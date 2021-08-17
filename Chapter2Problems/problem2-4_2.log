@@ -1,0 +1,72 @@
+Circuit: * C:\users\erik\My Documents\Education\powerelectronics\AdvancedConverterControlTechniques\Chapter2Problems\problem2-4_2.asc
+
+Per .tran options, skipping operating point for transient analysis.
+Ignoring empty pin current: Ix(u1:1)
+Ignoring empty pin current: Ix(u1:2)
+Ignoring empty pin current: Ix(u1:3)
+Ignoring empty pin current: Ix(u1:5)
+.step duty=0.01
+.step duty=0.2
+.step duty=0.3
+.step duty=0.4
+.step duty=0.5
+.step duty=0.6
+.step duty=0.7
+.step duty=0.8
+.step duty=0.99
+
+
+Measurement: m
+  step	vc1/v(vin)
+     1	-0.974065
+     2	-0.597891
+     3	-0.400075
+     4	-0.202402
+     5	-0.00390237
+     6	0.193333
+     7	0.392138
+     8	0.589422
+     9	0.966202
+
+Measurement: vc1
+  step	AVG(v(vcout, vln))	FROM	TO
+     1	-9.74065	9e-005	0.00019
+     2	-5.97891	9e-005	0.00019
+     3	-4.00075	9e-005	0.00019
+     4	-2.02402	9e-005	0.00019
+     5	-0.0390237	9e-005	0.00019
+     6	1.93333	9e-005	0.00019
+     7	3.92138	9e-005	0.00019
+     8	5.89422	9e-005	0.00019
+     9	9.66202	9e-005	0.00019
+
+Measurement: d
+  step	AVG(v(duty)/5)	FROM	TO
+     1	0.0129364	9e-005	0.00019
+     2	0.201052	9e-005	0.00019
+     3	0.299967	9e-005	0.00019
+     4	0.398796	9e-005	0.00019
+     5	0.498041	9e-005	0.00019
+     6	0.59666	9e-005	0.00019
+     7	0.696055	9e-005	0.00019
+     8	0.794691	9e-005	0.00019
+     9	0.983118	9e-005	0.00019
+
+
+Date: Tue Jun 15 07:34:59 2021
+Total elapsed time: 1.284 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 18676
+traniter = 18676
+tranpoints = 6790
+accept = 5409
+rejected = 1381
+matrix size = 31
+fillins = 0
+solver = Normal
+Matrix Compiler1: 1.02 KB object code size  0.2/0.1/[0.1]
+Matrix Compiler2: 2.05 KB object code size  0.2/0.2/[0.1]
+

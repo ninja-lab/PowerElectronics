@@ -1,0 +1,7644 @@
+2021-06-16 07:51:15,337
+adding V_c to []
+2021-06-16 07:51:15,337
+looking for 
+V_c
+2021-06-16 07:51:15,543
+nonlinsolve returns: 
+M⋅V_g
+2021-06-16 07:51:15,557
+
+D⋅(-V_c + V_g) + (1 - D)⋅(-V_c - V_g) solved for 
+V_c=
+{V_g⋅(2⋅D - 1)}
+2021-06-16 07:51:15,566
+
+    V_c
+M - ───
+    V_g solved for 
+V_c=
+{M⋅V_g}
+2021-06-16 07:51:15,568
+Done with 
+V_c
+2021-06-16 07:51:15,568
+so far V_c = 
+OrderedSet([V_g*(2*D - 1), M*V_g])
+2021-06-16 07:51:15,568
+solution to V_c is: 
+V_g⋅(2⋅D - 1) 
+2021-06-16 07:51:15,568
+recursesym: 
+[V_c]
+2021-06-16 07:51:15,568
+calling solver looking for 
+D
+2021-06-16 07:51:15,569
+	adding D to [V_c]
+2021-06-16 07:51:15,569
+looking for 
+D
+2021-06-16 07:51:15,604
+nonlinsolve returns: 
+V_c + V_g
+─────────
+  2⋅V_g  
+2021-06-16 07:51:15,616
+
+D⋅(-V_c + V_g) + (1 - D)⋅(-V_c - V_g) solved for 
+D=
+⎧V_c + V_g⎫
+⎨─────────⎬
+⎩  2⋅V_g  ⎭
+2021-06-16 07:51:15,624
+
+    V_c
+M - ───
+    V_g solved for 
+D=
+∅
+2021-06-16 07:51:15,624
+	Done with 
+D
+2021-06-16 07:51:15,624
+	so far D = 
+	OrderedSet([(V_c + V_g)/(2*V_g)])
+2021-06-16 07:51:15,624
+	solution to D is: 
+	V_c + V_g
+	─────────
+	  2⋅V_g   
+2021-06-16 07:51:15,625
+	recursesym: 
+	[V_c, D]
+2021-06-16 07:51:15,625
+	calling solver looking for 
+	V_c
+2021-06-16 07:51:15,625
+		base case
+2021-06-16 07:51:15,625
+returning: V_c=set()
+2021-06-16 07:51:15,625
+	recursesym: 
+	[V_c, D]
+2021-06-16 07:51:15,625
+	calling solver looking for 
+	V_g
+2021-06-16 07:51:15,625
+		adding V_g to [V_c, D]
+2021-06-16 07:51:15,625
+looking for 
+V_g
+2021-06-16 07:51:15,677
+nonlinsolve returns: 
+V_c
+───
+ M 
+2021-06-16 07:51:15,691
+
+D⋅(-V_c + V_g) + (1 - D)⋅(-V_c - V_g) solved for 
+V_g=
+⎧  V_c  ⎫
+⎨───────⎬
+⎩2⋅D - 1⎭
+2021-06-16 07:51:15,705
+
+    V_c
+M - ───
+    V_g solved for 
+V_g=
+⎧V_c⎫      
+⎨───⎬ \ {0}
+⎩ M ⎭      
+2021-06-16 07:51:15,708
+		Done with 
+V_g
+2021-06-16 07:51:15,708
+		so far V_g = 
+		OrderedSet([V_c/(2*D - 1), V_c/M])
+2021-06-16 07:51:15,708
+		solution to V_g is: 
+		  V_c  
+		───────
+		2⋅D - 1 
+2021-06-16 07:51:15,709
+		recursesym: 
+		[V_c, D, V_g]
+2021-06-16 07:51:15,709
+		calling solver looking for 
+		D
+2021-06-16 07:51:15,709
+			base case
+2021-06-16 07:51:15,709
+returning: D=set()
+2021-06-16 07:51:15,709
+		recursesym: 
+		[V_c, D, V_g]
+2021-06-16 07:51:15,709
+		calling solver looking for 
+		V_c
+2021-06-16 07:51:15,709
+			base case
+2021-06-16 07:51:15,709
+returning: V_c=set()
+2021-06-16 07:51:15,709
+		solution to V_g is: 
+		V_c
+		───
+		 M  
+2021-06-16 07:51:15,709
+		recursesym: 
+		[V_c, D, V_g]
+2021-06-16 07:51:15,710
+		calling solver looking for 
+		M
+2021-06-16 07:51:15,710
+			adding M to [V_c, D, V_g]
+2021-06-16 07:51:15,710
+looking for 
+M
+2021-06-16 07:51:15,735
+nonlinsolve returns: 
+V_c
+───
+V_g
+2021-06-16 07:51:15,737
+
+D⋅(-V_c + V_g) + (1 - D)⋅(-V_c - V_g) solved for 
+M=
+∅
+2021-06-16 07:51:15,738
+
+    V_c
+M - ───
+    V_g solved for 
+M=
+⎧V_c⎫
+⎨───⎬
+⎩V_g⎭
+2021-06-16 07:51:15,741
+			Done with 
+M
+2021-06-16 07:51:15,741
+			so far M = 
+			OrderedSet([V_c/V_g])
+2021-06-16 07:51:15,741
+			solution to M is: 
+			V_c
+			───
+			V_g 
+2021-06-16 07:51:15,741
+			recursesym: 
+			[V_c, D, V_g, M]
+2021-06-16 07:51:15,741
+			calling solver looking for 
+			V_c
+2021-06-16 07:51:15,742
+				base case
+2021-06-16 07:51:15,742
+returning: V_c=set()
+2021-06-16 07:51:15,742
+			recursesym: 
+			[V_c, D, V_g, M]
+2021-06-16 07:51:15,742
+			calling solver looking for 
+			V_g
+2021-06-16 07:51:15,742
+				base case
+2021-06-16 07:51:15,742
+returning: V_g=set()
+2021-06-16 07:51:15,742
+end of function, recursesym: {V_c: set(), D: set(), V_g: set(), M: set()}
+2021-06-16 07:51:15,742
+returning: 
+			OrderedSet([V_c/V_g])
+2021-06-16 07:51:15,743
+		sub-ing in 
+		V_c
+		───
+		V_g for 
+		M
+2021-06-16 07:51:15,744
+		and found 
+		V_g
+2021-06-16 07:51:15,744
+		recursesym: 
+		[V_c, D, V_g, M]
+2021-06-16 07:51:15,744
+		calling solver looking for 
+		V_c
+2021-06-16 07:51:15,744
+				base case
+2021-06-16 07:51:15,744
+returning: V_c=set()
+2021-06-16 07:51:15,744
+end of function, recursesym: {V_c: set(), D: set(), V_g: set(), M: OrderedSet([V_c/V_g])}
+2021-06-16 07:51:15,744
+returning: 
+		OrderedSet([V_c/(2*D - 1), V_c/M])
+2021-06-16 07:51:15,754
+	sub-ing in 
+	  V_c  
+	───────
+	2⋅D - 1 for 
+	V_g
+2021-06-16 07:51:15,755
+	and found 
+	          ⎛        V_c  ⎞
+	(2⋅D - 1)⋅⎜V_c + ───────⎟
+	          ⎝      2⋅D - 1⎠
+	─────────────────────────
+	          2⋅V_c          
+2021-06-16 07:51:15,763
+	sub-ing in 
+	V_c
+	───
+	 M  for 
+	V_g
+2021-06-16 07:51:15,764
+	and found 
+	  ⎛      V_c⎞
+	M⋅⎜V_c + ───⎟
+	  ⎝       M ⎠
+	─────────────
+	    2⋅V_c    
+2021-06-16 07:51:15,764
+end of function, recursesym: {V_c: set(), D: set(), V_g: OrderedSet([V_c/(2*D - 1), V_c/M]), M: OrderedSet([V_c/V_g])}
+2021-06-16 07:51:15,765
+returning: 
+	OrderedSet([(V_c + V_g)/(2*V_g), M/2 + 1/2])
+2021-06-16 07:51:15,771
+sub-ing in 
+V_c + V_g
+─────────
+  2⋅V_g   for 
+D
+2021-06-16 07:51:15,771
+and found 
+    ⎛     V_c + V_g⎞
+V_g⋅⎜-1 + ─────────⎟
+    ⎝        V_g   ⎠
+2021-06-16 07:51:15,773
+sub-ing in 
+M   1
+─ + ─
+2   2 for 
+D
+2021-06-16 07:51:15,774
+and found 
+M⋅V_g
+2021-06-16 07:51:15,774
+recursesym: 
+[V_c, D, V_g, M]
+2021-06-16 07:51:15,774
+calling solver looking for 
+V_g
+2021-06-16 07:51:15,774
+				base case
+2021-06-16 07:51:15,774
+returning: V_g=OrderedSet([V_c/(2*D - 1), V_c/M])
+2021-06-16 07:51:15,775
+sub-ing in 
+  V_c  
+───────
+2⋅D - 1 for 
+V_g
+2021-06-16 07:51:15,775
+and found 
+V_c
+2021-06-16 07:51:15,784
+sub-ing in 
+V_c
+───
+ M  for 
+V_g
+2021-06-16 07:51:15,784
+and found 
+V_c⋅(2⋅D - 1)
+─────────────
+      M      
+2021-06-16 07:51:15,784
+solution to V_c is: 
+M⋅V_g 
+2021-06-16 07:51:15,784
+recursesym: 
+[V_c, D, V_g, M]
+2021-06-16 07:51:15,784
+calling solver looking for 
+M
+2021-06-16 07:51:15,784
+				base case
+2021-06-16 07:51:15,785
+returning: M=OrderedSet([V_c/V_g])
+2021-06-16 07:51:15,785
+sub-ing in 
+V_c
+───
+V_g for 
+M
+2021-06-16 07:51:15,785
+and found 
+V_c
+2021-06-16 07:51:15,785
+recursesym: 
+[V_c, D, V_g, M]
+2021-06-16 07:51:15,785
+calling solver looking for 
+V_g
+2021-06-16 07:51:15,785
+				base case
+2021-06-16 07:51:15,786
+returning: V_g=OrderedSet([V_c/(2*D - 1), V_c/M])
+2021-06-16 07:51:15,792
+sub-ing in 
+  V_c  
+───────
+2⋅D - 1 for 
+V_g
+2021-06-16 07:51:15,792
+and found 
+ M⋅V_c 
+───────
+2⋅D - 1
+2021-06-16 07:51:15,793
+sub-ing in 
+V_c
+───
+ M  for 
+V_g
+2021-06-16 07:51:15,793
+and found 
+V_c
+2021-06-16 07:51:15,794
+end of function, recursesym: {V_c: set(), D: OrderedSet([(V_c + V_g)/(2*V_g), M/2 + 1/2]), V_g: OrderedSet([V_c/(2*D - 1), V_c/M]), M: OrderedSet([V_c/V_g])}
+2021-06-16 07:51:15,794
+returning: 
+OrderedSet([V_g*(2*D - 1), M*V_g])
+2021-06-16 07:51:15,802
+adding M to []
+2021-06-16 07:51:15,802
+looking for 
+M
+2021-06-16 07:51:15,825
+nonlinsolve returns: 
+V_c
+───
+V_g
+2021-06-16 07:51:15,827
+
+D⋅(-V_c + V_g) + (1 - D)⋅(-V_c - V_g) solved for 
+M=
+∅
+2021-06-16 07:51:15,828
+
+    V_c
+M - ───
+    V_g solved for 
+M=
+⎧V_c⎫
+⎨───⎬
+⎩V_g⎭
+2021-06-16 07:51:15,831
+Done with 
+M
+2021-06-16 07:51:15,831
+so far M = 
+OrderedSet([V_c/V_g])
+2021-06-16 07:51:15,831
+solution to M is: 
+V_c
+───
+V_g 
+2021-06-16 07:51:15,831
+recursesym: 
+[M]
+2021-06-16 07:51:15,831
+calling solver looking for 
+V_c
+2021-06-16 07:51:15,831
+	adding V_c to [M]
+2021-06-16 07:51:15,831
+looking for 
+V_c
+2021-06-16 07:51:15,854
+nonlinsolve returns: 
+M⋅V_g
+2021-06-16 07:51:15,861
+
+D⋅(-V_c + V_g) + (1 - D)⋅(-V_c - V_g) solved for 
+V_c=
+{V_g⋅(2⋅D - 1)}
+2021-06-16 07:51:15,866
+
+    V_c
+M - ───
+    V_g solved for 
+V_c=
+{M⋅V_g}
+2021-06-16 07:51:15,868
+	Done with 
+V_c
+2021-06-16 07:51:15,868
+	so far V_c = 
+	OrderedSet([V_g*(2*D - 1), M*V_g])
+2021-06-16 07:51:15,869
+	solution to V_c is: 
+	V_g⋅(2⋅D - 1) 
+2021-06-16 07:51:15,869
+	recursesym: 
+	[M, V_c]
+2021-06-16 07:51:15,869
+	calling solver looking for 
+	D
+2021-06-16 07:51:15,869
+		adding D to [M, V_c]
+2021-06-16 07:51:15,869
+looking for 
+D
+2021-06-16 07:51:15,896
+nonlinsolve returns: 
+V_c + V_g
+─────────
+  2⋅V_g  
+2021-06-16 07:51:15,903
+
+D⋅(-V_c + V_g) + (1 - D)⋅(-V_c - V_g) solved for 
+D=
+⎧V_c + V_g⎫
+⎨─────────⎬
+⎩  2⋅V_g  ⎭
+2021-06-16 07:51:15,908
+
+    V_c
+M - ───
+    V_g solved for 
+D=
+∅
+2021-06-16 07:51:15,908
+		Done with 
+D
+2021-06-16 07:51:15,908
+		so far D = 
+		OrderedSet([(V_c + V_g)/(2*V_g)])
+2021-06-16 07:51:15,909
+		solution to D is: 
+		V_c + V_g
+		─────────
+		  2⋅V_g   
+2021-06-16 07:51:15,909
+		recursesym: 
+		[M, V_c, D]
+2021-06-16 07:51:15,909
+		calling solver looking for 
+		V_c
+2021-06-16 07:51:15,909
+			base case
+2021-06-16 07:51:15,909
+returning: V_c=set()
+2021-06-16 07:51:15,909
+		recursesym: 
+		[M, V_c, D]
+2021-06-16 07:51:15,909
+		calling solver looking for 
+		V_g
+2021-06-16 07:51:15,909
+			adding V_g to [M, V_c, D]
+2021-06-16 07:51:15,910
+looking for 
+V_g
+2021-06-16 07:51:15,954
+nonlinsolve returns: 
+V_c
+───
+ M 
+2021-06-16 07:51:15,961
+
+D⋅(-V_c + V_g) + (1 - D)⋅(-V_c - V_g) solved for 
+V_g=
+⎧  V_c  ⎫
+⎨───────⎬
+⎩2⋅D - 1⎭
+2021-06-16 07:51:15,968
+
+    V_c
+M - ───
+    V_g solved for 
+V_g=
+⎧V_c⎫      
+⎨───⎬ \ {0}
+⎩ M ⎭      
+2021-06-16 07:51:15,971
+			Done with 
+V_g
+2021-06-16 07:51:15,971
+			so far V_g = 
+			OrderedSet([V_c/(2*D - 1), V_c/M])
+2021-06-16 07:51:15,971
+			solution to V_g is: 
+			  V_c  
+			───────
+			2⋅D - 1 
+2021-06-16 07:51:15,972
+			recursesym: 
+			[M, V_c, D, V_g]
+2021-06-16 07:51:15,972
+			calling solver looking for 
+			D
+2021-06-16 07:51:15,972
+				base case
+2021-06-16 07:51:15,972
+returning: D=set()
+2021-06-16 07:51:15,972
+			recursesym: 
+			[M, V_c, D, V_g]
+2021-06-16 07:51:15,972
+			calling solver looking for 
+			V_c
+2021-06-16 07:51:15,972
+				base case
+2021-06-16 07:51:15,972
+returning: V_c=set()
+2021-06-16 07:51:15,972
+			solution to V_g is: 
+			V_c
+			───
+			 M  
+2021-06-16 07:51:15,972
+			recursesym: 
+			[M, V_c, D, V_g]
+2021-06-16 07:51:15,973
+			calling solver looking for 
+			M
+2021-06-16 07:51:15,973
+				base case
+2021-06-16 07:51:15,973
+returning: M=set()
+2021-06-16 07:51:15,973
+			recursesym: 
+			[M, V_c, D, V_g]
+2021-06-16 07:51:15,973
+			calling solver looking for 
+			V_c
+2021-06-16 07:51:15,973
+				base case
+2021-06-16 07:51:15,973
+returning: V_c=set()
+2021-06-16 07:51:15,973
+end of function, recursesym: {M: set(), V_c: set(), D: set(), V_g: set()}
+2021-06-16 07:51:15,973
+returning: 
+			OrderedSet([V_c/(2*D - 1), V_c/M])
+2021-06-16 07:51:15,977
+		sub-ing in 
+		  V_c  
+		───────
+		2⋅D - 1 for 
+		V_g
+2021-06-16 07:51:15,978
+		and found 
+		          ⎛        V_c  ⎞
+		(2⋅D - 1)⋅⎜V_c + ───────⎟
+		          ⎝      2⋅D - 1⎠
+		─────────────────────────
+		          2⋅V_c          
+2021-06-16 07:51:15,982
+		sub-ing in 
+		V_c
+		───
+		 M  for 
+		V_g
+2021-06-16 07:51:15,983
+		and found 
+		  ⎛      V_c⎞
+		M⋅⎜V_c + ───⎟
+		  ⎝       M ⎠
+		─────────────
+		    2⋅V_c    
+2021-06-16 07:51:15,983
+end of function, recursesym: {M: set(), V_c: set(), D: set(), V_g: OrderedSet([V_c/(2*D - 1), V_c/M])}
+2021-06-16 07:51:15,983
+returning: 
+		OrderedSet([(V_c + V_g)/(2*V_g), M/2 + 1/2])
+2021-06-16 07:51:15,985
+	sub-ing in 
+	V_c + V_g
+	─────────
+	  2⋅V_g   for 
+	D
+2021-06-16 07:51:15,986
+	and found 
+	    ⎛     V_c + V_g⎞
+	V_g⋅⎜-1 + ─────────⎟
+	    ⎝        V_g   ⎠
+2021-06-16 07:51:15,988
+	sub-ing in 
+	M   1
+	─ + ─
+	2   2 for 
+	D
+2021-06-16 07:51:15,988
+	and found 
+	M⋅V_g
+2021-06-16 07:51:15,988
+	recursesym: 
+	[M, V_c, D, V_g]
+2021-06-16 07:51:15,988
+	calling solver looking for 
+	V_g
+2021-06-16 07:51:15,988
+				base case
+2021-06-16 07:51:15,988
+returning: V_g=OrderedSet([V_c/(2*D - 1), V_c/M])
+2021-06-16 07:51:15,989
+	sub-ing in 
+	  V_c  
+	───────
+	2⋅D - 1 for 
+	V_g
+2021-06-16 07:51:15,989
+	and found 
+	V_c
+2021-06-16 07:51:15,995
+	sub-ing in 
+	V_c
+	───
+	 M  for 
+	V_g
+2021-06-16 07:51:15,995
+	and found 
+	V_c⋅(2⋅D - 1)
+	─────────────
+	      M      
+2021-06-16 07:51:15,995
+	solution to V_c is: 
+	M⋅V_g 
+2021-06-16 07:51:15,996
+	recursesym: 
+	[M, V_c, D, V_g]
+2021-06-16 07:51:15,996
+	calling solver looking for 
+	M
+2021-06-16 07:51:15,996
+				base case
+2021-06-16 07:51:15,996
+returning: M=set()
+2021-06-16 07:51:15,996
+	recursesym: 
+	[M, V_c, D, V_g]
+2021-06-16 07:51:15,996
+	calling solver looking for 
+	V_g
+2021-06-16 07:51:15,996
+				base case
+2021-06-16 07:51:15,996
+returning: V_g=OrderedSet([V_c/(2*D - 1), V_c/M])
+2021-06-16 07:51:16,002
+	sub-ing in 
+	  V_c  
+	───────
+	2⋅D - 1 for 
+	V_g
+2021-06-16 07:51:16,002
+	and found 
+	 M⋅V_c 
+	───────
+	2⋅D - 1
+2021-06-16 07:51:16,002
+	sub-ing in 
+	V_c
+	───
+	 M  for 
+	V_g
+2021-06-16 07:51:16,002
+	and found 
+	V_c
+2021-06-16 07:51:16,003
+end of function, recursesym: {M: set(), V_c: set(), D: OrderedSet([(V_c + V_g)/(2*V_g), M/2 + 1/2]), V_g: OrderedSet([V_c/(2*D - 1), V_c/M])}
+2021-06-16 07:51:16,004
+returning: 
+	OrderedSet([V_g*(2*D - 1), M*V_g])
+2021-06-16 07:51:16,010
+sub-ing in 
+V_g⋅(2⋅D - 1) for 
+V_c
+2021-06-16 07:51:16,010
+and found 
+2⋅D - 1
+2021-06-16 07:51:16,011
+sub-ing in 
+M⋅V_g for 
+V_c
+2021-06-16 07:51:16,011
+and found 
+M
+2021-06-16 07:51:16,011
+recursesym: 
+[M, V_c, D, V_g]
+2021-06-16 07:51:16,011
+calling solver looking for 
+V_g
+2021-06-16 07:51:16,011
+				base case
+2021-06-16 07:51:16,011
+returning: V_g=OrderedSet([V_c/(2*D - 1), V_c/M])
+2021-06-16 07:51:16,015
+sub-ing in 
+  V_c  
+───────
+2⋅D - 1 for 
+V_g
+2021-06-16 07:51:16,015
+and found 
+2⋅D - 1
+2021-06-16 07:51:16,016
+sub-ing in 
+V_c
+───
+ M  for 
+V_g
+2021-06-16 07:51:16,016
+and found 
+M
+2021-06-16 07:51:16,017
+end of function, recursesym: {M: set(), V_c: OrderedSet([V_g*(2*D - 1), M*V_g]), D: OrderedSet([(V_c + V_g)/(2*V_g), M/2 + 1/2]), V_g: OrderedSet([V_c/(2*D - 1), V_c/M])}
+2021-06-16 07:51:16,017
+returning: 
+OrderedSet([V_c/V_g, 2*D - 1])
+2021-06-16 07:51:16,215
+adding delta_iL to []
+2021-06-16 07:51:16,215
+looking for 
+\Delta i_L
+2021-06-16 07:51:16,347
+nonlinsolve returns: 
+8.0⋅C⋅\Delta v_C⋅fₛ
+2021-06-16 07:51:16,349
+
+D⋅(-V_c + V_g) + (1 - D)⋅(-V_c - V_g) solved for 
+\Delta i_L=
+∅
+2021-06-16 07:51:16,349
+
+    V_c
+M - ───
+    V_g solved for 
+\Delta i_L=
+∅
+2021-06-16 07:51:16,358
+
+  D⋅(-V_c + V_g)               
+- ────────────── + 2⋅\Delta i_L
+       L⋅fₛ                     solved for 
+\Delta i_L=
+⎧-D⋅(V_c - V_g) ⎫
+⎨───────────────⎬
+⎩     2⋅L⋅fₛ    ⎭
+2021-06-16 07:51:16,375
+
+                 0.25⋅\Delta i_L
+2⋅C⋅\Delta v_C - ───────────────
+                        fₛ       solved for 
+\Delta i_L=
+{8.0⋅C⋅\Delta v_C⋅fₛ}
+2021-06-16 07:51:16,380
+
+      V_c
+i_L - ───
+       R  solved for 
+\Delta i_L=
+∅
+2021-06-16 07:51:16,380
+Done with 
+\Delta i_L
+2021-06-16 07:51:16,381
+so far delta_iL = 
+OrderedSet([D*(-V_c + V_g)/(2*L*f_s), 8.0*C*\Delta v_C*f_s])
+2021-06-16 07:51:16,381
+solution to delta_iL is: 
+D⋅(-V_c + V_g)
+──────────────
+    2⋅L⋅fₛ     
+2021-06-16 07:51:16,381
+recursesym: 
+[\Delta i_L]
+2021-06-16 07:51:16,381
+calling solver looking for 
+D
+2021-06-16 07:51:16,381
+	adding D to [\Delta i_L]
+2021-06-16 07:51:16,381
+looking for 
+D
+2021-06-16 07:51:16,476
+nonlinsolve returns: 
+V_c + V_g
+─────────
+  2⋅V_g  
+2021-06-16 07:51:16,486
+
+D⋅(-V_c + V_g) + (1 - D)⋅(-V_c - V_g) solved for 
+D=
+⎧V_c + V_g⎫
+⎨─────────⎬
+⎩  2⋅V_g  ⎭
+2021-06-16 07:51:16,492
+
+    V_c
+M - ───
+    V_g solved for 
+D=
+∅
+2021-06-16 07:51:16,500
+
+  D⋅(-V_c + V_g)               
+- ────────────── + 2⋅\Delta i_L
+       L⋅fₛ                     solved for 
+D=
+⎧-2⋅L⋅\Delta i_L⋅fₛ ⎫
+⎨───────────────────⎬
+⎩     V_c - V_g     ⎭
+2021-06-16 07:51:16,509
+
+                 0.25⋅\Delta i_L
+2⋅C⋅\Delta v_C - ───────────────
+                        fₛ       solved for 
+D=
+∅
+2021-06-16 07:51:16,510
+
+      V_c
+i_L - ───
+       R  solved for 
+D=
+∅
+2021-06-16 07:51:16,510
+	Done with 
+D
+2021-06-16 07:51:16,510
+	so far D = 
+	OrderedSet([(V_c + V_g)/(2*V_g), -2*L*\Delta i_L*f_s/(V_c - V_g)])
+2021-06-16 07:51:16,510
+	solution to D is: 
+	V_c + V_g
+	─────────
+	  2⋅V_g   
+2021-06-16 07:51:16,511
+	recursesym: 
+	[\Delta i_L, D]
+2021-06-16 07:51:16,511
+	calling solver looking for 
+	V_c
+2021-06-16 07:51:16,511
+		adding V_c to [\Delta i_L, D]
+2021-06-16 07:51:16,511
+looking for 
+V_c
+2021-06-16 07:51:16,574
+nonlinsolve returns: 
+M⋅V_g
+2021-06-16 07:51:16,584
+
+D⋅(-V_c + V_g) + (1 - D)⋅(-V_c - V_g) solved for 
+V_c=
+{V_g⋅(2⋅D - 1)}
+2021-06-16 07:51:16,591
+
+    V_c
+M - ───
+    V_g solved for 
+V_c=
+{M⋅V_g}
+2021-06-16 07:51:16,600
+
+  D⋅(-V_c + V_g)               
+- ────────────── + 2⋅\Delta i_L
+       L⋅fₛ                     solved for 
+V_c=
+⎧      2⋅L⋅\Delta i_L⋅fₛ⎫
+⎨V_g - ─────────────────⎬
+⎩              D        ⎭
+2021-06-16 07:51:16,611
+
+                 0.25⋅\Delta i_L
+2⋅C⋅\Delta v_C - ───────────────
+                        fₛ       solved for 
+V_c=
+∅
+2021-06-16 07:51:16,614
+
+      V_c
+i_L - ───
+       R  solved for 
+V_c=
+{R⋅i_L}
+2021-06-16 07:51:16,616
+		Done with 
+V_c
+2021-06-16 07:51:16,617
+		so far V_c = 
+		OrderedSet([V_g*(2*D - 1), M*V_g, V_g - 2*L*\Delta i_L*f_s/D, R*i_L])
+2021-06-16 07:51:16,617
+		solution to V_c is: 
+		V_g⋅(2⋅D - 1) 
+2021-06-16 07:51:16,617
+		recursesym: 
+		[\Delta i_L, D, V_c]
+2021-06-16 07:51:16,617
+		calling solver looking for 
+		D
+2021-06-16 07:51:16,617
+			base case
+2021-06-16 07:51:16,618
+returning: D=set()
+2021-06-16 07:51:16,618
+		recursesym: 
+		[\Delta i_L, D, V_c]
+2021-06-16 07:51:16,618
+		calling solver looking for 
+		V_g
+2021-06-16 07:51:16,618
+			adding V_g to [\Delta i_L, D, V_c]
+2021-06-16 07:51:16,618
+looking for 
+V_g
+2021-06-16 07:51:16,718
+nonlinsolve returns: 
+V_c
+───
+ M 
+2021-06-16 07:51:16,726
+
+D⋅(-V_c + V_g) + (1 - D)⋅(-V_c - V_g) solved for 
+V_g=
+⎧  V_c  ⎫
+⎨───────⎬
+⎩2⋅D - 1⎭
+2021-06-16 07:51:16,738
+
+    V_c
+M - ───
+    V_g solved for 
+V_g=
+⎧V_c⎫      
+⎨───⎬ \ {0}
+⎩ M ⎭      
+2021-06-16 07:51:16,744
+
+  D⋅(-V_c + V_g)               
+- ────────────── + 2⋅\Delta i_L
+       L⋅fₛ                     solved for 
+V_g=
+⎧      2⋅L⋅\Delta i_L⋅fₛ⎫
+⎨V_c + ─────────────────⎬
+⎩              D        ⎭
+2021-06-16 07:51:16,755
+
+                 0.25⋅\Delta i_L
+2⋅C⋅\Delta v_C - ───────────────
+                        fₛ       solved for 
+V_g=
+∅
+2021-06-16 07:51:16,755
+
+      V_c
+i_L - ───
+       R  solved for 
+V_g=
+∅
+2021-06-16 07:51:16,755
+			Done with 
+V_g
+2021-06-16 07:51:16,756
+			so far V_g = 
+			OrderedSet([V_c/(2*D - 1), V_c/M, V_c + 2*L*\Delta i_L*f_s/D])
+2021-06-16 07:51:16,756
+			solution to V_g is: 
+			  V_c  
+			───────
+			2⋅D - 1 
+2021-06-16 07:51:16,756
+			recursesym: 
+			[\Delta i_L, D, V_c, V_g]
+2021-06-16 07:51:16,756
+			calling solver looking for 
+			D
+2021-06-16 07:51:16,757
+				base case
+2021-06-16 07:51:16,757
+returning: D=set()
+2021-06-16 07:51:16,757
+			recursesym: 
+			[\Delta i_L, D, V_c, V_g]
+2021-06-16 07:51:16,757
+			calling solver looking for 
+			V_c
+2021-06-16 07:51:16,757
+				base case
+2021-06-16 07:51:16,757
+returning: V_c=set()
+2021-06-16 07:51:16,757
+			solution to V_g is: 
+			V_c
+			───
+			 M  
+2021-06-16 07:51:16,757
+			recursesym: 
+			[\Delta i_L, D, V_c, V_g]
+2021-06-16 07:51:16,757
+			calling solver looking for 
+			M
+2021-06-16 07:51:16,757
+				adding M to [\Delta i_L, D, V_c, V_g]
+2021-06-16 07:51:16,758
+looking for 
+M
+2021-06-16 07:51:16,817
+nonlinsolve returns: 
+V_c
+───
+V_g
+2021-06-16 07:51:16,818
+
+D⋅(-V_c + V_g) + (1 - D)⋅(-V_c - V_g) solved for 
+M=
+∅
+2021-06-16 07:51:16,820
+
+    V_c
+M - ───
+    V_g solved for 
+M=
+⎧V_c⎫
+⎨───⎬
+⎩V_g⎭
+2021-06-16 07:51:16,825
+
+  D⋅(-V_c + V_g)               
+- ────────────── + 2⋅\Delta i_L
+       L⋅fₛ                     solved for 
+M=
+∅
+2021-06-16 07:51:16,826
+
+                 0.25⋅\Delta i_L
+2⋅C⋅\Delta v_C - ───────────────
+                        fₛ       solved for 
+M=
+∅
+2021-06-16 07:51:16,826
+
+      V_c
+i_L - ───
+       R  solved for 
+M=
+∅
+2021-06-16 07:51:16,826
+				Done with 
+M
+2021-06-16 07:51:16,826
+				so far M = 
+				OrderedSet([V_c/V_g])
+2021-06-16 07:51:16,827
+				solution to M is: 
+				V_c
+				───
+				V_g 
+2021-06-16 07:51:16,827
+				recursesym: 
+				[\Delta i_L, D, V_c, V_g, M]
+2021-06-16 07:51:16,827
+				calling solver looking for 
+				V_c
+2021-06-16 07:51:16,827
+					base case
+2021-06-16 07:51:16,827
+returning: V_c=set()
+2021-06-16 07:51:16,827
+				recursesym: 
+				[\Delta i_L, D, V_c, V_g, M]
+2021-06-16 07:51:16,827
+				calling solver looking for 
+				V_g
+2021-06-16 07:51:16,827
+					base case
+2021-06-16 07:51:16,827
+returning: V_g=set()
+2021-06-16 07:51:16,827
+end of function, recursesym: {\Delta i_L: set(), D: set(), V_c: set(), V_g: set(), M: set()}
+2021-06-16 07:51:16,827
+returning: 
+				OrderedSet([V_c/V_g])
+2021-06-16 07:51:16,828
+			sub-ing in 
+			V_c
+			───
+			V_g for 
+			M
+2021-06-16 07:51:16,828
+			and found 
+			V_g
+2021-06-16 07:51:16,828
+			recursesym: 
+			[\Delta i_L, D, V_c, V_g, M]
+2021-06-16 07:51:16,828
+			calling solver looking for 
+			V_c
+2021-06-16 07:51:16,828
+					base case
+2021-06-16 07:51:16,828
+returning: V_c=set()
+2021-06-16 07:51:16,829
+			solution to V_g is: 
+			      2⋅L⋅\Delta i_L⋅fₛ
+			V_c + ─────────────────
+			              D         
+2021-06-16 07:51:16,829
+			recursesym: 
+			[\Delta i_L, D, V_c, V_g, M]
+2021-06-16 07:51:16,829
+			calling solver looking for 
+			D
+2021-06-16 07:51:16,829
+					base case
+2021-06-16 07:51:16,829
+returning: D=set()
+2021-06-16 07:51:16,829
+			recursesym: 
+			[\Delta i_L, D, V_c, V_g, M]
+2021-06-16 07:51:16,829
+			calling solver looking for 
+			L
+2021-06-16 07:51:16,829
+					adding L to [\Delta i_L, D, V_c, V_g, M]
+2021-06-16 07:51:16,829
+looking for 
+L
+2021-06-16 07:51:16,945
+nonlinsolve returns: 
+ D⋅(-V_c + V_g)
+───────────────
+2⋅\Delta i_L⋅fₛ
+2021-06-16 07:51:16,947
+
+D⋅(-V_c + V_g) + (1 - D)⋅(-V_c - V_g) solved for 
+L=
+∅
+2021-06-16 07:51:16,947
+
+    V_c
+M - ───
+    V_g solved for 
+L=
+∅
+2021-06-16 07:51:16,961
+
+  D⋅(-V_c + V_g)               
+- ────────────── + 2⋅\Delta i_L
+       L⋅fₛ                     solved for 
+L=
+⎧-D⋅(V_c - V_g) ⎫      
+⎨───────────────⎬ \ {0}
+⎩2⋅\Delta i_L⋅fₛ⎭      
+2021-06-16 07:51:16,969
+
+                 0.25⋅\Delta i_L
+2⋅C⋅\Delta v_C - ───────────────
+                        fₛ       solved for 
+L=
+∅
+2021-06-16 07:51:16,970
+
+      V_c
+i_L - ───
+       R  solved for 
+L=
+∅
+2021-06-16 07:51:16,970
+					Done with 
+L
+2021-06-16 07:51:16,970
+					so far L = 
+					OrderedSet([D*(-V_c + V_g)/(2*\Delta i_L*f_s)])
+2021-06-16 07:51:16,971
+					solution to L is: 
+					 D⋅(-V_c + V_g)
+					───────────────
+					2⋅\Delta i_L⋅fₛ 
+2021-06-16 07:51:16,971
+					recursesym: 
+					[\Delta i_L, D, V_c, V_g, M, L]
+2021-06-16 07:51:16,971
+					calling solver looking for 
+					D
+2021-06-16 07:51:16,971
+						base case
+2021-06-16 07:51:16,971
+returning: D=set()
+2021-06-16 07:51:16,971
+					recursesym: 
+					[\Delta i_L, D, V_c, V_g, M, L]
+2021-06-16 07:51:16,971
+					calling solver looking for 
+					V_c
+2021-06-16 07:51:16,972
+						base case
+2021-06-16 07:51:16,972
+returning: V_c=set()
+2021-06-16 07:51:16,972
+					recursesym: 
+					[\Delta i_L, D, V_c, V_g, M, L]
+2021-06-16 07:51:16,972
+					calling solver looking for 
+					V_g
+2021-06-16 07:51:16,972
+						base case
+2021-06-16 07:51:16,972
+returning: V_g=set()
+2021-06-16 07:51:16,972
+					recursesym: 
+					[\Delta i_L, D, V_c, V_g, M, L]
+2021-06-16 07:51:16,972
+					calling solver looking for 
+					\Delta i_L
+2021-06-16 07:51:16,972
+						base case
+2021-06-16 07:51:16,972
+returning: delta_iL=set()
+2021-06-16 07:51:16,973
+					recursesym: 
+					[\Delta i_L, D, V_c, V_g, M, L]
+2021-06-16 07:51:16,973
+					calling solver looking for 
+					fₛ
+2021-06-16 07:51:16,973
+						adding f_s to [\Delta i_L, D, V_c, V_g, M, L]
+2021-06-16 07:51:16,973
+looking for 
+fₛ
+2021-06-16 07:51:17,091
+nonlinsolve returns: 
+0.125⋅\Delta i_L
+────────────────
+  C⋅\Delta v_C  
+2021-06-16 07:51:17,092
+
+D⋅(-V_c + V_g) + (1 - D)⋅(-V_c - V_g) solved for 
+fₛ=
+∅
+2021-06-16 07:51:17,093
+
+    V_c
+M - ───
+    V_g solved for 
+fₛ=
+∅
+2021-06-16 07:51:17,107
+
+  D⋅(-V_c + V_g)               
+- ────────────── + 2⋅\Delta i_L
+       L⋅fₛ                     solved for 
+fₛ=
+⎧-D⋅(V_c - V_g) ⎫      
+⎨───────────────⎬ \ {0}
+⎩ 2⋅L⋅\Delta i_L⎭      
+2021-06-16 07:51:17,130
+
+                 0.25⋅\Delta i_L
+2⋅C⋅\Delta v_C - ───────────────
+                        fₛ       solved for 
+fₛ=
+⎧0.125⋅\Delta i_L⎫      
+⎨────────────────⎬ \ {0}
+⎩  C⋅\Delta v_C  ⎭      
+2021-06-16 07:51:17,134
+
+      V_c
+i_L - ───
+       R  solved for 
+fₛ=
+∅
+2021-06-16 07:51:17,134
+						Done with 
+fₛ
+2021-06-16 07:51:17,135
+						so far f_s = 
+						OrderedSet([D*(-V_c + V_g)/(2*L*\Delta i_L), 0.125*\Delta i_L/(C*\Delta v_C)])
+2021-06-16 07:51:17,135
+						solution to f_s is: 
+						D⋅(-V_c + V_g)
+						──────────────
+						2⋅L⋅\Delta i_L 
+2021-06-16 07:51:17,136
+						recursesym: 
+						[\Delta i_L, D, V_c, V_g, M, L, fₛ]
+2021-06-16 07:51:17,136
+						calling solver looking for 
+						D
+2021-06-16 07:51:17,136
+							base case
+2021-06-16 07:51:17,136
+returning: D=set()
+2021-06-16 07:51:17,136
+						recursesym: 
+						[\Delta i_L, D, V_c, V_g, M, L, fₛ]
+2021-06-16 07:51:17,136
+						calling solver looking for 
+						L
+2021-06-16 07:51:17,136
+							base case
+2021-06-16 07:51:17,136
+returning: L=set()
+2021-06-16 07:51:17,136
+						recursesym: 
+						[\Delta i_L, D, V_c, V_g, M, L, fₛ]
+2021-06-16 07:51:17,136
+						calling solver looking for 
+						V_c
+2021-06-16 07:51:17,137
+							base case
+2021-06-16 07:51:17,137
+returning: V_c=set()
+2021-06-16 07:51:17,137
+						recursesym: 
+						[\Delta i_L, D, V_c, V_g, M, L, fₛ]
+2021-06-16 07:51:17,137
+						calling solver looking for 
+						V_g
+2021-06-16 07:51:17,137
+							base case
+2021-06-16 07:51:17,137
+returning: V_g=set()
+2021-06-16 07:51:17,137
+						recursesym: 
+						[\Delta i_L, D, V_c, V_g, M, L, fₛ]
+2021-06-16 07:51:17,137
+						calling solver looking for 
+						\Delta i_L
+2021-06-16 07:51:17,137
+							base case
+2021-06-16 07:51:17,137
+returning: delta_iL=set()
+2021-06-16 07:51:17,138
+						solution to f_s is: 
+						0.125⋅\Delta i_L
+						────────────────
+						  C⋅\Delta v_C   
+2021-06-16 07:51:17,138
+						recursesym: 
+						[\Delta i_L, D, V_c, V_g, M, L, fₛ]
+2021-06-16 07:51:17,138
+						calling solver looking for 
+						C
+2021-06-16 07:51:17,138
+							adding C to [\Delta i_L, D, V_c, V_g, M, L, f_s]
+2021-06-16 07:51:17,138
+looking for 
+C
+2021-06-16 07:51:17,206
+nonlinsolve returns: 
+0.125⋅\Delta i_L
+────────────────
+ \Delta v_C⋅fₛ  
+2021-06-16 07:51:17,207
+
+D⋅(-V_c + V_g) + (1 - D)⋅(-V_c - V_g) solved for 
+C=
+∅
+2021-06-16 07:51:17,207
+
+    V_c
+M - ───
+    V_g solved for 
+C=
+∅
+2021-06-16 07:51:17,208
+
+  D⋅(-V_c + V_g)               
+- ────────────── + 2⋅\Delta i_L
+       L⋅fₛ                     solved for 
+C=
+∅
+2021-06-16 07:51:17,212
+
+                 0.25⋅\Delta i_L
+2⋅C⋅\Delta v_C - ───────────────
+                        fₛ       solved for 
+C=
+⎧0.125⋅\Delta i_L⎫
+⎨────────────────⎬
+⎩ \Delta v_C⋅fₛ  ⎭
+2021-06-16 07:51:17,218
+
+      V_c
+i_L - ───
+       R  solved for 
+C=
+∅
+2021-06-16 07:51:17,218
+							Done with 
+C
+2021-06-16 07:51:17,218
+							so far C = 
+							OrderedSet([0.125*\Delta i_L/(\Delta v_C*f_s)])
+2021-06-16 07:51:17,219
+							solution to C is: 
+							0.125⋅\Delta i_L
+							────────────────
+							 \Delta v_C⋅fₛ   
+2021-06-16 07:51:17,219
+							recursesym: 
+							[\Delta i_L, D, V_c, V_g, M, L, fₛ, C]
+2021-06-16 07:51:17,219
+							calling solver looking for 
+							\Delta i_L
+2021-06-16 07:51:17,219
+								base case
+2021-06-16 07:51:17,219
+returning: delta_iL=set()
+2021-06-16 07:51:17,219
+							recursesym: 
+							[\Delta i_L, D, V_c, V_g, M, L, fₛ, C]
+2021-06-16 07:51:17,219
+							calling solver looking for 
+							\Delta v_C
+2021-06-16 07:51:17,219
+								adding detla_vC to [\Delta i_L, D, V_c, V_g, M, L, f_s, C]
+2021-06-16 07:51:17,220
+looking for 
+\Delta v_C
+2021-06-16 07:51:17,285
+nonlinsolve returns: 
+0.125⋅\Delta i_L
+────────────────
+      C⋅fₛ      
+2021-06-16 07:51:17,287
+
+D⋅(-V_c + V_g) + (1 - D)⋅(-V_c - V_g) solved for 
+\Delta v_C=
+∅
+2021-06-16 07:51:17,287
+
+    V_c
+M - ───
+    V_g solved for 
+\Delta v_C=
+∅
+2021-06-16 07:51:17,289
+
+  D⋅(-V_c + V_g)               
+- ────────────── + 2⋅\Delta i_L
+       L⋅fₛ                     solved for 
+\Delta v_C=
+∅
+2021-06-16 07:51:17,293
+
+                 0.25⋅\Delta i_L
+2⋅C⋅\Delta v_C - ───────────────
+                        fₛ       solved for 
+\Delta v_C=
+⎧0.125⋅\Delta i_L⎫
+⎨────────────────⎬
+⎩      C⋅fₛ      ⎭
+2021-06-16 07:51:17,300
+
+      V_c
+i_L - ───
+       R  solved for 
+\Delta v_C=
+∅
+2021-06-16 07:51:17,300
+								Done with 
+\Delta v_C
+2021-06-16 07:51:17,300
+								so far detla_vC = 
+								OrderedSet([0.125*\Delta i_L/(C*f_s)])
+2021-06-16 07:51:17,300
+								solution to detla_vC is: 
+								0.125⋅\Delta i_L
+								────────────────
+								      C⋅fₛ       
+2021-06-16 07:51:17,301
+								recursesym: 
+								[\Delta i_L, D, V_c, V_g, M, L, fₛ, C, \Delta v_C]
+2021-06-16 07:51:17,301
+								calling solver looking for 
+								C
+2021-06-16 07:51:17,301
+									base case
+2021-06-16 07:51:17,301
+returning: C=set()
+2021-06-16 07:51:17,301
+								recursesym: 
+								[\Delta i_L, D, V_c, V_g, M, L, fₛ, C, \Delta v_C]
+2021-06-16 07:51:17,301
+								calling solver looking for 
+								\Delta i_L
+2021-06-16 07:51:17,301
+									base case
+2021-06-16 07:51:17,301
+returning: delta_iL=set()
+2021-06-16 07:51:17,302
+								recursesym: 
+								[\Delta i_L, D, V_c, V_g, M, L, fₛ, C, \Delta v_C]
+2021-06-16 07:51:17,302
+								calling solver looking for 
+								fₛ
+2021-06-16 07:51:17,302
+									base case
+2021-06-16 07:51:17,302
+returning: f_s=set()
+2021-06-16 07:51:17,302
+end of function, recursesym: {\Delta i_L: set(), D: set(), V_c: set(), V_g: set(), M: OrderedSet([V_c/V_g]), L: set(), f_s: set(), C: set(), \Delta v_C: set()}
+2021-06-16 07:51:17,302
+returning: 
+								OrderedSet([0.125*\Delta i_L/(C*f_s)])
+2021-06-16 07:51:17,307
+							sub-ing in 
+							0.125⋅\Delta i_L
+							────────────────
+							      C⋅fₛ       for 
+							\Delta v_C
+2021-06-16 07:51:17,307
+							and found 
+							1.0⋅C
+2021-06-16 07:51:17,308
+							recursesym: 
+							[\Delta i_L, D, V_c, V_g, M, L, fₛ, C, \Delta v_C]
+2021-06-16 07:51:17,308
+							calling solver looking for 
+							fₛ
+2021-06-16 07:51:17,308
+									base case
+2021-06-16 07:51:17,308
+returning: f_s=set()
+2021-06-16 07:51:17,308
+end of function, recursesym: {\Delta i_L: set(), D: set(), V_c: set(), V_g: set(), M: OrderedSet([V_c/V_g]), L: set(), f_s: set(), C: set(), \Delta v_C: OrderedSet([0.125*\Delta i_L/(C*f_s)])}
+2021-06-16 07:51:17,308
+returning: 
+							OrderedSet([0.125*\Delta i_L/(\Delta v_C*f_s)])
+2021-06-16 07:51:17,313
+						sub-ing in 
+						0.125⋅\Delta i_L
+						────────────────
+						 \Delta v_C⋅fₛ   for 
+						C
+2021-06-16 07:51:17,313
+						and found 
+						1.0⋅fₛ
+2021-06-16 07:51:17,314
+						recursesym: 
+						[\Delta i_L, D, V_c, V_g, M, L, fₛ, C, \Delta v_C]
+2021-06-16 07:51:17,314
+						calling solver looking for 
+						\Delta i_L
+2021-06-16 07:51:17,314
+									base case
+2021-06-16 07:51:17,314
+returning: delta_iL=set()
+2021-06-16 07:51:17,314
+						recursesym: 
+						[\Delta i_L, D, V_c, V_g, M, L, fₛ, C, \Delta v_C]
+2021-06-16 07:51:17,314
+						calling solver looking for 
+						\Delta v_C
+2021-06-16 07:51:17,314
+									base case
+2021-06-16 07:51:17,314
+returning: detla_vC=OrderedSet([0.125*\Delta i_L/(C*f_s)])
+2021-06-16 07:51:17,317
+						sub-ing in 
+						0.125⋅\Delta i_L
+						────────────────
+						      C⋅fₛ       for 
+						\Delta v_C
+2021-06-16 07:51:17,317
+						and found 
+						1.0⋅fₛ
+2021-06-16 07:51:17,318
+end of function, recursesym: {\Delta i_L: set(), D: set(), V_c: set(), V_g: set(), M: OrderedSet([V_c/V_g]), L: set(), f_s: set(), C: OrderedSet([0.125*\Delta i_L/(\Delta v_C*f_s)]), \Delta v_C: OrderedSet([0.125*\Delta i_L/(C*f_s)])}
+2021-06-16 07:51:17,318
+returning: 
+						OrderedSet([D*(-V_c + V_g)/(2*L*\Delta i_L), 0.125*\Delta i_L/(C*\Delta v_C)])
+2021-06-16 07:51:17,320
+					sub-ing in 
+					D⋅(-V_c + V_g)
+					──────────────
+					2⋅L⋅\Delta i_L for 
+					fₛ
+2021-06-16 07:51:17,320
+					and found 
+					L
+2021-06-16 07:51:17,344
+					sub-ing in 
+					0.125⋅\Delta i_L
+					────────────────
+					  C⋅\Delta v_C   for 
+					fₛ
+2021-06-16 07:51:17,345
+					and found 
+					4.0⋅C⋅D⋅\Delta v_C⋅(-V_c + V_g)
+					───────────────────────────────
+					                    2          
+					          \Delta i_L           
+2021-06-16 07:51:17,346
+end of function, recursesym: {\Delta i_L: set(), D: set(), V_c: set(), V_g: set(), M: OrderedSet([V_c/V_g]), L: set(), f_s: OrderedSet([D*(-V_c + V_g)/(2*L*\Delta i_L), 0.125*\Delta i_L/(C*\Delta v_C)]), C: OrderedSet([0.125*\Delta i_L/(\Delta v_C*f_s)]), \Delta v_C: OrderedSet([0.125*\Delta i_L/(C*f_s)])}
+2021-06-16 07:51:17,346
+returning: 
+					OrderedSet([D*(-V_c + V_g)/(2*\Delta i_L*f_s), 4.0*C*D*\Delta v_C*(-V_c + V_g)
+					/\Delta i_L**2])
+2021-06-16 07:51:17,347
+			sub-ing in 
+			 D⋅(-V_c + V_g)
+			───────────────
+			2⋅\Delta i_L⋅fₛ for 
+			L
+2021-06-16 07:51:17,347
+			and found 
+			V_g
+2021-06-16 07:51:17,380
+			sub-ing in 
+			4.0⋅C⋅D⋅\Delta v_C⋅(-V_c + V_g)
+			───────────────────────────────
+			                    2          
+			          \Delta i_L            for 
+			L
+2021-06-16 07:51:17,381
+			and found 
+			8.0⋅C⋅\Delta v_C⋅fₛ⋅(-V_c + V_g)      
+			──────────────────────────────── + V_c
+			           \Delta i_L                 
+2021-06-16 07:51:17,381
+			recursesym: 
+			[\Delta i_L, D, V_c, V_g, M, L, fₛ, C, \Delta v_C]
+2021-06-16 07:51:17,381
+			calling solver looking for 
+			V_c
+2021-06-16 07:51:17,381
+									base case
+2021-06-16 07:51:17,382
+returning: V_c=set()
+2021-06-16 07:51:17,382
+			recursesym: 
+			[\Delta i_L, D, V_c, V_g, M, L, fₛ, C, \Delta v_C]
+2021-06-16 07:51:17,382
+			calling solver looking for 
+			\Delta i_L
+2021-06-16 07:51:17,382
+									base case
+2021-06-16 07:51:17,382
+returning: delta_iL=set()
+2021-06-16 07:51:17,382
+			recursesym: 
+			[\Delta i_L, D, V_c, V_g, M, L, fₛ, C, \Delta v_C]
+2021-06-16 07:51:17,382
+			calling solver looking for 
+			fₛ
+2021-06-16 07:51:17,382
+									base case
+2021-06-16 07:51:17,383
+returning: f_s=OrderedSet([D*(-V_c + V_g)/(2*L*\Delta i_L), 0.125*\Delta i_L/(C*\Delta v_C)])
+2021-06-16 07:51:17,384
+			sub-ing in 
+			D⋅(-V_c + V_g)
+			──────────────
+			2⋅L⋅\Delta i_L for 
+			fₛ
+2021-06-16 07:51:17,384
+			and found 
+			V_g
+2021-06-16 07:51:17,410
+			sub-ing in 
+			0.125⋅\Delta i_L
+			────────────────
+			  C⋅\Delta v_C   for 
+			fₛ
+2021-06-16 07:51:17,411
+			and found 
+			                       2
+			      0.25⋅L⋅\Delta i_L 
+			V_c + ──────────────────
+			        C⋅D⋅\Delta v_C  
+2021-06-16 07:51:17,412
+end of function, recursesym: {\Delta i_L: set(), D: set(), V_c: set(), V_g: set(), M: OrderedSet([V_c/V_g]), L: OrderedSet([D*(-V_c + V_g)/(2*\Delta i_L*f_s), 4.0*C*D*\Delta v_C*(-V_c + V_g)/\Delta i_L**2]), f_s: OrderedSet([D*(-V_c + V_g)/(2*L*\Delta i_L), 0.125*\Delta i_L/(C*\Delta v_C)]), C: OrderedSet([0.125*\Delta i_L/(\Delta v_C*f_s)]), \Delta v_C: OrderedSet([0.125*\Delta i_L/(C*f_s)])}
+2021-06-16 07:51:17,413
+returning: 
+			OrderedSet([V_c/(2*D - 1), V_c/M, V_c + 2*L*\Delta i_L*f_s/D, V_c + 0.25*L*\De
+			lta i_L**2/(C*D*\Delta v_C)])
+2021-06-16 07:51:17,413
+		sub-ing in 
+		  V_c  
+		───────
+		2⋅D - 1 for 
+		V_g
+2021-06-16 07:51:17,413
+		and found 
+		V_c
+2021-06-16 07:51:17,424
+		sub-ing in 
+		V_c
+		───
+		 M  for 
+		V_g
+2021-06-16 07:51:17,424
+		and found 
+		V_c⋅(2⋅D - 1)
+		─────────────
+		      M      
+2021-06-16 07:51:17,447
+		sub-ing in 
+		      2⋅L⋅\Delta i_L⋅fₛ
+		V_c + ─────────────────
+		              D         for 
+		V_g
+2021-06-16 07:51:17,447
+		and found 
+		          ⎛      2⋅L⋅\Delta i_L⋅fₛ⎞
+		(2⋅D - 1)⋅⎜V_c + ─────────────────⎟
+		          ⎝              D        ⎠
+2021-06-16 07:51:17,489
+		sub-ing in 
+		                       2
+		      0.25⋅L⋅\Delta i_L 
+		V_c + ──────────────────
+		        C⋅D⋅\Delta v_C   for 
+		V_g
+2021-06-16 07:51:17,490
+		and found 
+		          ⎛                       2⎞
+		          ⎜      0.25⋅L⋅\Delta i_L ⎟
+		(2⋅D - 1)⋅⎜V_c + ──────────────────⎟
+		          ⎝        C⋅D⋅\Delta v_C  ⎠
+2021-06-16 07:51:17,490
+		solution to V_c is: 
+		M⋅V_g 
+2021-06-16 07:51:17,490
+		recursesym: 
+		[\Delta i_L, D, V_c, V_g, M, L, fₛ, C, \Delta v_C]
+2021-06-16 07:51:17,490
+		calling solver looking for 
+		M
+2021-06-16 07:51:17,490
+									base case
+2021-06-16 07:51:17,491
+returning: M=OrderedSet([V_c/V_g])
+2021-06-16 07:51:17,491
+		sub-ing in 
+		V_c
+		───
+		V_g for 
+		M
+2021-06-16 07:51:17,491
+		and found 
+		V_c
+2021-06-16 07:51:17,491
+		recursesym: 
+		[\Delta i_L, D, V_c, V_g, M, L, fₛ, C, \Delta v_C]
+2021-06-16 07:51:17,491
+		calling solver looking for 
+		V_g
+2021-06-16 07:51:17,491
+									base case
+2021-06-16 07:51:17,492
+returning: V_g=OrderedSet([V_c/(2*D - 1), V_c/M, V_c + 2*L*\Delta i_L*f_s/D, V_c + 0.25*L*\De
+lta i_L**2/(C*D*\Delta v_C)])
+2021-06-16 07:51:17,498
+		sub-ing in 
+		  V_c  
+		───────
+		2⋅D - 1 for 
+		V_g
+2021-06-16 07:51:17,499
+		and found 
+		 M⋅V_c 
+		───────
+		2⋅D - 1
+2021-06-16 07:51:17,499
+		sub-ing in 
+		V_c
+		───
+		 M  for 
+		V_g
+2021-06-16 07:51:17,499
+		and found 
+		V_c
+2021-06-16 07:51:17,513
+		sub-ing in 
+		      2⋅L⋅\Delta i_L⋅fₛ
+		V_c + ─────────────────
+		              D         for 
+		V_g
+2021-06-16 07:51:17,513
+		and found 
+		  ⎛      2⋅L⋅\Delta i_L⋅fₛ⎞
+		M⋅⎜V_c + ─────────────────⎟
+		  ⎝              D        ⎠
+2021-06-16 07:51:17,540
+		sub-ing in 
+		                       2
+		      0.25⋅L⋅\Delta i_L 
+		V_c + ──────────────────
+		        C⋅D⋅\Delta v_C   for 
+		V_g
+2021-06-16 07:51:17,540
+		and found 
+		  ⎛                       2⎞
+		  ⎜      0.25⋅L⋅\Delta i_L ⎟
+		M⋅⎜V_c + ──────────────────⎟
+		  ⎝        C⋅D⋅\Delta v_C  ⎠
+2021-06-16 07:51:17,541
+		solution to V_c is: 
+		      2⋅L⋅\Delta i_L⋅fₛ
+		V_g - ─────────────────
+		              D         
+2021-06-16 07:51:17,541
+		recursesym: 
+		[\Delta i_L, D, V_c, V_g, M, L, fₛ, C, \Delta v_C]
+2021-06-16 07:51:17,541
+		calling solver looking for 
+		D
+2021-06-16 07:51:17,541
+									base case
+2021-06-16 07:51:17,541
+returning: D=set()
+2021-06-16 07:51:17,542
+		recursesym: 
+		[\Delta i_L, D, V_c, V_g, M, L, fₛ, C, \Delta v_C]
+2021-06-16 07:51:17,542
+		calling solver looking for 
+		L
+2021-06-16 07:51:17,542
+									base case
+2021-06-16 07:51:17,542
+returning: L=OrderedSet([D*(-V_c + V_g)/(2*\Delta i_L*f_s), 4.0*C*D*\Delta v_C*(-V_c + V_g)
+/\Delta i_L**2])
+2021-06-16 07:51:17,543
+		sub-ing in 
+		 D⋅(-V_c + V_g)
+		───────────────
+		2⋅\Delta i_L⋅fₛ for 
+		L
+2021-06-16 07:51:17,543
+		and found 
+		V_c
+2021-06-16 07:51:17,572
+		sub-ing in 
+		4.0⋅C⋅D⋅\Delta v_C⋅(-V_c + V_g)
+		───────────────────────────────
+		                    2          
+		          \Delta i_L            for 
+		L
+2021-06-16 07:51:17,573
+		and found 
+		  8.0⋅C⋅\Delta v_C⋅fₛ⋅(-V_c + V_g)      
+		- ──────────────────────────────── + V_g
+		             \Delta i_L                 
+2021-06-16 07:51:17,573
+		recursesym: 
+		[\Delta i_L, D, V_c, V_g, M, L, fₛ, C, \Delta v_C]
+2021-06-16 07:51:17,573
+		calling solver looking for 
+		V_g
+2021-06-16 07:51:17,573
+									base case
+2021-06-16 07:51:17,574
+returning: V_g=OrderedSet([V_c/(2*D - 1), V_c/M, V_c + 2*L*\Delta i_L*f_s/D, V_c + 0.25*L*\De
+lta i_L**2/(C*D*\Delta v_C)])
+2021-06-16 07:51:17,605
+		sub-ing in 
+		  V_c  
+		───────
+		2⋅D - 1 for 
+		V_g
+2021-06-16 07:51:17,605
+		and found 
+		  V_c     2⋅L⋅\Delta i_L⋅fₛ
+		─────── - ─────────────────
+		2⋅D - 1           D        
+2021-06-16 07:51:17,619
+		sub-ing in 
+		V_c
+		───
+		 M  for 
+		V_g
+2021-06-16 07:51:17,620
+		and found 
+		V_c   2⋅L⋅\Delta i_L⋅fₛ
+		─── - ─────────────────
+		 M            D        
+2021-06-16 07:51:17,621
+		sub-ing in 
+		      2⋅L⋅\Delta i_L⋅fₛ
+		V_c + ─────────────────
+		              D         for 
+		V_g
+2021-06-16 07:51:17,621
+		and found 
+		V_c
+2021-06-16 07:51:17,659
+		sub-ing in 
+		                       2
+		      0.25⋅L⋅\Delta i_L 
+		V_c + ──────────────────
+		        C⋅D⋅\Delta v_C   for 
+		V_g
+2021-06-16 07:51:17,660
+		and found 
+		                                           2
+		      2⋅L⋅\Delta i_L⋅fₛ   0.25⋅L⋅\Delta i_L 
+		V_c - ───────────────── + ──────────────────
+		              D             C⋅D⋅\Delta v_C  
+2021-06-16 07:51:17,660
+		recursesym: 
+		[\Delta i_L, D, V_c, V_g, M, L, fₛ, C, \Delta v_C]
+2021-06-16 07:51:17,660
+		calling solver looking for 
+		\Delta i_L
+2021-06-16 07:51:17,660
+									base case
+2021-06-16 07:51:17,660
+returning: delta_iL=set()
+2021-06-16 07:51:17,660
+		recursesym: 
+		[\Delta i_L, D, V_c, V_g, M, L, fₛ, C, \Delta v_C]
+2021-06-16 07:51:17,661
+		calling solver looking for 
+		fₛ
+2021-06-16 07:51:17,661
+									base case
+2021-06-16 07:51:17,661
+returning: f_s=OrderedSet([D*(-V_c + V_g)/(2*L*\Delta i_L), 0.125*\Delta i_L/(C*\Delta v_C)])
+2021-06-16 07:51:17,662
+		sub-ing in 
+		D⋅(-V_c + V_g)
+		──────────────
+		2⋅L⋅\Delta i_L for 
+		fₛ
+2021-06-16 07:51:17,662
+		and found 
+		V_c
+2021-06-16 07:51:17,685
+		sub-ing in 
+		0.125⋅\Delta i_L
+		────────────────
+		  C⋅\Delta v_C   for 
+		fₛ
+2021-06-16 07:51:17,686
+		and found 
+		                       2
+		      0.25⋅L⋅\Delta i_L 
+		V_g - ──────────────────
+		        C⋅D⋅\Delta v_C  
+2021-06-16 07:51:17,686
+		solution to V_c is: 
+		R⋅i_L 
+2021-06-16 07:51:17,686
+		recursesym: 
+		[\Delta i_L, D, V_c, V_g, M, L, fₛ, C, \Delta v_C]
+2021-06-16 07:51:17,686
+		calling solver looking for 
+		R
+2021-06-16 07:51:17,686
+									adding R to [\Delta i_L, D, V_c, V_g, M, L, f_s, C, \Delta v_C]
+2021-06-16 07:51:17,686
+looking for 
+R
+2021-06-16 07:51:17,785
+nonlinsolve returns: 
+V_c
+───
+i_L
+2021-06-16 07:51:17,787
+
+D⋅(-V_c + V_g) + (1 - D)⋅(-V_c - V_g) solved for 
+R=
+∅
+2021-06-16 07:51:17,788
+
+    V_c
+M - ───
+    V_g solved for 
+R=
+∅
+2021-06-16 07:51:17,790
+
+  D⋅(-V_c + V_g)               
+- ────────────── + 2⋅\Delta i_L
+       L⋅fₛ                     solved for 
+R=
+∅
+2021-06-16 07:51:17,791
+
+                 0.25⋅\Delta i_L
+2⋅C⋅\Delta v_C - ───────────────
+                        fₛ       solved for 
+R=
+∅
+2021-06-16 07:51:17,799
+
+      V_c
+i_L - ───
+       R  solved for 
+R=
+⎧V_c⎫      
+⎨───⎬ \ {0}
+⎩i_L⎭      
+2021-06-16 07:51:17,801
+									Done with 
+R
+2021-06-16 07:51:17,801
+									so far R = 
+									OrderedSet([V_c/i_L])
+2021-06-16 07:51:17,802
+									solution to R is: 
+									V_c
+									───
+									i_L 
+2021-06-16 07:51:17,802
+									recursesym: 
+									[\Delta i_L, D, V_c, V_g, M, L, fₛ, C, \Delta v_C, R]
+2021-06-16 07:51:17,802
+									calling solver looking for 
+									V_c
+2021-06-16 07:51:17,802
+										base case
+2021-06-16 07:51:17,802
+returning: V_c=set()
+2021-06-16 07:51:17,803
+									recursesym: 
+									[\Delta i_L, D, V_c, V_g, M, L, fₛ, C, \Delta v_C, R]
+2021-06-16 07:51:17,803
+									calling solver looking for 
+									i_L
+2021-06-16 07:51:17,803
+										adding i_L to [\Delta i_L, D, V_c, V_g, M, L, f_s, C, \Delta v_C, R]
+2021-06-16 07:51:17,803
+looking for 
+i_L
+2021-06-16 07:51:17,860
+nonlinsolve returns: 
+V_c
+───
+ R 
+2021-06-16 07:51:17,861
+
+D⋅(-V_c + V_g) + (1 - D)⋅(-V_c - V_g) solved for 
+i_L=
+∅
+2021-06-16 07:51:17,862
+
+    V_c
+M - ───
+    V_g solved for 
+i_L=
+∅
+2021-06-16 07:51:17,863
+
+  D⋅(-V_c + V_g)               
+- ────────────── + 2⋅\Delta i_L
+       L⋅fₛ                     solved for 
+i_L=
+∅
+2021-06-16 07:51:17,864
+
+                 0.25⋅\Delta i_L
+2⋅C⋅\Delta v_C - ───────────────
+                        fₛ       solved for 
+i_L=
+∅
+2021-06-16 07:51:17,865
+
+      V_c
+i_L - ───
+       R  solved for 
+i_L=
+⎧V_c⎫
+⎨───⎬
+⎩ R ⎭
+2021-06-16 07:51:17,868
+										Done with 
+i_L
+2021-06-16 07:51:17,868
+										so far i_L = 
+										OrderedSet([V_c/R])
+2021-06-16 07:51:17,868
+										solution to i_L is: 
+										V_c
+										───
+										 R  
+2021-06-16 07:51:17,868
+										recursesym: 
+										[\Delta i_L, D, V_c, V_g, M, L, fₛ, C, \Delta v_C, R, i_L]
+2021-06-16 07:51:17,868
+										calling solver looking for 
+										R
+2021-06-16 07:51:17,868
+											base case
+2021-06-16 07:51:17,869
+returning: R=set()
+2021-06-16 07:51:17,869
+										recursesym: 
+										[\Delta i_L, D, V_c, V_g, M, L, fₛ, C, \Delta v_C, R, i_L]
+2021-06-16 07:51:17,869
+										calling solver looking for 
+										V_c
+2021-06-16 07:51:17,869
+											base case
+2021-06-16 07:51:17,869
+returning: V_c=set()
+2021-06-16 07:51:17,871
+end of function, recursesym: {\Delta i_L: set(), D: set(), V_c: set(), V_g: OrderedSet([V_c/(2*D - 1), V_c/M, V_c + 2*L*\Delta i_L*f_s/D, V_c + 0.25*L*\Delta i_L**2/(C*D*\Delta v_C)]), M: OrderedSet([V_c/V_g]), L: OrderedSet([D*(-V_c + V_g)/(2*\Delta i_L*f_s), 4.0*C*D*\Delta v_C*(-V_c + V_g)/\Delta i_L**2]), f_s: OrderedSet([D*(-V_c + V_g)/(2*L*\Delta i_L), 0.125*\Delta i_L/(C*\Delta v_C)]), C: OrderedSet([0.125*\Delta i_L/(\Delta v_C*f_s)]), \Delta v_C: OrderedSet([0.125*\Delta i_L/(C*f_s)]), R: set(), i_L: set()}
+2021-06-16 07:51:17,871
+returning: 
+										OrderedSet([V_c/R])
+2021-06-16 07:51:17,872
+									sub-ing in 
+									V_c
+									───
+									 R  for 
+									i_L
+2021-06-16 07:51:17,872
+									and found 
+									R
+2021-06-16 07:51:17,874
+end of function, recursesym: {\Delta i_L: set(), D: set(), V_c: set(), V_g: OrderedSet([V_c/(2*D - 1), V_c/M, V_c + 2*L*\Delta i_L*f_s/D, V_c + 0.25*L*\Delta i_L**2/(C*D*\Delta v_C)]), M: OrderedSet([V_c/V_g]), L: OrderedSet([D*(-V_c + V_g)/(2*\Delta i_L*f_s), 4.0*C*D*\Delta v_C*(-V_c + V_g)/\Delta i_L**2]), f_s: OrderedSet([D*(-V_c + V_g)/(2*L*\Delta i_L), 0.125*\Delta i_L/(C*\Delta v_C)]), C: OrderedSet([0.125*\Delta i_L/(\Delta v_C*f_s)]), \Delta v_C: OrderedSet([0.125*\Delta i_L/(C*f_s)]), R: set(), i_L: OrderedSet([V_c/R])}
+2021-06-16 07:51:17,874
+returning: 
+									OrderedSet([V_c/i_L])
+2021-06-16 07:51:17,874
+		sub-ing in 
+		V_c
+		───
+		i_L for 
+		R
+2021-06-16 07:51:17,874
+		and found 
+		V_c
+2021-06-16 07:51:17,874
+		recursesym: 
+		[\Delta i_L, D, V_c, V_g, M, L, fₛ, C, \Delta v_C, R, i_L]
+2021-06-16 07:51:17,874
+		calling solver looking for 
+		i_L
+2021-06-16 07:51:17,874
+											base case
+2021-06-16 07:51:17,875
+returning: i_L=OrderedSet([V_c/R])
+2021-06-16 07:51:17,875
+		sub-ing in 
+		V_c
+		───
+		 R  for 
+		i_L
+2021-06-16 07:51:17,875
+		and found 
+		V_c
+2021-06-16 07:51:17,877
+end of function, recursesym: {\Delta i_L: set(), D: set(), V_c: set(), V_g: OrderedSet([V_c/(2*D - 1), V_c/M, V_c + 2*L*\Delta i_L*f_s/D, V_c + 0.25*L*\Delta i_L**2/(C*D*\Delta v_C)]), M: OrderedSet([V_c/V_g]), L: OrderedSet([D*(-V_c + V_g)/(2*\Delta i_L*f_s), 4.0*C*D*\Delta v_C*(-V_c + V_g)/\Delta i_L**2]), f_s: OrderedSet([D*(-V_c + V_g)/(2*L*\Delta i_L), 0.125*\Delta i_L/(C*\Delta v_C)]), C: OrderedSet([0.125*\Delta i_L/(\Delta v_C*f_s)]), \Delta v_C: OrderedSet([0.125*\Delta i_L/(C*f_s)]), R: OrderedSet([V_c/i_L]), i_L: OrderedSet([V_c/R])}
+2021-06-16 07:51:17,878
+returning: 
+		OrderedSet([V_g*(2*D - 1), M*V_g, V_g - 2*L*\Delta i_L*f_s/D, R*i_L, V_g - 0.2
+		5*L*\Delta i_L**2/(C*D*\Delta v_C)])
+2021-06-16 07:51:17,885
+	sub-ing in 
+	V_g⋅(2⋅D - 1) for 
+	V_c
+2021-06-16 07:51:17,886
+	and found 
+	V_g⋅(2⋅D - 1) + V_g
+	───────────────────
+	       2⋅V_g       
+2021-06-16 07:51:17,892
+	sub-ing in 
+	M⋅V_g for 
+	V_c
+2021-06-16 07:51:17,892
+	and found 
+	M⋅V_g + V_g
+	───────────
+	   2⋅V_g   
+2021-06-16 07:51:17,909
+	sub-ing in 
+	      2⋅L⋅\Delta i_L⋅fₛ
+	V_g - ─────────────────
+	              D         for 
+	V_c
+2021-06-16 07:51:17,909
+	and found 
+	        2⋅L⋅\Delta i_L⋅fₛ
+	2⋅V_g - ─────────────────
+	                D        
+	─────────────────────────
+	          2⋅V_g          
+2021-06-16 07:51:17,919
+	sub-ing in 
+	R⋅i_L for 
+	V_c
+2021-06-16 07:51:17,919
+	and found 
+	R⋅i_L + V_g
+	───────────
+	   2⋅V_g   
+2021-06-16 07:51:17,950
+	sub-ing in 
+	                       2
+	      0.25⋅L⋅\Delta i_L 
+	V_g - ──────────────────
+	        C⋅D⋅\Delta v_C   for 
+	V_c
+2021-06-16 07:51:17,951
+	and found 
+	                         2
+	        0.25⋅L⋅\Delta i_L 
+	2⋅V_g - ──────────────────
+	          C⋅D⋅\Delta v_C  
+	──────────────────────────
+	          2⋅V_g           
+2021-06-16 07:51:17,952
+	recursesym: 
+	[\Delta i_L, D, V_c, V_g, M, L, fₛ, C, \Delta v_C, R, i_L]
+2021-06-16 07:51:17,952
+	calling solver looking for 
+	V_g
+2021-06-16 07:51:17,952
+											base case
+2021-06-16 07:51:17,952
+returning: V_g=OrderedSet([V_c/(2*D - 1), V_c/M, V_c + 2*L*\Delta i_L*f_s/D, V_c + 0.25*L*\De
+lta i_L**2/(C*D*\Delta v_C)])
+2021-06-16 07:51:17,959
+	sub-ing in 
+	  V_c  
+	───────
+	2⋅D - 1 for 
+	V_g
+2021-06-16 07:51:17,960
+	and found 
+	          ⎛        V_c  ⎞
+	(2⋅D - 1)⋅⎜V_c + ───────⎟
+	          ⎝      2⋅D - 1⎠
+	─────────────────────────
+	          2⋅V_c          
+2021-06-16 07:51:17,966
+	sub-ing in 
+	V_c
+	───
+	 M  for 
+	V_g
+2021-06-16 07:51:17,967
+	and found 
+	  ⎛      V_c⎞
+	M⋅⎜V_c + ───⎟
+	  ⎝       M ⎠
+	─────────────
+	    2⋅V_c    
+2021-06-16 07:51:18,001
+	sub-ing in 
+	      2⋅L⋅\Delta i_L⋅fₛ
+	V_c + ─────────────────
+	              D         for 
+	V_g
+2021-06-16 07:51:18,003
+	and found 
+	         2⋅L⋅\Delta i_L⋅fₛ 
+	 2⋅V_c + ───────────────── 
+	                 D         
+	───────────────────────────
+	  ⎛      2⋅L⋅\Delta i_L⋅fₛ⎞
+	2⋅⎜V_c + ─────────────────⎟
+	  ⎝              D        ⎠
+2021-06-16 07:51:18,064
+	sub-ing in 
+	                       2
+	      0.25⋅L⋅\Delta i_L 
+	V_c + ──────────────────
+	        C⋅D⋅\Delta v_C   for 
+	V_g
+2021-06-16 07:51:18,065
+	and found 
+	                          2 
+	         0.25⋅L⋅\Delta i_L  
+	 2⋅V_c + ────────────────── 
+	           C⋅D⋅\Delta v_C   
+	────────────────────────────
+	  ⎛                       2⎞
+	  ⎜      0.25⋅L⋅\Delta i_L ⎟
+	2⋅⎜V_c + ──────────────────⎟
+	  ⎝        C⋅D⋅\Delta v_C  ⎠
+2021-06-16 07:51:18,066
+	solution to D is: 
+	-2⋅L⋅\Delta i_L⋅fₛ 
+	───────────────────
+	     V_c - V_g      
+2021-06-16 07:51:18,066
+	recursesym: 
+	[\Delta i_L, D, V_c, V_g, M, L, fₛ, C, \Delta v_C, R, i_L]
+2021-06-16 07:51:18,066
+	calling solver looking for 
+	L
+2021-06-16 07:51:18,066
+											base case
+2021-06-16 07:51:18,067
+returning: L=OrderedSet([D*(-V_c + V_g)/(2*\Delta i_L*f_s), 4.0*C*D*\Delta v_C*(-V_c + V_g)
+/\Delta i_L**2])
+2021-06-16 07:51:18,068
+	sub-ing in 
+	 D⋅(-V_c + V_g)
+	───────────────
+	2⋅\Delta i_L⋅fₛ for 
+	L
+2021-06-16 07:51:18,069
+	and found 
+	-D⋅(-V_c + V_g) 
+	────────────────
+	   V_c - V_g    
+2021-06-16 07:51:18,079
+	sub-ing in 
+	4.0⋅C⋅D⋅\Delta v_C⋅(-V_c + V_g)
+	───────────────────────────────
+	                    2          
+	          \Delta i_L            for 
+	L
+2021-06-16 07:51:18,080
+	and found 
+	-8.0⋅C⋅D⋅\Delta v_C⋅fₛ⋅(-V_c + V_g) 
+	────────────────────────────────────
+	       \Delta i_L⋅(V_c - V_g)       
+2021-06-16 07:51:18,080
+	recursesym: 
+	[\Delta i_L, D, V_c, V_g, M, L, fₛ, C, \Delta v_C, R, i_L]
+2021-06-16 07:51:18,080
+	calling solver looking for 
+	V_c
+2021-06-16 07:51:18,080
+											base case
+2021-06-16 07:51:18,081
+returning: V_c=OrderedSet([V_g*(2*D - 1), M*V_g, V_g - 2*L*\Delta i_L*f_s/D, R*i_L, V_g - 0.2
+5*L*\Delta i_L**2/(C*D*\Delta v_C)])
+2021-06-16 07:51:18,104
+	sub-ing in 
+	V_g⋅(2⋅D - 1) for 
+	V_c
+2021-06-16 07:51:18,105
+	and found 
+	-2⋅L⋅\Delta i_L⋅fₛ 
+	───────────────────
+	V_g⋅(2⋅D - 1) - V_g
+2021-06-16 07:51:18,120
+	sub-ing in 
+	M⋅V_g for 
+	V_c
+2021-06-16 07:51:18,120
+	and found 
+	-2⋅L⋅\Delta i_L⋅fₛ 
+	───────────────────
+	    M⋅V_g - V_g    
+2021-06-16 07:51:18,121
+	sub-ing in 
+	      2⋅L⋅\Delta i_L⋅fₛ
+	V_g - ─────────────────
+	              D         for 
+	V_c
+2021-06-16 07:51:18,122
+	and found 
+	D
+2021-06-16 07:51:18,133
+	sub-ing in 
+	R⋅i_L for 
+	V_c
+2021-06-16 07:51:18,134
+	and found 
+	-2⋅L⋅\Delta i_L⋅fₛ 
+	───────────────────
+	    R⋅i_L - V_g    
+2021-06-16 07:51:18,140
+	sub-ing in 
+	                       2
+	      0.25⋅L⋅\Delta i_L 
+	V_g - ──────────────────
+	        C⋅D⋅\Delta v_C   for 
+	V_c
+2021-06-16 07:51:18,140
+	and found 
+	8.0⋅C⋅D⋅\Delta v_C⋅fₛ
+	─────────────────────
+	      \Delta i_L     
+2021-06-16 07:51:18,141
+	recursesym: 
+	[\Delta i_L, D, V_c, V_g, M, L, fₛ, C, \Delta v_C, R, i_L]
+2021-06-16 07:51:18,141
+	calling solver looking for 
+	V_g
+2021-06-16 07:51:18,141
+											base case
+2021-06-16 07:51:18,142
+returning: V_g=OrderedSet([V_c/(2*D - 1), V_c/M, V_c + 2*L*\Delta i_L*f_s/D, V_c + 0.25*L*\De
+lta i_L**2/(C*D*\Delta v_C)])
+2021-06-16 07:51:18,171
+	sub-ing in 
+	  V_c  
+	───────
+	2⋅D - 1 for 
+	V_g
+2021-06-16 07:51:18,172
+	and found 
+	-2⋅L⋅\Delta i_L⋅fₛ 
+	───────────────────
+	           V_c     
+	   V_c - ───────   
+	         2⋅D - 1   
+2021-06-16 07:51:18,189
+	sub-ing in 
+	V_c
+	───
+	 M  for 
+	V_g
+2021-06-16 07:51:18,190
+	and found 
+	-2⋅L⋅\Delta i_L⋅fₛ 
+	───────────────────
+	           V_c     
+	     V_c - ───     
+	            M      
+2021-06-16 07:51:18,191
+	sub-ing in 
+	      2⋅L⋅\Delta i_L⋅fₛ
+	V_c + ─────────────────
+	              D         for 
+	V_g
+2021-06-16 07:51:18,191
+	and found 
+	D
+2021-06-16 07:51:18,196
+	sub-ing in 
+	                       2
+	      0.25⋅L⋅\Delta i_L 
+	V_c + ──────────────────
+	        C⋅D⋅\Delta v_C   for 
+	V_g
+2021-06-16 07:51:18,196
+	and found 
+	8.0⋅C⋅D⋅\Delta v_C⋅fₛ
+	─────────────────────
+	      \Delta i_L     
+2021-06-16 07:51:18,196
+	recursesym: 
+	[\Delta i_L, D, V_c, V_g, M, L, fₛ, C, \Delta v_C, R, i_L]
+2021-06-16 07:51:18,197
+	calling solver looking for 
+	\Delta i_L
+2021-06-16 07:51:18,197
+											base case
+2021-06-16 07:51:18,197
+returning: delta_iL=set()
+2021-06-16 07:51:18,197
+	recursesym: 
+	[\Delta i_L, D, V_c, V_g, M, L, fₛ, C, \Delta v_C, R, i_L]
+2021-06-16 07:51:18,197
+	calling solver looking for 
+	fₛ
+2021-06-16 07:51:18,197
+											base case
+2021-06-16 07:51:18,197
+returning: f_s=OrderedSet([D*(-V_c + V_g)/(2*L*\Delta i_L), 0.125*\Delta i_L/(C*\Delta v_C)])
+2021-06-16 07:51:18,199
+	sub-ing in 
+	D⋅(-V_c + V_g)
+	──────────────
+	2⋅L⋅\Delta i_L for 
+	fₛ
+2021-06-16 07:51:18,200
+	and found 
+	-D⋅(-V_c + V_g) 
+	────────────────
+	   V_c - V_g    
+2021-06-16 07:51:18,225
+	sub-ing in 
+	0.125⋅\Delta i_L
+	────────────────
+	  C⋅\Delta v_C   for 
+	fₛ
+2021-06-16 07:51:18,225
+	and found 
+	                    2   
+	  -0.25⋅L⋅\Delta i_L    
+	────────────────────────
+	C⋅\Delta v_C⋅(V_c - V_g)
+2021-06-16 07:51:18,228
+end of function, recursesym: {\Delta i_L: set(), D: set(), V_c: OrderedSet([V_g*(2*D - 1), M*V_g, V_g - 2*L*\Delta i_L*f_s/D, R*i_L, V_g - 0.25*L*\Delta i_L**2/(C*D*\Delta v_C)]), V_g: OrderedSet([V_c/(2*D - 1), V_c/M, V_c + 2*L*\Delta i_L*f_s/D, V_c + 0.25*L*\Delta i_L**2/(C*D*\Delta v_C)]), M: OrderedSet([V_c/V_g]), L: OrderedSet([D*(-V_c + V_g)/(2*\Delta i_L*f_s), 4.0*C*D*\Delta v_C*(-V_c + V_g)/\Delta i_L**2]), f_s: OrderedSet([D*(-V_c + V_g)/(2*L*\Delta i_L), 0.125*\Delta i_L/(C*\Delta v_C)]), C: OrderedSet([0.125*\Delta i_L/(\Delta v_C*f_s)]), \Delta v_C: OrderedSet([0.125*\Delta i_L/(C*f_s)]), R: OrderedSet([V_c/i_L]), i_L: OrderedSet([V_c/R])}
+2021-06-16 07:51:18,230
+returning: 
+	OrderedSet([(V_c + V_g)/(2*V_g), -2*L*\Delta i_L*f_s/(V_c - V_g), M/2 + 1/2, (
+	R*i_L + V_g)/(2*V_g), -2*L*\Delta i_L*f_s/(V_g*(M - 1)), -2*L*\Delta i_L*f_s/(
+	R*i_L - V_g), -2*L*M*\Delta i_L*f_s/(V_c*(M - 1)), -0.25*L*\Delta i_L**2/(C*\D
+	elta v_C*(V_c - V_g))])
+2021-06-16 07:51:18,253
+sub-ing in 
+V_c + V_g
+─────────
+  2⋅V_g   for 
+D
+2021-06-16 07:51:18,254
+and found 
+(-V_c + V_g)⋅(V_c + V_g)
+────────────────────────
+       4⋅L⋅V_g⋅fₛ       
+2021-06-16 07:51:18,255
+sub-ing in 
+-2⋅L⋅\Delta i_L⋅fₛ 
+───────────────────
+     V_c - V_g      for 
+D
+2021-06-16 07:51:18,256
+and found 
+-\Delta i_L⋅(-V_c + V_g) 
+─────────────────────────
+        V_c - V_g        
+2021-06-16 07:51:18,276
+sub-ing in 
+M   1
+─ + ─
+2   2 for 
+D
+2021-06-16 07:51:18,277
+and found 
+⎛M   1⎞             
+⎜─ + ─⎟⋅(-V_c + V_g)
+⎝2   2⎠             
+────────────────────
+       2⋅L⋅fₛ       
+2021-06-16 07:51:18,301
+sub-ing in 
+R⋅i_L + V_g
+───────────
+   2⋅V_g    for 
+D
+2021-06-16 07:51:18,301
+and found 
+(-V_c + V_g)⋅(R⋅i_L + V_g)
+──────────────────────────
+        4⋅L⋅V_g⋅fₛ        
+2021-06-16 07:51:18,319
+sub-ing in 
+-2⋅L⋅\Delta i_L⋅fₛ 
+───────────────────
+    V_g⋅(M - 1)     for 
+D
+2021-06-16 07:51:18,320
+and found 
+-\Delta i_L⋅(-V_c + V_g) 
+─────────────────────────
+       V_g⋅(M - 1)       
+2021-06-16 07:51:18,335
+sub-ing in 
+-2⋅L⋅\Delta i_L⋅fₛ 
+───────────────────
+    R⋅i_L - V_g     for 
+D
+2021-06-16 07:51:18,336
+and found 
+-\Delta i_L⋅(-V_c + V_g) 
+─────────────────────────
+       R⋅i_L - V_g       
+2021-06-16 07:51:18,352
+sub-ing in 
+-2⋅L⋅M⋅\Delta i_L⋅fₛ 
+─────────────────────
+     V_c⋅(M - 1)      for 
+D
+2021-06-16 07:51:18,353
+and found 
+-M⋅\Delta i_L⋅(-V_c + V_g) 
+───────────────────────────
+        V_c⋅(M - 1)        
+2021-06-16 07:51:18,365
+sub-ing in 
+                    2   
+  -0.25⋅L⋅\Delta i_L    
+────────────────────────
+C⋅\Delta v_C⋅(V_c - V_g) for 
+D
+2021-06-16 07:51:18,366
+and found 
+                 2              
+-0.125⋅\Delta i_L ⋅(-V_c + V_g) 
+────────────────────────────────
+  C⋅\Delta v_C⋅fₛ⋅(V_c - V_g)   
+2021-06-16 07:51:18,367
+recursesym: 
+[\Delta i_L, D, V_c, V_g, M, L, fₛ, C, \Delta v_C, R, i_L]
+2021-06-16 07:51:18,367
+calling solver looking for 
+L
+2021-06-16 07:51:18,367
+											base case
+2021-06-16 07:51:18,367
+returning: L=OrderedSet([D*(-V_c + V_g)/(2*\Delta i_L*f_s), 4.0*C*D*\Delta v_C*(-V_c + V_g)
+/\Delta i_L**2])
+2021-06-16 07:51:18,369
+sub-ing in 
+ D⋅(-V_c + V_g)
+───────────────
+2⋅\Delta i_L⋅fₛ for 
+L
+2021-06-16 07:51:18,369
+and found 
+\Delta i_L
+2021-06-16 07:51:18,377
+sub-ing in 
+4.0⋅C⋅D⋅\Delta v_C⋅(-V_c + V_g)
+───────────────────────────────
+                    2          
+          \Delta i_L            for 
+L
+2021-06-16 07:51:18,377
+and found 
+                2
+0.125⋅\Delta i_L 
+─────────────────
+ C⋅\Delta v_C⋅fₛ 
+2021-06-16 07:51:18,377
+recursesym: 
+[\Delta i_L, D, V_c, V_g, M, L, fₛ, C, \Delta v_C, R, i_L]
+2021-06-16 07:51:18,377
+calling solver looking for 
+V_c
+2021-06-16 07:51:18,377
+											base case
+2021-06-16 07:51:18,378
+returning: V_c=OrderedSet([V_g*(2*D - 1), M*V_g, V_g - 2*L*\Delta i_L*f_s/D, R*i_L, V_g - 0.2
+5*L*\Delta i_L**2/(C*D*\Delta v_C)])
+2021-06-16 07:51:18,398
+sub-ing in 
+V_g⋅(2⋅D - 1) for 
+V_c
+2021-06-16 07:51:18,399
+and found 
+D⋅(-V_g⋅(2⋅D - 1) + V_g)
+────────────────────────
+         2⋅L⋅fₛ         
+2021-06-16 07:51:18,417
+sub-ing in 
+M⋅V_g for 
+V_c
+2021-06-16 07:51:18,417
+and found 
+D⋅(-M⋅V_g + V_g)
+────────────────
+     2⋅L⋅fₛ     
+2021-06-16 07:51:18,418
+sub-ing in 
+      2⋅L⋅\Delta i_L⋅fₛ
+V_g - ─────────────────
+              D         for 
+V_c
+2021-06-16 07:51:18,418
+and found 
+\Delta i_L
+2021-06-16 07:51:18,435
+sub-ing in 
+R⋅i_L for 
+V_c
+2021-06-16 07:51:18,436
+and found 
+D⋅(-R⋅i_L + V_g)
+────────────────
+     2⋅L⋅fₛ     
+2021-06-16 07:51:18,443
+sub-ing in 
+                       2
+      0.25⋅L⋅\Delta i_L 
+V_g - ──────────────────
+        C⋅D⋅\Delta v_C   for 
+V_c
+2021-06-16 07:51:18,444
+and found 
+                2
+0.125⋅\Delta i_L 
+─────────────────
+ C⋅\Delta v_C⋅fₛ 
+2021-06-16 07:51:18,444
+recursesym: 
+[\Delta i_L, D, V_c, V_g, M, L, fₛ, C, \Delta v_C, R, i_L]
+2021-06-16 07:51:18,444
+calling solver looking for 
+V_g
+2021-06-16 07:51:18,444
+											base case
+2021-06-16 07:51:18,445
+returning: V_g=OrderedSet([V_c/(2*D - 1), V_c/M, V_c + 2*L*\Delta i_L*f_s/D, V_c + 0.25*L*\De
+lta i_L**2/(C*D*\Delta v_C)])
+2021-06-16 07:51:18,474
+sub-ing in 
+  V_c  
+───────
+2⋅D - 1 for 
+V_g
+2021-06-16 07:51:18,475
+and found 
+  ⎛         V_c  ⎞
+D⋅⎜-V_c + ───────⎟
+  ⎝       2⋅D - 1⎠
+──────────────────
+      2⋅L⋅fₛ      
+2021-06-16 07:51:18,496
+sub-ing in 
+V_c
+───
+ M  for 
+V_g
+2021-06-16 07:51:18,497
+and found 
+  ⎛       V_c⎞
+D⋅⎜-V_c + ───⎟
+  ⎝        M ⎠
+──────────────
+    2⋅L⋅fₛ    
+2021-06-16 07:51:18,498
+sub-ing in 
+      2⋅L⋅\Delta i_L⋅fₛ
+V_c + ─────────────────
+              D         for 
+V_g
+2021-06-16 07:51:18,498
+and found 
+\Delta i_L
+2021-06-16 07:51:18,505
+sub-ing in 
+                       2
+      0.25⋅L⋅\Delta i_L 
+V_c + ──────────────────
+        C⋅D⋅\Delta v_C   for 
+V_g
+2021-06-16 07:51:18,505
+and found 
+                2
+0.125⋅\Delta i_L 
+─────────────────
+ C⋅\Delta v_C⋅fₛ 
+2021-06-16 07:51:18,505
+recursesym: 
+[\Delta i_L, D, V_c, V_g, M, L, fₛ, C, \Delta v_C, R, i_L]
+2021-06-16 07:51:18,506
+calling solver looking for 
+fₛ
+2021-06-16 07:51:18,506
+											base case
+2021-06-16 07:51:18,506
+returning: f_s=OrderedSet([D*(-V_c + V_g)/(2*L*\Delta i_L), 0.125*\Delta i_L/(C*\Delta v_C)])
+2021-06-16 07:51:18,507
+sub-ing in 
+D⋅(-V_c + V_g)
+──────────────
+2⋅L⋅\Delta i_L for 
+fₛ
+2021-06-16 07:51:18,507
+and found 
+\Delta i_L
+2021-06-16 07:51:18,530
+sub-ing in 
+0.125⋅\Delta i_L
+────────────────
+  C⋅\Delta v_C   for 
+fₛ
+2021-06-16 07:51:18,531
+and found 
+4.0⋅C⋅D⋅\Delta v_C⋅(-V_c + V_g)
+───────────────────────────────
+          L⋅\Delta i_L         
+2021-06-16 07:51:18,531
+solution to delta_iL is: 
+8.0⋅C⋅\Delta v_C⋅fₛ 
+2021-06-16 07:51:18,531
+recursesym: 
+[\Delta i_L, D, V_c, V_g, M, L, fₛ, C, \Delta v_C, R, i_L]
+2021-06-16 07:51:18,531
+calling solver looking for 
+C
+2021-06-16 07:51:18,531
+											base case
+2021-06-16 07:51:18,532
+returning: C=OrderedSet([0.125*\Delta i_L/(\Delta v_C*f_s)])
+2021-06-16 07:51:18,536
+sub-ing in 
+0.125⋅\Delta i_L
+────────────────
+ \Delta v_C⋅fₛ   for 
+C
+2021-06-16 07:51:18,536
+and found 
+1.0⋅\Delta i_L
+2021-06-16 07:51:18,536
+recursesym: 
+[\Delta i_L, D, V_c, V_g, M, L, fₛ, C, \Delta v_C, R, i_L]
+2021-06-16 07:51:18,536
+calling solver looking for 
+\Delta v_C
+2021-06-16 07:51:18,537
+											base case
+2021-06-16 07:51:18,537
+returning: detla_vC=OrderedSet([0.125*\Delta i_L/(C*f_s)])
+2021-06-16 07:51:18,539
+sub-ing in 
+0.125⋅\Delta i_L
+────────────────
+      C⋅fₛ       for 
+\Delta v_C
+2021-06-16 07:51:18,540
+and found 
+1.0⋅\Delta i_L
+2021-06-16 07:51:18,540
+recursesym: 
+[\Delta i_L, D, V_c, V_g, M, L, fₛ, C, \Delta v_C, R, i_L]
+2021-06-16 07:51:18,540
+calling solver looking for 
+fₛ
+2021-06-16 07:51:18,540
+											base case
+2021-06-16 07:51:18,540
+returning: f_s=OrderedSet([D*(-V_c + V_g)/(2*L*\Delta i_L), 0.125*\Delta i_L/(C*\Delta v_C)])
+2021-06-16 07:51:18,551
+sub-ing in 
+D⋅(-V_c + V_g)
+──────────────
+2⋅L⋅\Delta i_L for 
+fₛ
+2021-06-16 07:51:18,551
+and found 
+4.0⋅C⋅D⋅\Delta v_C⋅(-V_c + V_g)
+───────────────────────────────
+          L⋅\Delta i_L         
+2021-06-16 07:51:18,554
+sub-ing in 
+0.125⋅\Delta i_L
+────────────────
+  C⋅\Delta v_C   for 
+fₛ
+2021-06-16 07:51:18,554
+and found 
+1.0⋅\Delta i_L
+2021-06-16 07:51:18,559
+end of function, recursesym: {\Delta i_L: set(), D: OrderedSet([(V_c + V_g)/(2*V_g), -2*L*\Delta i_L*f_s/(V_c - V_g), M/2 + 1/2, (R*i_L + V_g)/(2*V_g), -2*L*\Delta i_L*f_s/(V_g*(M - 1)), -2*L*\Delta i_L*f_s/(R*i_L - V_g), -2*L*M*\Delta i_L*f_s/(V_c*(M - 1)), -0.25*L*\Delta i_L**2/(C*\Delta v_C*(V_c - V_g))]), V_c: OrderedSet([V_g*(2*D - 1), M*V_g, V_g - 2*L*\Delta i_L*f_s/D, R*i_L, V_g - 0.25*L*\Delta i_L**2/(C*D*\Delta v_C)]), V_g: OrderedSet([V_c/(2*D - 1), V_c/M, V_c + 2*L*\Delta i_L*f_s/D, V_c + 0.25*L*\Delta i_L**2/(C*D*\Delta v_C)]), M: OrderedSet([V_c/V_g]), L: OrderedSet([D*(-V_c + V_g)/(2*\Delta i_L*f_s), 4.0*C*D*\Delta v_C*(-V_c + V_g)/\Delta i_L**2]), f_s: OrderedSet([D*(-V_c + V_g)/(2*L*\Delta i_L), 0.125*\Delta i_L/(C*\Delta v_C)]), C: OrderedSet([0.125*\Delta i_L/(\Delta v_C*f_s)]), \Delta v_C: OrderedSet([0.125*\Delta i_L/(C*f_s)]), R: OrderedSet([V_c/i_L]), i_L: OrderedSet([V_c/R])}
+2021-06-16 07:51:18,561
+returning: 
+OrderedSet([D*(-V_c + V_g)/(2*L*f_s), 8.0*C*\Delta v_C*f_s, (-V_c**2 + V_g**2)
+/(4*L*V_g*f_s), -(M + 1)*(V_c - V_g)/(4*L*f_s), -(V_c - V_g)*(R*i_L + V_g)/(4*
+L*V_g*f_s), D*V_g*(1 - D)/(L*f_s), D*(-R*i_L + V_g)/(2*L*f_s), D*V_c*(1 - D)/(
+L*f_s*(2*D - 1))])
+2021-06-16 07:51:18,573
+adding detla_vC to []
+2021-06-16 07:51:18,573
+looking for 
+\Delta v_C
+2021-06-16 07:51:18,702
+nonlinsolve returns: 
+0.125⋅\Delta i_L
+────────────────
+      C⋅fₛ      
+2021-06-16 07:51:18,705
+
+D⋅(-V_c + V_g) + (1 - D)⋅(-V_c - V_g) solved for 
+\Delta v_C=
+∅
+2021-06-16 07:51:18,707
+
+    V_c
+M - ───
+    V_g solved for 
+\Delta v_C=
+∅
+2021-06-16 07:51:18,709
+
+  D⋅(-V_c + V_g)               
+- ────────────── + 2⋅\Delta i_L
+       L⋅fₛ                     solved for 
+\Delta v_C=
+∅
+2021-06-16 07:51:18,713
+
+                 0.25⋅\Delta i_L
+2⋅C⋅\Delta v_C - ───────────────
+                        fₛ       solved for 
+\Delta v_C=
+⎧0.125⋅\Delta i_L⎫
+⎨────────────────⎬
+⎩      C⋅fₛ      ⎭
+2021-06-16 07:51:18,723
+
+      V_c
+i_L - ───
+       R  solved for 
+\Delta v_C=
+∅
+2021-06-16 07:51:18,723
+Done with 
+\Delta v_C
+2021-06-16 07:51:18,723
+so far detla_vC = 
+OrderedSet([0.125*\Delta i_L/(C*f_s)])
+2021-06-16 07:51:18,724
+solution to detla_vC is: 
+0.125⋅\Delta i_L
+────────────────
+      C⋅fₛ       
+2021-06-16 07:51:18,724
+recursesym: 
+[\Delta v_C]
+2021-06-16 07:51:18,724
+calling solver looking for 
+C
+2021-06-16 07:51:18,724
+	adding C to [\Delta v_C]
+2021-06-16 07:51:18,724
+looking for 
+C
+2021-06-16 07:51:18,805
+nonlinsolve returns: 
+0.125⋅\Delta i_L
+────────────────
+ \Delta v_C⋅fₛ  
+2021-06-16 07:51:18,806
+
+D⋅(-V_c + V_g) + (1 - D)⋅(-V_c - V_g) solved for 
+C=
+∅
+2021-06-16 07:51:18,806
+
+    V_c
+M - ───
+    V_g solved for 
+C=
+∅
+2021-06-16 07:51:18,807
+
+  D⋅(-V_c + V_g)               
+- ────────────── + 2⋅\Delta i_L
+       L⋅fₛ                     solved for 
+C=
+∅
+2021-06-16 07:51:18,810
+
+                 0.25⋅\Delta i_L
+2⋅C⋅\Delta v_C - ───────────────
+                        fₛ       solved for 
+C=
+⎧0.125⋅\Delta i_L⎫
+⎨────────────────⎬
+⎩ \Delta v_C⋅fₛ  ⎭
+2021-06-16 07:51:18,816
+
+      V_c
+i_L - ───
+       R  solved for 
+C=
+∅
+2021-06-16 07:51:18,816
+	Done with 
+C
+2021-06-16 07:51:18,817
+	so far C = 
+	OrderedSet([0.125*\Delta i_L/(\Delta v_C*f_s)])
+2021-06-16 07:51:18,817
+	solution to C is: 
+	0.125⋅\Delta i_L
+	────────────────
+	 \Delta v_C⋅fₛ   
+2021-06-16 07:51:18,817
+	recursesym: 
+	[\Delta v_C, C]
+2021-06-16 07:51:18,817
+	calling solver looking for 
+	\Delta i_L
+2021-06-16 07:51:18,817
+		adding delta_iL to [\Delta v_C, C]
+2021-06-16 07:51:18,817
+looking for 
+\Delta i_L
+2021-06-16 07:51:18,882
+nonlinsolve returns: 
+8.0⋅C⋅\Delta v_C⋅fₛ
+2021-06-16 07:51:18,883
+
+D⋅(-V_c + V_g) + (1 - D)⋅(-V_c - V_g) solved for 
+\Delta i_L=
+∅
+2021-06-16 07:51:18,884
+
+    V_c
+M - ───
+    V_g solved for 
+\Delta i_L=
+∅
+2021-06-16 07:51:18,894
+
+  D⋅(-V_c + V_g)               
+- ────────────── + 2⋅\Delta i_L
+       L⋅fₛ                     solved for 
+\Delta i_L=
+⎧-D⋅(V_c - V_g) ⎫
+⎨───────────────⎬
+⎩     2⋅L⋅fₛ    ⎭
+2021-06-16 07:51:18,911
+
+                 0.25⋅\Delta i_L
+2⋅C⋅\Delta v_C - ───────────────
+                        fₛ       solved for 
+\Delta i_L=
+{8.0⋅C⋅\Delta v_C⋅fₛ}
+2021-06-16 07:51:18,915
+
+      V_c
+i_L - ───
+       R  solved for 
+\Delta i_L=
+∅
+2021-06-16 07:51:18,915
+		Done with 
+\Delta i_L
+2021-06-16 07:51:18,916
+		so far delta_iL = 
+		OrderedSet([D*(-V_c + V_g)/(2*L*f_s), 8.0*C*\Delta v_C*f_s])
+2021-06-16 07:51:18,916
+		solution to delta_iL is: 
+		D⋅(-V_c + V_g)
+		──────────────
+		    2⋅L⋅fₛ     
+2021-06-16 07:51:18,916
+		recursesym: 
+		[\Delta v_C, C, \Delta i_L]
+2021-06-16 07:51:18,916
+		calling solver looking for 
+		D
+2021-06-16 07:51:18,916
+			adding D to [\Delta v_C, C, \Delta i_L]
+2021-06-16 07:51:18,917
+looking for 
+D
+2021-06-16 07:51:18,983
+nonlinsolve returns: 
+V_c + V_g
+─────────
+  2⋅V_g  
+2021-06-16 07:51:18,992
+
+D⋅(-V_c + V_g) + (1 - D)⋅(-V_c - V_g) solved for 
+D=
+⎧V_c + V_g⎫
+⎨─────────⎬
+⎩  2⋅V_g  ⎭
+2021-06-16 07:51:18,998
+
+    V_c
+M - ───
+    V_g solved for 
+D=
+∅
+2021-06-16 07:51:19,003
+
+  D⋅(-V_c + V_g)               
+- ────────────── + 2⋅\Delta i_L
+       L⋅fₛ                     solved for 
+D=
+⎧-2⋅L⋅\Delta i_L⋅fₛ ⎫
+⎨───────────────────⎬
+⎩     V_c - V_g     ⎭
+2021-06-16 07:51:19,012
+
+                 0.25⋅\Delta i_L
+2⋅C⋅\Delta v_C - ───────────────
+                        fₛ       solved for 
+D=
+∅
+2021-06-16 07:51:19,012
+
+      V_c
+i_L - ───
+       R  solved for 
+D=
+∅
+2021-06-16 07:51:19,012
+			Done with 
+D
+2021-06-16 07:51:19,013
+			so far D = 
+			OrderedSet([(V_c + V_g)/(2*V_g), -2*L*\Delta i_L*f_s/(V_c - V_g)])
+2021-06-16 07:51:19,013
+			solution to D is: 
+			V_c + V_g
+			─────────
+			  2⋅V_g   
+2021-06-16 07:51:19,013
+			recursesym: 
+			[\Delta v_C, C, \Delta i_L, D]
+2021-06-16 07:51:19,014
+			calling solver looking for 
+			V_c
+2021-06-16 07:51:19,014
+				adding V_c to [\Delta v_C, C, \Delta i_L, D]
+2021-06-16 07:51:19,014
+looking for 
+V_c
+2021-06-16 07:51:19,072
+nonlinsolve returns: 
+M⋅V_g
+2021-06-16 07:51:19,081
+
+D⋅(-V_c + V_g) + (1 - D)⋅(-V_c - V_g) solved for 
+V_c=
+{V_g⋅(2⋅D - 1)}
+2021-06-16 07:51:19,090
+
+    V_c
+M - ───
+    V_g solved for 
+V_c=
+{M⋅V_g}
+2021-06-16 07:51:19,097
+
+  D⋅(-V_c + V_g)               
+- ────────────── + 2⋅\Delta i_L
+       L⋅fₛ                     solved for 
+V_c=
+⎧      2⋅L⋅\Delta i_L⋅fₛ⎫
+⎨V_g - ─────────────────⎬
+⎩              D        ⎭
+2021-06-16 07:51:19,108
+
+                 0.25⋅\Delta i_L
+2⋅C⋅\Delta v_C - ───────────────
+                        fₛ       solved for 
+V_c=
+∅
+2021-06-16 07:51:19,110
+
+      V_c
+i_L - ───
+       R  solved for 
+V_c=
+{R⋅i_L}
+2021-06-16 07:51:19,112
+				Done with 
+V_c
+2021-06-16 07:51:19,113
+				so far V_c = 
+				OrderedSet([V_g*(2*D - 1), M*V_g, V_g - 2*L*\Delta i_L*f_s/D, R*i_L])
+2021-06-16 07:51:19,113
+				solution to V_c is: 
+				V_g⋅(2⋅D - 1) 
+2021-06-16 07:51:19,113
+				recursesym: 
+				[\Delta v_C, C, \Delta i_L, D, V_c]
+2021-06-16 07:51:19,113
+				calling solver looking for 
+				D
+2021-06-16 07:51:19,113
+					base case
+2021-06-16 07:51:19,114
+returning: D=set()
+2021-06-16 07:51:19,114
+				recursesym: 
+				[\Delta v_C, C, \Delta i_L, D, V_c]
+2021-06-16 07:51:19,114
+				calling solver looking for 
+				V_g
+2021-06-16 07:51:19,114
+					adding V_g to [\Delta v_C, C, \Delta i_L, D, V_c]
+2021-06-16 07:51:19,114
+looking for 
+V_g
+2021-06-16 07:51:19,212
+nonlinsolve returns: 
+V_c
+───
+ M 
+2021-06-16 07:51:19,221
+
+D⋅(-V_c + V_g) + (1 - D)⋅(-V_c - V_g) solved for 
+V_g=
+⎧  V_c  ⎫
+⎨───────⎬
+⎩2⋅D - 1⎭
+2021-06-16 07:51:19,234
+
+    V_c
+M - ───
+    V_g solved for 
+V_g=
+⎧V_c⎫      
+⎨───⎬ \ {0}
+⎩ M ⎭      
+2021-06-16 07:51:19,240
+
+  D⋅(-V_c + V_g)               
+- ────────────── + 2⋅\Delta i_L
+       L⋅fₛ                     solved for 
+V_g=
+⎧      2⋅L⋅\Delta i_L⋅fₛ⎫
+⎨V_c + ─────────────────⎬
+⎩              D        ⎭
+2021-06-16 07:51:19,250
+
+                 0.25⋅\Delta i_L
+2⋅C⋅\Delta v_C - ───────────────
+                        fₛ       solved for 
+V_g=
+∅
+2021-06-16 07:51:19,250
+
+      V_c
+i_L - ───
+       R  solved for 
+V_g=
+∅
+2021-06-16 07:51:19,250
+					Done with 
+V_g
+2021-06-16 07:51:19,251
+					so far V_g = 
+					OrderedSet([V_c/(2*D - 1), V_c/M, V_c + 2*L*\Delta i_L*f_s/D])
+2021-06-16 07:51:19,251
+					solution to V_g is: 
+					  V_c  
+					───────
+					2⋅D - 1 
+2021-06-16 07:51:19,251
+					recursesym: 
+					[\Delta v_C, C, \Delta i_L, D, V_c, V_g]
+2021-06-16 07:51:19,251
+					calling solver looking for 
+					D
+2021-06-16 07:51:19,252
+						base case
+2021-06-16 07:51:19,252
+returning: D=set()
+2021-06-16 07:51:19,252
+					recursesym: 
+					[\Delta v_C, C, \Delta i_L, D, V_c, V_g]
+2021-06-16 07:51:19,252
+					calling solver looking for 
+					V_c
+2021-06-16 07:51:19,252
+						base case
+2021-06-16 07:51:19,252
+returning: V_c=set()
+2021-06-16 07:51:19,252
+					solution to V_g is: 
+					V_c
+					───
+					 M  
+2021-06-16 07:51:19,252
+					recursesym: 
+					[\Delta v_C, C, \Delta i_L, D, V_c, V_g]
+2021-06-16 07:51:19,252
+					calling solver looking for 
+					M
+2021-06-16 07:51:19,253
+						adding M to [\Delta v_C, C, \Delta i_L, D, V_c, V_g]
+2021-06-16 07:51:19,253
+looking for 
+M
+2021-06-16 07:51:19,313
+nonlinsolve returns: 
+V_c
+───
+V_g
+2021-06-16 07:51:19,314
+
+D⋅(-V_c + V_g) + (1 - D)⋅(-V_c - V_g) solved for 
+M=
+∅
+2021-06-16 07:51:19,315
+
+    V_c
+M - ───
+    V_g solved for 
+M=
+⎧V_c⎫
+⎨───⎬
+⎩V_g⎭
+2021-06-16 07:51:19,319
+
+  D⋅(-V_c + V_g)               
+- ────────────── + 2⋅\Delta i_L
+       L⋅fₛ                     solved for 
+M=
+∅
+2021-06-16 07:51:19,320
+
+                 0.25⋅\Delta i_L
+2⋅C⋅\Delta v_C - ───────────────
+                        fₛ       solved for 
+M=
+∅
+2021-06-16 07:51:19,320
+
+      V_c
+i_L - ───
+       R  solved for 
+M=
+∅
+2021-06-16 07:51:19,320
+						Done with 
+M
+2021-06-16 07:51:19,320
+						so far M = 
+						OrderedSet([V_c/V_g])
+2021-06-16 07:51:19,320
+						solution to M is: 
+						V_c
+						───
+						V_g 
+2021-06-16 07:51:19,321
+						recursesym: 
+						[\Delta v_C, C, \Delta i_L, D, V_c, V_g, M]
+2021-06-16 07:51:19,321
+						calling solver looking for 
+						V_c
+2021-06-16 07:51:19,321
+							base case
+2021-06-16 07:51:19,321
+returning: V_c=set()
+2021-06-16 07:51:19,321
+						recursesym: 
+						[\Delta v_C, C, \Delta i_L, D, V_c, V_g, M]
+2021-06-16 07:51:19,321
+						calling solver looking for 
+						V_g
+2021-06-16 07:51:19,321
+							base case
+2021-06-16 07:51:19,321
+returning: V_g=set()
+2021-06-16 07:51:19,321
+end of function, recursesym: {\Delta v_C: set(), C: set(), \Delta i_L: set(), D: set(), V_c: set(), V_g: set(), M: set()}
+2021-06-16 07:51:19,322
+returning: 
+						OrderedSet([V_c/V_g])
+2021-06-16 07:51:19,322
+					sub-ing in 
+					V_c
+					───
+					V_g for 
+					M
+2021-06-16 07:51:19,322
+					and found 
+					V_g
+2021-06-16 07:51:19,322
+					recursesym: 
+					[\Delta v_C, C, \Delta i_L, D, V_c, V_g, M]
+2021-06-16 07:51:19,322
+					calling solver looking for 
+					V_c
+2021-06-16 07:51:19,322
+							base case
+2021-06-16 07:51:19,322
+returning: V_c=set()
+2021-06-16 07:51:19,323
+					solution to V_g is: 
+					      2⋅L⋅\Delta i_L⋅fₛ
+					V_c + ─────────────────
+					              D         
+2021-06-16 07:51:19,323
+					recursesym: 
+					[\Delta v_C, C, \Delta i_L, D, V_c, V_g, M]
+2021-06-16 07:51:19,323
+					calling solver looking for 
+					D
+2021-06-16 07:51:19,323
+							base case
+2021-06-16 07:51:19,323
+returning: D=set()
+2021-06-16 07:51:19,323
+					recursesym: 
+					[\Delta v_C, C, \Delta i_L, D, V_c, V_g, M]
+2021-06-16 07:51:19,323
+					calling solver looking for 
+					L
+2021-06-16 07:51:19,323
+							adding L to [\Delta v_C, C, \Delta i_L, D, V_c, V_g, M]
+2021-06-16 07:51:19,324
+looking for 
+L
+2021-06-16 07:51:19,436
+nonlinsolve returns: 
+ D⋅(-V_c + V_g)
+───────────────
+2⋅\Delta i_L⋅fₛ
+2021-06-16 07:51:19,437
+
+D⋅(-V_c + V_g) + (1 - D)⋅(-V_c - V_g) solved for 
+L=
+∅
+2021-06-16 07:51:19,438
+
+    V_c
+M - ───
+    V_g solved for 
+L=
+∅
+2021-06-16 07:51:19,449
+
+  D⋅(-V_c + V_g)               
+- ────────────── + 2⋅\Delta i_L
+       L⋅fₛ                     solved for 
+L=
+⎧-D⋅(V_c - V_g) ⎫      
+⎨───────────────⎬ \ {0}
+⎩2⋅\Delta i_L⋅fₛ⎭      
+2021-06-16 07:51:19,457
+
+                 0.25⋅\Delta i_L
+2⋅C⋅\Delta v_C - ───────────────
+                        fₛ       solved for 
+L=
+∅
+2021-06-16 07:51:19,457
+
+      V_c
+i_L - ───
+       R  solved for 
+L=
+∅
+2021-06-16 07:51:19,458
+							Done with 
+L
+2021-06-16 07:51:19,458
+							so far L = 
+							OrderedSet([D*(-V_c + V_g)/(2*\Delta i_L*f_s)])
+2021-06-16 07:51:19,458
+							solution to L is: 
+							 D⋅(-V_c + V_g)
+							───────────────
+							2⋅\Delta i_L⋅fₛ 
+2021-06-16 07:51:19,459
+							recursesym: 
+							[\Delta v_C, C, \Delta i_L, D, V_c, V_g, M, L]
+2021-06-16 07:51:19,459
+							calling solver looking for 
+							D
+2021-06-16 07:51:19,459
+								base case
+2021-06-16 07:51:19,459
+returning: D=set()
+2021-06-16 07:51:19,459
+							recursesym: 
+							[\Delta v_C, C, \Delta i_L, D, V_c, V_g, M, L]
+2021-06-16 07:51:19,459
+							calling solver looking for 
+							V_c
+2021-06-16 07:51:19,459
+								base case
+2021-06-16 07:51:19,459
+returning: V_c=set()
+2021-06-16 07:51:19,459
+							recursesym: 
+							[\Delta v_C, C, \Delta i_L, D, V_c, V_g, M, L]
+2021-06-16 07:51:19,459
+							calling solver looking for 
+							V_g
+2021-06-16 07:51:19,460
+								base case
+2021-06-16 07:51:19,460
+returning: V_g=set()
+2021-06-16 07:51:19,460
+							recursesym: 
+							[\Delta v_C, C, \Delta i_L, D, V_c, V_g, M, L]
+2021-06-16 07:51:19,460
+							calling solver looking for 
+							\Delta i_L
+2021-06-16 07:51:19,460
+								base case
+2021-06-16 07:51:19,460
+returning: delta_iL=set()
+2021-06-16 07:51:19,460
+							recursesym: 
+							[\Delta v_C, C, \Delta i_L, D, V_c, V_g, M, L]
+2021-06-16 07:51:19,460
+							calling solver looking for 
+							fₛ
+2021-06-16 07:51:19,460
+								adding f_s to [\Delta v_C, C, \Delta i_L, D, V_c, V_g, M, L]
+2021-06-16 07:51:19,460
+looking for 
+fₛ
+2021-06-16 07:51:19,572
+nonlinsolve returns: 
+0.125⋅\Delta i_L
+────────────────
+  C⋅\Delta v_C  
+2021-06-16 07:51:19,573
+
+D⋅(-V_c + V_g) + (1 - D)⋅(-V_c - V_g) solved for 
+fₛ=
+∅
+2021-06-16 07:51:19,574
+
+    V_c
+M - ───
+    V_g solved for 
+fₛ=
+∅
+2021-06-16 07:51:19,584
+
+  D⋅(-V_c + V_g)               
+- ────────────── + 2⋅\Delta i_L
+       L⋅fₛ                     solved for 
+fₛ=
+⎧-D⋅(V_c - V_g) ⎫      
+⎨───────────────⎬ \ {0}
+⎩ 2⋅L⋅\Delta i_L⎭      
+2021-06-16 07:51:19,604
+
+                 0.25⋅\Delta i_L
+2⋅C⋅\Delta v_C - ───────────────
+                        fₛ       solved for 
+fₛ=
+⎧0.125⋅\Delta i_L⎫      
+⎨────────────────⎬ \ {0}
+⎩  C⋅\Delta v_C  ⎭      
+2021-06-16 07:51:19,609
+
+      V_c
+i_L - ───
+       R  solved for 
+fₛ=
+∅
+2021-06-16 07:51:19,609
+								Done with 
+fₛ
+2021-06-16 07:51:19,610
+								so far f_s = 
+								OrderedSet([D*(-V_c + V_g)/(2*L*\Delta i_L), 0.125*\Delta i_L/(C*\Delta v_C)])
+2021-06-16 07:51:19,610
+								solution to f_s is: 
+								D⋅(-V_c + V_g)
+								──────────────
+								2⋅L⋅\Delta i_L 
+2021-06-16 07:51:19,611
+								recursesym: 
+								[\Delta v_C, C, \Delta i_L, D, V_c, V_g, M, L, fₛ]
+2021-06-16 07:51:19,611
+								calling solver looking for 
+								D
+2021-06-16 07:51:19,611
+									base case
+2021-06-16 07:51:19,611
+returning: D=set()
+2021-06-16 07:51:19,611
+								recursesym: 
+								[\Delta v_C, C, \Delta i_L, D, V_c, V_g, M, L, fₛ]
+2021-06-16 07:51:19,611
+								calling solver looking for 
+								L
+2021-06-16 07:51:19,611
+									base case
+2021-06-16 07:51:19,611
+returning: L=set()
+2021-06-16 07:51:19,612
+								recursesym: 
+								[\Delta v_C, C, \Delta i_L, D, V_c, V_g, M, L, fₛ]
+2021-06-16 07:51:19,612
+								calling solver looking for 
+								V_c
+2021-06-16 07:51:19,612
+									base case
+2021-06-16 07:51:19,612
+returning: V_c=set()
+2021-06-16 07:51:19,612
+								recursesym: 
+								[\Delta v_C, C, \Delta i_L, D, V_c, V_g, M, L, fₛ]
+2021-06-16 07:51:19,612
+								calling solver looking for 
+								V_g
+2021-06-16 07:51:19,612
+									base case
+2021-06-16 07:51:19,612
+returning: V_g=set()
+2021-06-16 07:51:19,612
+								recursesym: 
+								[\Delta v_C, C, \Delta i_L, D, V_c, V_g, M, L, fₛ]
+2021-06-16 07:51:19,612
+								calling solver looking for 
+								\Delta i_L
+2021-06-16 07:51:19,612
+									base case
+2021-06-16 07:51:19,613
+returning: delta_iL=set()
+2021-06-16 07:51:19,613
+								solution to f_s is: 
+								0.125⋅\Delta i_L
+								────────────────
+								  C⋅\Delta v_C   
+2021-06-16 07:51:19,613
+								recursesym: 
+								[\Delta v_C, C, \Delta i_L, D, V_c, V_g, M, L, fₛ]
+2021-06-16 07:51:19,613
+								calling solver looking for 
+								C
+2021-06-16 07:51:19,613
+									base case
+2021-06-16 07:51:19,613
+returning: C=set()
+2021-06-16 07:51:19,614
+								recursesym: 
+								[\Delta v_C, C, \Delta i_L, D, V_c, V_g, M, L, fₛ]
+2021-06-16 07:51:19,614
+								calling solver looking for 
+								\Delta i_L
+2021-06-16 07:51:19,614
+									base case
+2021-06-16 07:51:19,614
+returning: delta_iL=set()
+2021-06-16 07:51:19,614
+								recursesym: 
+								[\Delta v_C, C, \Delta i_L, D, V_c, V_g, M, L, fₛ]
+2021-06-16 07:51:19,614
+								calling solver looking for 
+								\Delta v_C
+2021-06-16 07:51:19,614
+									base case
+2021-06-16 07:51:19,614
+returning: detla_vC=set()
+2021-06-16 07:51:19,614
+end of function, recursesym: {\Delta v_C: set(), C: set(), \Delta i_L: set(), D: set(), V_c: set(), V_g: set(), M: OrderedSet([V_c/V_g]), L: set(), f_s: set()}
+2021-06-16 07:51:19,615
+returning: 
+								OrderedSet([D*(-V_c + V_g)/(2*L*\Delta i_L), 0.125*\Delta i_L/(C*\Delta v_C)])
+2021-06-16 07:51:19,615
+							sub-ing in 
+							D⋅(-V_c + V_g)
+							──────────────
+							2⋅L⋅\Delta i_L for 
+							fₛ
+2021-06-16 07:51:19,615
+							and found 
+							L
+2021-06-16 07:51:19,632
+							sub-ing in 
+							0.125⋅\Delta i_L
+							────────────────
+							  C⋅\Delta v_C   for 
+							fₛ
+2021-06-16 07:51:19,633
+							and found 
+							4.0⋅C⋅D⋅\Delta v_C⋅(-V_c + V_g)
+							───────────────────────────────
+							                    2          
+							          \Delta i_L           
+2021-06-16 07:51:19,633
+end of function, recursesym: {\Delta v_C: set(), C: set(), \Delta i_L: set(), D: set(), V_c: set(), V_g: set(), M: OrderedSet([V_c/V_g]), L: set(), f_s: OrderedSet([D*(-V_c + V_g)/(2*L*\Delta i_L), 0.125*\Delta i_L/(C*\Delta v_C)])}
+2021-06-16 07:51:19,634
+returning: 
+							OrderedSet([D*(-V_c + V_g)/(2*\Delta i_L*f_s), 4.0*C*D*\Delta v_C*(-V_c + V_g)
+							/\Delta i_L**2])
+2021-06-16 07:51:19,635
+					sub-ing in 
+					 D⋅(-V_c + V_g)
+					───────────────
+					2⋅\Delta i_L⋅fₛ for 
+					L
+2021-06-16 07:51:19,635
+					and found 
+					V_g
+2021-06-16 07:51:19,661
+					sub-ing in 
+					4.0⋅C⋅D⋅\Delta v_C⋅(-V_c + V_g)
+					───────────────────────────────
+					                    2          
+					          \Delta i_L            for 
+					L
+2021-06-16 07:51:19,661
+					and found 
+					8.0⋅C⋅\Delta v_C⋅fₛ⋅(-V_c + V_g)      
+					──────────────────────────────── + V_c
+					           \Delta i_L                 
+2021-06-16 07:51:19,662
+					recursesym: 
+					[\Delta v_C, C, \Delta i_L, D, V_c, V_g, M, L, fₛ]
+2021-06-16 07:51:19,662
+					calling solver looking for 
+					V_c
+2021-06-16 07:51:19,662
+									base case
+2021-06-16 07:51:19,662
+returning: V_c=set()
+2021-06-16 07:51:19,662
+					recursesym: 
+					[\Delta v_C, C, \Delta i_L, D, V_c, V_g, M, L, fₛ]
+2021-06-16 07:51:19,662
+					calling solver looking for 
+					\Delta i_L
+2021-06-16 07:51:19,662
+									base case
+2021-06-16 07:51:19,662
+returning: delta_iL=set()
+2021-06-16 07:51:19,663
+					recursesym: 
+					[\Delta v_C, C, \Delta i_L, D, V_c, V_g, M, L, fₛ]
+2021-06-16 07:51:19,663
+					calling solver looking for 
+					fₛ
+2021-06-16 07:51:19,663
+									base case
+2021-06-16 07:51:19,663
+returning: f_s=OrderedSet([D*(-V_c + V_g)/(2*L*\Delta i_L), 0.125*\Delta i_L/(C*\Delta v_C)])
+2021-06-16 07:51:19,664
+					sub-ing in 
+					D⋅(-V_c + V_g)
+					──────────────
+					2⋅L⋅\Delta i_L for 
+					fₛ
+2021-06-16 07:51:19,664
+					and found 
+					V_g
+2021-06-16 07:51:19,686
+					sub-ing in 
+					0.125⋅\Delta i_L
+					────────────────
+					  C⋅\Delta v_C   for 
+					fₛ
+2021-06-16 07:51:19,686
+					and found 
+					                       2
+					      0.25⋅L⋅\Delta i_L 
+					V_c + ──────────────────
+					        C⋅D⋅\Delta v_C  
+2021-06-16 07:51:19,687
+end of function, recursesym: {\Delta v_C: set(), C: set(), \Delta i_L: set(), D: set(), V_c: set(), V_g: set(), M: OrderedSet([V_c/V_g]), L: OrderedSet([D*(-V_c + V_g)/(2*\Delta i_L*f_s), 4.0*C*D*\Delta v_C*(-V_c + V_g)/\Delta i_L**2]), f_s: OrderedSet([D*(-V_c + V_g)/(2*L*\Delta i_L), 0.125*\Delta i_L/(C*\Delta v_C)])}
+2021-06-16 07:51:19,688
+returning: 
+					OrderedSet([V_c/(2*D - 1), V_c/M, V_c + 2*L*\Delta i_L*f_s/D, V_c + 0.25*L*\De
+					lta i_L**2/(C*D*\Delta v_C)])
+2021-06-16 07:51:19,688
+				sub-ing in 
+				  V_c  
+				───────
+				2⋅D - 1 for 
+				V_g
+2021-06-16 07:51:19,688
+				and found 
+				V_c
+2021-06-16 07:51:19,699
+				sub-ing in 
+				V_c
+				───
+				 M  for 
+				V_g
+2021-06-16 07:51:19,699
+				and found 
+				V_c⋅(2⋅D - 1)
+				─────────────
+				      M      
+2021-06-16 07:51:19,718
+				sub-ing in 
+				      2⋅L⋅\Delta i_L⋅fₛ
+				V_c + ─────────────────
+				              D         for 
+				V_g
+2021-06-16 07:51:19,718
+				and found 
+				          ⎛      2⋅L⋅\Delta i_L⋅fₛ⎞
+				(2⋅D - 1)⋅⎜V_c + ─────────────────⎟
+				          ⎝              D        ⎠
+2021-06-16 07:51:19,747
+				sub-ing in 
+				                       2
+				      0.25⋅L⋅\Delta i_L 
+				V_c + ──────────────────
+				        C⋅D⋅\Delta v_C   for 
+				V_g
+2021-06-16 07:51:19,747
+				and found 
+				          ⎛                       2⎞
+				          ⎜      0.25⋅L⋅\Delta i_L ⎟
+				(2⋅D - 1)⋅⎜V_c + ──────────────────⎟
+				          ⎝        C⋅D⋅\Delta v_C  ⎠
+2021-06-16 07:51:19,748
+				solution to V_c is: 
+				M⋅V_g 
+2021-06-16 07:51:19,748
+				recursesym: 
+				[\Delta v_C, C, \Delta i_L, D, V_c, V_g, M, L, fₛ]
+2021-06-16 07:51:19,748
+				calling solver looking for 
+				M
+2021-06-16 07:51:19,748
+									base case
+2021-06-16 07:51:19,748
+returning: M=OrderedSet([V_c/V_g])
+2021-06-16 07:51:19,749
+				sub-ing in 
+				V_c
+				───
+				V_g for 
+				M
+2021-06-16 07:51:19,749
+				and found 
+				V_c
+2021-06-16 07:51:19,749
+				recursesym: 
+				[\Delta v_C, C, \Delta i_L, D, V_c, V_g, M, L, fₛ]
+2021-06-16 07:51:19,749
+				calling solver looking for 
+				V_g
+2021-06-16 07:51:19,749
+									base case
+2021-06-16 07:51:19,750
+returning: V_g=OrderedSet([V_c/(2*D - 1), V_c/M, V_c + 2*L*\Delta i_L*f_s/D, V_c + 0.25*L*\De
+lta i_L**2/(C*D*\Delta v_C)])
+2021-06-16 07:51:19,756
+				sub-ing in 
+				  V_c  
+				───────
+				2⋅D - 1 for 
+				V_g
+2021-06-16 07:51:19,756
+				and found 
+				 M⋅V_c 
+				───────
+				2⋅D - 1
+2021-06-16 07:51:19,757
+				sub-ing in 
+				V_c
+				───
+				 M  for 
+				V_g
+2021-06-16 07:51:19,757
+				and found 
+				V_c
+2021-06-16 07:51:19,768
+				sub-ing in 
+				      2⋅L⋅\Delta i_L⋅fₛ
+				V_c + ─────────────────
+				              D         for 
+				V_g
+2021-06-16 07:51:19,769
+				and found 
+				  ⎛      2⋅L⋅\Delta i_L⋅fₛ⎞
+				M⋅⎜V_c + ─────────────────⎟
+				  ⎝              D        ⎠
+2021-06-16 07:51:19,790
+				sub-ing in 
+				                       2
+				      0.25⋅L⋅\Delta i_L 
+				V_c + ──────────────────
+				        C⋅D⋅\Delta v_C   for 
+				V_g
+2021-06-16 07:51:19,791
+				and found 
+				  ⎛                       2⎞
+				  ⎜      0.25⋅L⋅\Delta i_L ⎟
+				M⋅⎜V_c + ──────────────────⎟
+				  ⎝        C⋅D⋅\Delta v_C  ⎠
+2021-06-16 07:51:19,792
+				solution to V_c is: 
+				      2⋅L⋅\Delta i_L⋅fₛ
+				V_g - ─────────────────
+				              D         
+2021-06-16 07:51:19,792
+				recursesym: 
+				[\Delta v_C, C, \Delta i_L, D, V_c, V_g, M, L, fₛ]
+2021-06-16 07:51:19,792
+				calling solver looking for 
+				D
+2021-06-16 07:51:19,792
+									base case
+2021-06-16 07:51:19,792
+returning: D=set()
+2021-06-16 07:51:19,792
+				recursesym: 
+				[\Delta v_C, C, \Delta i_L, D, V_c, V_g, M, L, fₛ]
+2021-06-16 07:51:19,793
+				calling solver looking for 
+				L
+2021-06-16 07:51:19,793
+									base case
+2021-06-16 07:51:19,793
+returning: L=OrderedSet([D*(-V_c + V_g)/(2*\Delta i_L*f_s), 4.0*C*D*\Delta v_C*(-V_c + V_g)
+/\Delta i_L**2])
+2021-06-16 07:51:19,794
+				sub-ing in 
+				 D⋅(-V_c + V_g)
+				───────────────
+				2⋅\Delta i_L⋅fₛ for 
+				L
+2021-06-16 07:51:19,794
+				and found 
+				V_c
+2021-06-16 07:51:19,816
+				sub-ing in 
+				4.0⋅C⋅D⋅\Delta v_C⋅(-V_c + V_g)
+				───────────────────────────────
+				                    2          
+				          \Delta i_L            for 
+				L
+2021-06-16 07:51:19,816
+				and found 
+				  8.0⋅C⋅\Delta v_C⋅fₛ⋅(-V_c + V_g)      
+				- ──────────────────────────────── + V_g
+				             \Delta i_L                 
+2021-06-16 07:51:19,817
+				recursesym: 
+				[\Delta v_C, C, \Delta i_L, D, V_c, V_g, M, L, fₛ]
+2021-06-16 07:51:19,817
+				calling solver looking for 
+				V_g
+2021-06-16 07:51:19,817
+									base case
+2021-06-16 07:51:19,818
+returning: V_g=OrderedSet([V_c/(2*D - 1), V_c/M, V_c + 2*L*\Delta i_L*f_s/D, V_c + 0.25*L*\De
+lta i_L**2/(C*D*\Delta v_C)])
+2021-06-16 07:51:19,842
+				sub-ing in 
+				  V_c  
+				───────
+				2⋅D - 1 for 
+				V_g
+2021-06-16 07:51:19,842
+				and found 
+				  V_c     2⋅L⋅\Delta i_L⋅fₛ
+				─────── - ─────────────────
+				2⋅D - 1           D        
+2021-06-16 07:51:19,854
+				sub-ing in 
+				V_c
+				───
+				 M  for 
+				V_g
+2021-06-16 07:51:19,855
+				and found 
+				V_c   2⋅L⋅\Delta i_L⋅fₛ
+				─── - ─────────────────
+				 M            D        
+2021-06-16 07:51:19,855
+				sub-ing in 
+				      2⋅L⋅\Delta i_L⋅fₛ
+				V_c + ─────────────────
+				              D         for 
+				V_g
+2021-06-16 07:51:19,855
+				and found 
+				V_c
+2021-06-16 07:51:19,887
+				sub-ing in 
+				                       2
+				      0.25⋅L⋅\Delta i_L 
+				V_c + ──────────────────
+				        C⋅D⋅\Delta v_C   for 
+				V_g
+2021-06-16 07:51:19,888
+				and found 
+				                                           2
+				      2⋅L⋅\Delta i_L⋅fₛ   0.25⋅L⋅\Delta i_L 
+				V_c - ───────────────── + ──────────────────
+				              D             C⋅D⋅\Delta v_C  
+2021-06-16 07:51:19,888
+				recursesym: 
+				[\Delta v_C, C, \Delta i_L, D, V_c, V_g, M, L, fₛ]
+2021-06-16 07:51:19,888
+				calling solver looking for 
+				\Delta i_L
+2021-06-16 07:51:19,889
+									base case
+2021-06-16 07:51:19,889
+returning: delta_iL=set()
+2021-06-16 07:51:19,889
+				recursesym: 
+				[\Delta v_C, C, \Delta i_L, D, V_c, V_g, M, L, fₛ]
+2021-06-16 07:51:19,889
+				calling solver looking for 
+				fₛ
+2021-06-16 07:51:19,889
+									base case
+2021-06-16 07:51:19,889
+returning: f_s=OrderedSet([D*(-V_c + V_g)/(2*L*\Delta i_L), 0.125*\Delta i_L/(C*\Delta v_C)])
+2021-06-16 07:51:19,890
+				sub-ing in 
+				D⋅(-V_c + V_g)
+				──────────────
+				2⋅L⋅\Delta i_L for 
+				fₛ
+2021-06-16 07:51:19,890
+				and found 
+				V_c
+2021-06-16 07:51:19,910
+				sub-ing in 
+				0.125⋅\Delta i_L
+				────────────────
+				  C⋅\Delta v_C   for 
+				fₛ
+2021-06-16 07:51:19,910
+				and found 
+				                       2
+				      0.25⋅L⋅\Delta i_L 
+				V_g - ──────────────────
+				        C⋅D⋅\Delta v_C  
+2021-06-16 07:51:19,910
+				solution to V_c is: 
+				R⋅i_L 
+2021-06-16 07:51:19,911
+				recursesym: 
+				[\Delta v_C, C, \Delta i_L, D, V_c, V_g, M, L, fₛ]
+2021-06-16 07:51:19,911
+				calling solver looking for 
+				R
+2021-06-16 07:51:19,911
+									adding R to [\Delta v_C, C, \Delta i_L, D, V_c, V_g, M, L, f_s]
+2021-06-16 07:51:19,911
+looking for 
+R
+2021-06-16 07:51:20,007
+nonlinsolve returns: 
+V_c
+───
+i_L
+2021-06-16 07:51:20,009
+
+D⋅(-V_c + V_g) + (1 - D)⋅(-V_c - V_g) solved for 
+R=
+∅
+2021-06-16 07:51:20,010
+
+    V_c
+M - ───
+    V_g solved for 
+R=
+∅
+2021-06-16 07:51:20,012
+
+  D⋅(-V_c + V_g)               
+- ────────────── + 2⋅\Delta i_L
+       L⋅fₛ                     solved for 
+R=
+∅
+2021-06-16 07:51:20,013
+
+                 0.25⋅\Delta i_L
+2⋅C⋅\Delta v_C - ───────────────
+                        fₛ       solved for 
+R=
+∅
+2021-06-16 07:51:20,020
+
+      V_c
+i_L - ───
+       R  solved for 
+R=
+⎧V_c⎫      
+⎨───⎬ \ {0}
+⎩i_L⎭      
+2021-06-16 07:51:20,023
+									Done with 
+R
+2021-06-16 07:51:20,023
+									so far R = 
+									OrderedSet([V_c/i_L])
+2021-06-16 07:51:20,023
+									solution to R is: 
+									V_c
+									───
+									i_L 
+2021-06-16 07:51:20,023
+									recursesym: 
+									[\Delta v_C, C, \Delta i_L, D, V_c, V_g, M, L, fₛ, R]
+2021-06-16 07:51:20,023
+									calling solver looking for 
+									V_c
+2021-06-16 07:51:20,023
+										base case
+2021-06-16 07:51:20,023
+returning: V_c=set()
+2021-06-16 07:51:20,024
+									recursesym: 
+									[\Delta v_C, C, \Delta i_L, D, V_c, V_g, M, L, fₛ, R]
+2021-06-16 07:51:20,024
+									calling solver looking for 
+									i_L
+2021-06-16 07:51:20,024
+										adding i_L to [\Delta v_C, C, \Delta i_L, D, V_c, V_g, M, L, f_s, R]
+2021-06-16 07:51:20,024
+looking for 
+i_L
+2021-06-16 07:51:20,082
+nonlinsolve returns: 
+V_c
+───
+ R 
+2021-06-16 07:51:20,083
+
+D⋅(-V_c + V_g) + (1 - D)⋅(-V_c - V_g) solved for 
+i_L=
+∅
+2021-06-16 07:51:20,083
+
+    V_c
+M - ───
+    V_g solved for 
+i_L=
+∅
+2021-06-16 07:51:20,084
+
+  D⋅(-V_c + V_g)               
+- ────────────── + 2⋅\Delta i_L
+       L⋅fₛ                     solved for 
+i_L=
+∅
+2021-06-16 07:51:20,085
+
+                 0.25⋅\Delta i_L
+2⋅C⋅\Delta v_C - ───────────────
+                        fₛ       solved for 
+i_L=
+∅
+2021-06-16 07:51:20,086
+
+      V_c
+i_L - ───
+       R  solved for 
+i_L=
+⎧V_c⎫
+⎨───⎬
+⎩ R ⎭
+2021-06-16 07:51:20,089
+										Done with 
+i_L
+2021-06-16 07:51:20,089
+										so far i_L = 
+										OrderedSet([V_c/R])
+2021-06-16 07:51:20,089
+										solution to i_L is: 
+										V_c
+										───
+										 R  
+2021-06-16 07:51:20,089
+										recursesym: 
+										[\Delta v_C, C, \Delta i_L, D, V_c, V_g, M, L, fₛ, R, i_L]
+2021-06-16 07:51:20,090
+										calling solver looking for 
+										R
+2021-06-16 07:51:20,090
+											base case
+2021-06-16 07:51:20,090
+returning: R=set()
+2021-06-16 07:51:20,090
+										recursesym: 
+										[\Delta v_C, C, \Delta i_L, D, V_c, V_g, M, L, fₛ, R, i_L]
+2021-06-16 07:51:20,090
+										calling solver looking for 
+										V_c
+2021-06-16 07:51:20,090
+											base case
+2021-06-16 07:51:20,090
+returning: V_c=set()
+2021-06-16 07:51:20,092
+end of function, recursesym: {\Delta v_C: set(), C: set(), \Delta i_L: set(), D: set(), V_c: set(), V_g: OrderedSet([V_c/(2*D - 1), V_c/M, V_c + 2*L*\Delta i_L*f_s/D, V_c + 0.25*L*\Delta i_L**2/(C*D*\Delta v_C)]), M: OrderedSet([V_c/V_g]), L: OrderedSet([D*(-V_c + V_g)/(2*\Delta i_L*f_s), 4.0*C*D*\Delta v_C*(-V_c + V_g)/\Delta i_L**2]), f_s: OrderedSet([D*(-V_c + V_g)/(2*L*\Delta i_L), 0.125*\Delta i_L/(C*\Delta v_C)]), R: set(), i_L: set()}
+2021-06-16 07:51:20,092
+returning: 
+										OrderedSet([V_c/R])
+2021-06-16 07:51:20,092
+									sub-ing in 
+									V_c
+									───
+									 R  for 
+									i_L
+2021-06-16 07:51:20,092
+									and found 
+									R
+2021-06-16 07:51:20,094
+end of function, recursesym: {\Delta v_C: set(), C: set(), \Delta i_L: set(), D: set(), V_c: set(), V_g: OrderedSet([V_c/(2*D - 1), V_c/M, V_c + 2*L*\Delta i_L*f_s/D, V_c + 0.25*L*\Delta i_L**2/(C*D*\Delta v_C)]), M: OrderedSet([V_c/V_g]), L: OrderedSet([D*(-V_c + V_g)/(2*\Delta i_L*f_s), 4.0*C*D*\Delta v_C*(-V_c + V_g)/\Delta i_L**2]), f_s: OrderedSet([D*(-V_c + V_g)/(2*L*\Delta i_L), 0.125*\Delta i_L/(C*\Delta v_C)]), R: set(), i_L: OrderedSet([V_c/R])}
+2021-06-16 07:51:20,094
+returning: 
+									OrderedSet([V_c/i_L])
+2021-06-16 07:51:20,094
+				sub-ing in 
+				V_c
+				───
+				i_L for 
+				R
+2021-06-16 07:51:20,094
+				and found 
+				V_c
+2021-06-16 07:51:20,095
+				recursesym: 
+				[\Delta v_C, C, \Delta i_L, D, V_c, V_g, M, L, fₛ, R, i_L]
+2021-06-16 07:51:20,095
+				calling solver looking for 
+				i_L
+2021-06-16 07:51:20,095
+											base case
+2021-06-16 07:51:20,095
+returning: i_L=OrderedSet([V_c/R])
+2021-06-16 07:51:20,095
+				sub-ing in 
+				V_c
+				───
+				 R  for 
+				i_L
+2021-06-16 07:51:20,095
+				and found 
+				V_c
+2021-06-16 07:51:20,097
+end of function, recursesym: {\Delta v_C: set(), C: set(), \Delta i_L: set(), D: set(), V_c: set(), V_g: OrderedSet([V_c/(2*D - 1), V_c/M, V_c + 2*L*\Delta i_L*f_s/D, V_c + 0.25*L*\Delta i_L**2/(C*D*\Delta v_C)]), M: OrderedSet([V_c/V_g]), L: OrderedSet([D*(-V_c + V_g)/(2*\Delta i_L*f_s), 4.0*C*D*\Delta v_C*(-V_c + V_g)/\Delta i_L**2]), f_s: OrderedSet([D*(-V_c + V_g)/(2*L*\Delta i_L), 0.125*\Delta i_L/(C*\Delta v_C)]), R: OrderedSet([V_c/i_L]), i_L: OrderedSet([V_c/R])}
+2021-06-16 07:51:20,098
+returning: 
+				OrderedSet([V_g*(2*D - 1), M*V_g, V_g - 2*L*\Delta i_L*f_s/D, R*i_L, V_g - 0.2
+				5*L*\Delta i_L**2/(C*D*\Delta v_C)])
+2021-06-16 07:51:20,104
+			sub-ing in 
+			V_g⋅(2⋅D - 1) for 
+			V_c
+2021-06-16 07:51:20,104
+			and found 
+			V_g⋅(2⋅D - 1) + V_g
+			───────────────────
+			       2⋅V_g       
+2021-06-16 07:51:20,110
+			sub-ing in 
+			M⋅V_g for 
+			V_c
+2021-06-16 07:51:20,110
+			and found 
+			M⋅V_g + V_g
+			───────────
+			   2⋅V_g   
+2021-06-16 07:51:20,124
+			sub-ing in 
+			      2⋅L⋅\Delta i_L⋅fₛ
+			V_g - ─────────────────
+			              D         for 
+			V_c
+2021-06-16 07:51:20,124
+			and found 
+			        2⋅L⋅\Delta i_L⋅fₛ
+			2⋅V_g - ─────────────────
+			                D        
+			─────────────────────────
+			          2⋅V_g          
+2021-06-16 07:51:20,132
+			sub-ing in 
+			R⋅i_L for 
+			V_c
+2021-06-16 07:51:20,133
+			and found 
+			R⋅i_L + V_g
+			───────────
+			   2⋅V_g   
+2021-06-16 07:51:20,159
+			sub-ing in 
+			                       2
+			      0.25⋅L⋅\Delta i_L 
+			V_g - ──────────────────
+			        C⋅D⋅\Delta v_C   for 
+			V_c
+2021-06-16 07:51:20,160
+			and found 
+			                         2
+			        0.25⋅L⋅\Delta i_L 
+			2⋅V_g - ──────────────────
+			          C⋅D⋅\Delta v_C  
+			──────────────────────────
+			          2⋅V_g           
+2021-06-16 07:51:20,160
+			recursesym: 
+			[\Delta v_C, C, \Delta i_L, D, V_c, V_g, M, L, fₛ, R, i_L]
+2021-06-16 07:51:20,161
+			calling solver looking for 
+			V_g
+2021-06-16 07:51:20,161
+											base case
+2021-06-16 07:51:20,161
+returning: V_g=OrderedSet([V_c/(2*D - 1), V_c/M, V_c + 2*L*\Delta i_L*f_s/D, V_c + 0.25*L*\De
+lta i_L**2/(C*D*\Delta v_C)])
+2021-06-16 07:51:20,168
+			sub-ing in 
+			  V_c  
+			───────
+			2⋅D - 1 for 
+			V_g
+2021-06-16 07:51:20,169
+			and found 
+			          ⎛        V_c  ⎞
+			(2⋅D - 1)⋅⎜V_c + ───────⎟
+			          ⎝      2⋅D - 1⎠
+			─────────────────────────
+			          2⋅V_c          
+2021-06-16 07:51:20,175
+			sub-ing in 
+			V_c
+			───
+			 M  for 
+			V_g
+2021-06-16 07:51:20,175
+			and found 
+			  ⎛      V_c⎞
+			M⋅⎜V_c + ───⎟
+			  ⎝       M ⎠
+			─────────────
+			    2⋅V_c    
+2021-06-16 07:51:20,193
+			sub-ing in 
+			      2⋅L⋅\Delta i_L⋅fₛ
+			V_c + ─────────────────
+			              D         for 
+			V_g
+2021-06-16 07:51:20,194
+			and found 
+			         2⋅L⋅\Delta i_L⋅fₛ 
+			 2⋅V_c + ───────────────── 
+			                 D         
+			───────────────────────────
+			  ⎛      2⋅L⋅\Delta i_L⋅fₛ⎞
+			2⋅⎜V_c + ─────────────────⎟
+			  ⎝              D        ⎠
+2021-06-16 07:51:20,242
+			sub-ing in 
+			                       2
+			      0.25⋅L⋅\Delta i_L 
+			V_c + ──────────────────
+			        C⋅D⋅\Delta v_C   for 
+			V_g
+2021-06-16 07:51:20,243
+			and found 
+			                          2 
+			         0.25⋅L⋅\Delta i_L  
+			 2⋅V_c + ────────────────── 
+			           C⋅D⋅\Delta v_C   
+			────────────────────────────
+			  ⎛                       2⎞
+			  ⎜      0.25⋅L⋅\Delta i_L ⎟
+			2⋅⎜V_c + ──────────────────⎟
+			  ⎝        C⋅D⋅\Delta v_C  ⎠
+2021-06-16 07:51:20,243
+			solution to D is: 
+			-2⋅L⋅\Delta i_L⋅fₛ 
+			───────────────────
+			     V_c - V_g      
+2021-06-16 07:51:20,244
+			recursesym: 
+			[\Delta v_C, C, \Delta i_L, D, V_c, V_g, M, L, fₛ, R, i_L]
+2021-06-16 07:51:20,244
+			calling solver looking for 
+			L
+2021-06-16 07:51:20,244
+											base case
+2021-06-16 07:51:20,245
+returning: L=OrderedSet([D*(-V_c + V_g)/(2*\Delta i_L*f_s), 4.0*C*D*\Delta v_C*(-V_c + V_g)
+/\Delta i_L**2])
+2021-06-16 07:51:20,245
+			sub-ing in 
+			 D⋅(-V_c + V_g)
+			───────────────
+			2⋅\Delta i_L⋅fₛ for 
+			L
+2021-06-16 07:51:20,246
+			and found 
+			-D⋅(-V_c + V_g) 
+			────────────────
+			   V_c - V_g    
+2021-06-16 07:51:20,255
+			sub-ing in 
+			4.0⋅C⋅D⋅\Delta v_C⋅(-V_c + V_g)
+			───────────────────────────────
+			                    2          
+			          \Delta i_L            for 
+			L
+2021-06-16 07:51:20,255
+			and found 
+			-8.0⋅C⋅D⋅\Delta v_C⋅fₛ⋅(-V_c + V_g) 
+			────────────────────────────────────
+			       \Delta i_L⋅(V_c - V_g)       
+2021-06-16 07:51:20,256
+			recursesym: 
+			[\Delta v_C, C, \Delta i_L, D, V_c, V_g, M, L, fₛ, R, i_L]
+2021-06-16 07:51:20,256
+			calling solver looking for 
+			V_c
+2021-06-16 07:51:20,256
+											base case
+2021-06-16 07:51:20,257
+returning: V_c=OrderedSet([V_g*(2*D - 1), M*V_g, V_g - 2*L*\Delta i_L*f_s/D, R*i_L, V_g - 0.2
+5*L*\Delta i_L**2/(C*D*\Delta v_C)])
+2021-06-16 07:51:20,271
+			sub-ing in 
+			V_g⋅(2⋅D - 1) for 
+			V_c
+2021-06-16 07:51:20,271
+			and found 
+			-2⋅L⋅\Delta i_L⋅fₛ 
+			───────────────────
+			V_g⋅(2⋅D - 1) - V_g
+2021-06-16 07:51:20,282
+			sub-ing in 
+			M⋅V_g for 
+			V_c
+2021-06-16 07:51:20,283
+			and found 
+			-2⋅L⋅\Delta i_L⋅fₛ 
+			───────────────────
+			    M⋅V_g - V_g    
+2021-06-16 07:51:20,283
+			sub-ing in 
+			      2⋅L⋅\Delta i_L⋅fₛ
+			V_g - ─────────────────
+			              D         for 
+			V_c
+2021-06-16 07:51:20,283
+			and found 
+			D
+2021-06-16 07:51:20,292
+			sub-ing in 
+			R⋅i_L for 
+			V_c
+2021-06-16 07:51:20,292
+			and found 
+			-2⋅L⋅\Delta i_L⋅fₛ 
+			───────────────────
+			    R⋅i_L - V_g    
+2021-06-16 07:51:20,297
+			sub-ing in 
+			                       2
+			      0.25⋅L⋅\Delta i_L 
+			V_g - ──────────────────
+			        C⋅D⋅\Delta v_C   for 
+			V_c
+2021-06-16 07:51:20,297
+			and found 
+			8.0⋅C⋅D⋅\Delta v_C⋅fₛ
+			─────────────────────
+			      \Delta i_L     
+2021-06-16 07:51:20,298
+			recursesym: 
+			[\Delta v_C, C, \Delta i_L, D, V_c, V_g, M, L, fₛ, R, i_L]
+2021-06-16 07:51:20,298
+			calling solver looking for 
+			V_g
+2021-06-16 07:51:20,298
+											base case
+2021-06-16 07:51:20,299
+returning: V_g=OrderedSet([V_c/(2*D - 1), V_c/M, V_c + 2*L*\Delta i_L*f_s/D, V_c + 0.25*L*\De
+lta i_L**2/(C*D*\Delta v_C)])
+2021-06-16 07:51:20,320
+			sub-ing in 
+			  V_c  
+			───────
+			2⋅D - 1 for 
+			V_g
+2021-06-16 07:51:20,320
+			and found 
+			-2⋅L⋅\Delta i_L⋅fₛ 
+			───────────────────
+			           V_c     
+			   V_c - ───────   
+			         2⋅D - 1   
+2021-06-16 07:51:20,333
+			sub-ing in 
+			V_c
+			───
+			 M  for 
+			V_g
+2021-06-16 07:51:20,334
+			and found 
+			-2⋅L⋅\Delta i_L⋅fₛ 
+			───────────────────
+			           V_c     
+			     V_c - ───     
+			            M      
+2021-06-16 07:51:20,334
+			sub-ing in 
+			      2⋅L⋅\Delta i_L⋅fₛ
+			V_c + ─────────────────
+			              D         for 
+			V_g
+2021-06-16 07:51:20,334
+			and found 
+			D
+2021-06-16 07:51:20,339
+			sub-ing in 
+			                       2
+			      0.25⋅L⋅\Delta i_L 
+			V_c + ──────────────────
+			        C⋅D⋅\Delta v_C   for 
+			V_g
+2021-06-16 07:51:20,340
+			and found 
+			8.0⋅C⋅D⋅\Delta v_C⋅fₛ
+			─────────────────────
+			      \Delta i_L     
+2021-06-16 07:51:20,340
+			recursesym: 
+			[\Delta v_C, C, \Delta i_L, D, V_c, V_g, M, L, fₛ, R, i_L]
+2021-06-16 07:51:20,340
+			calling solver looking for 
+			\Delta i_L
+2021-06-16 07:51:20,340
+											base case
+2021-06-16 07:51:20,340
+returning: delta_iL=set()
+2021-06-16 07:51:20,340
+			recursesym: 
+			[\Delta v_C, C, \Delta i_L, D, V_c, V_g, M, L, fₛ, R, i_L]
+2021-06-16 07:51:20,341
+			calling solver looking for 
+			fₛ
+2021-06-16 07:51:20,341
+											base case
+2021-06-16 07:51:20,341
+returning: f_s=OrderedSet([D*(-V_c + V_g)/(2*L*\Delta i_L), 0.125*\Delta i_L/(C*\Delta v_C)])
+2021-06-16 07:51:20,342
+			sub-ing in 
+			D⋅(-V_c + V_g)
+			──────────────
+			2⋅L⋅\Delta i_L for 
+			fₛ
+2021-06-16 07:51:20,343
+			and found 
+			-D⋅(-V_c + V_g) 
+			────────────────
+			   V_c - V_g    
+2021-06-16 07:51:20,361
+			sub-ing in 
+			0.125⋅\Delta i_L
+			────────────────
+			  C⋅\Delta v_C   for 
+			fₛ
+2021-06-16 07:51:20,362
+			and found 
+			                    2   
+			  -0.25⋅L⋅\Delta i_L    
+			────────────────────────
+			C⋅\Delta v_C⋅(V_c - V_g)
+2021-06-16 07:51:20,365
+end of function, recursesym: {\Delta v_C: set(), C: set(), \Delta i_L: set(), D: set(), V_c: OrderedSet([V_g*(2*D - 1), M*V_g, V_g - 2*L*\Delta i_L*f_s/D, R*i_L, V_g - 0.25*L*\Delta i_L**2/(C*D*\Delta v_C)]), V_g: OrderedSet([V_c/(2*D - 1), V_c/M, V_c + 2*L*\Delta i_L*f_s/D, V_c + 0.25*L*\Delta i_L**2/(C*D*\Delta v_C)]), M: OrderedSet([V_c/V_g]), L: OrderedSet([D*(-V_c + V_g)/(2*\Delta i_L*f_s), 4.0*C*D*\Delta v_C*(-V_c + V_g)/\Delta i_L**2]), f_s: OrderedSet([D*(-V_c + V_g)/(2*L*\Delta i_L), 0.125*\Delta i_L/(C*\Delta v_C)]), R: OrderedSet([V_c/i_L]), i_L: OrderedSet([V_c/R])}
+2021-06-16 07:51:20,367
+returning: 
+			OrderedSet([(V_c + V_g)/(2*V_g), -2*L*\Delta i_L*f_s/(V_c - V_g), M/2 + 1/2, (
+			R*i_L + V_g)/(2*V_g), -2*L*\Delta i_L*f_s/(V_g*(M - 1)), -2*L*\Delta i_L*f_s/(
+			R*i_L - V_g), -2*L*M*\Delta i_L*f_s/(V_c*(M - 1)), -0.25*L*\Delta i_L**2/(C*\D
+			elta v_C*(V_c - V_g))])
+2021-06-16 07:51:20,384
+		sub-ing in 
+		V_c + V_g
+		─────────
+		  2⋅V_g   for 
+		D
+2021-06-16 07:51:20,384
+		and found 
+		(-V_c + V_g)⋅(V_c + V_g)
+		────────────────────────
+		       4⋅L⋅V_g⋅fₛ       
+2021-06-16 07:51:20,385
+		sub-ing in 
+		-2⋅L⋅\Delta i_L⋅fₛ 
+		───────────────────
+		     V_c - V_g      for 
+		D
+2021-06-16 07:51:20,386
+		and found 
+		-\Delta i_L⋅(-V_c + V_g) 
+		─────────────────────────
+		        V_c - V_g        
+2021-06-16 07:51:20,401
+		sub-ing in 
+		M   1
+		─ + ─
+		2   2 for 
+		D
+2021-06-16 07:51:20,401
+		and found 
+		⎛M   1⎞             
+		⎜─ + ─⎟⋅(-V_c + V_g)
+		⎝2   2⎠             
+		────────────────────
+		       2⋅L⋅fₛ       
+2021-06-16 07:51:20,420
+		sub-ing in 
+		R⋅i_L + V_g
+		───────────
+		   2⋅V_g    for 
+		D
+2021-06-16 07:51:20,421
+		and found 
+		(-V_c + V_g)⋅(R⋅i_L + V_g)
+		──────────────────────────
+		        4⋅L⋅V_g⋅fₛ        
+2021-06-16 07:51:20,434
+		sub-ing in 
+		-2⋅L⋅\Delta i_L⋅fₛ 
+		───────────────────
+		    V_g⋅(M - 1)     for 
+		D
+2021-06-16 07:51:20,435
+		and found 
+		-\Delta i_L⋅(-V_c + V_g) 
+		─────────────────────────
+		       V_g⋅(M - 1)       
+2021-06-16 07:51:20,447
+		sub-ing in 
+		-2⋅L⋅\Delta i_L⋅fₛ 
+		───────────────────
+		    R⋅i_L - V_g     for 
+		D
+2021-06-16 07:51:20,448
+		and found 
+		-\Delta i_L⋅(-V_c + V_g) 
+		─────────────────────────
+		       R⋅i_L - V_g       
+2021-06-16 07:51:20,464
+		sub-ing in 
+		-2⋅L⋅M⋅\Delta i_L⋅fₛ 
+		─────────────────────
+		     V_c⋅(M - 1)      for 
+		D
+2021-06-16 07:51:20,464
+		and found 
+		-M⋅\Delta i_L⋅(-V_c + V_g) 
+		───────────────────────────
+		        V_c⋅(M - 1)        
+2021-06-16 07:51:20,475
+		sub-ing in 
+		                    2   
+		  -0.25⋅L⋅\Delta i_L    
+		────────────────────────
+		C⋅\Delta v_C⋅(V_c - V_g) for 
+		D
+2021-06-16 07:51:20,476
+		and found 
+		                 2              
+		-0.125⋅\Delta i_L ⋅(-V_c + V_g) 
+		────────────────────────────────
+		  C⋅\Delta v_C⋅fₛ⋅(V_c - V_g)   
+2021-06-16 07:51:20,476
+		recursesym: 
+		[\Delta v_C, C, \Delta i_L, D, V_c, V_g, M, L, fₛ, R, i_L]
+2021-06-16 07:51:20,476
+		calling solver looking for 
+		L
+2021-06-16 07:51:20,476
+											base case
+2021-06-16 07:51:20,477
+returning: L=OrderedSet([D*(-V_c + V_g)/(2*\Delta i_L*f_s), 4.0*C*D*\Delta v_C*(-V_c + V_g)
+/\Delta i_L**2])
+2021-06-16 07:51:20,477
+		sub-ing in 
+		 D⋅(-V_c + V_g)
+		───────────────
+		2⋅\Delta i_L⋅fₛ for 
+		L
+2021-06-16 07:51:20,477
+		and found 
+		\Delta i_L
+2021-06-16 07:51:20,484
+		sub-ing in 
+		4.0⋅C⋅D⋅\Delta v_C⋅(-V_c + V_g)
+		───────────────────────────────
+		                    2          
+		          \Delta i_L            for 
+		L
+2021-06-16 07:51:20,484
+		and found 
+		                2
+		0.125⋅\Delta i_L 
+		─────────────────
+		 C⋅\Delta v_C⋅fₛ 
+2021-06-16 07:51:20,484
+		recursesym: 
+		[\Delta v_C, C, \Delta i_L, D, V_c, V_g, M, L, fₛ, R, i_L]
+2021-06-16 07:51:20,485
+		calling solver looking for 
+		V_c
+2021-06-16 07:51:20,485
+											base case
+2021-06-16 07:51:20,486
+returning: V_c=OrderedSet([V_g*(2*D - 1), M*V_g, V_g - 2*L*\Delta i_L*f_s/D, R*i_L, V_g - 0.2
+5*L*\Delta i_L**2/(C*D*\Delta v_C)])
+2021-06-16 07:51:20,500
+		sub-ing in 
+		V_g⋅(2⋅D - 1) for 
+		V_c
+2021-06-16 07:51:20,501
+		and found 
+		D⋅(-V_g⋅(2⋅D - 1) + V_g)
+		────────────────────────
+		         2⋅L⋅fₛ         
+2021-06-16 07:51:20,514
+		sub-ing in 
+		M⋅V_g for 
+		V_c
+2021-06-16 07:51:20,514
+		and found 
+		D⋅(-M⋅V_g + V_g)
+		────────────────
+		     2⋅L⋅fₛ     
+2021-06-16 07:51:20,515
+		sub-ing in 
+		      2⋅L⋅\Delta i_L⋅fₛ
+		V_g - ─────────────────
+		              D         for 
+		V_c
+2021-06-16 07:51:20,515
+		and found 
+		\Delta i_L
+2021-06-16 07:51:20,529
+		sub-ing in 
+		R⋅i_L for 
+		V_c
+2021-06-16 07:51:20,529
+		and found 
+		D⋅(-R⋅i_L + V_g)
+		────────────────
+		     2⋅L⋅fₛ     
+2021-06-16 07:51:20,536
+		sub-ing in 
+		                       2
+		      0.25⋅L⋅\Delta i_L 
+		V_g - ──────────────────
+		        C⋅D⋅\Delta v_C   for 
+		V_c
+2021-06-16 07:51:20,536
+		and found 
+		                2
+		0.125⋅\Delta i_L 
+		─────────────────
+		 C⋅\Delta v_C⋅fₛ 
+2021-06-16 07:51:20,537
+		recursesym: 
+		[\Delta v_C, C, \Delta i_L, D, V_c, V_g, M, L, fₛ, R, i_L]
+2021-06-16 07:51:20,537
+		calling solver looking for 
+		V_g
+2021-06-16 07:51:20,537
+											base case
+2021-06-16 07:51:20,538
+returning: V_g=OrderedSet([V_c/(2*D - 1), V_c/M, V_c + 2*L*\Delta i_L*f_s/D, V_c + 0.25*L*\De
+lta i_L**2/(C*D*\Delta v_C)])
+2021-06-16 07:51:20,558
+		sub-ing in 
+		  V_c  
+		───────
+		2⋅D - 1 for 
+		V_g
+2021-06-16 07:51:20,559
+		and found 
+		  ⎛         V_c  ⎞
+		D⋅⎜-V_c + ───────⎟
+		  ⎝       2⋅D - 1⎠
+		──────────────────
+		      2⋅L⋅fₛ      
+2021-06-16 07:51:20,574
+		sub-ing in 
+		V_c
+		───
+		 M  for 
+		V_g
+2021-06-16 07:51:20,575
+		and found 
+		  ⎛       V_c⎞
+		D⋅⎜-V_c + ───⎟
+		  ⎝        M ⎠
+		──────────────
+		    2⋅L⋅fₛ    
+2021-06-16 07:51:20,575
+		sub-ing in 
+		      2⋅L⋅\Delta i_L⋅fₛ
+		V_c + ─────────────────
+		              D         for 
+		V_g
+2021-06-16 07:51:20,575
+		and found 
+		\Delta i_L
+2021-06-16 07:51:20,582
+		sub-ing in 
+		                       2
+		      0.25⋅L⋅\Delta i_L 
+		V_c + ──────────────────
+		        C⋅D⋅\Delta v_C   for 
+		V_g
+2021-06-16 07:51:20,582
+		and found 
+		                2
+		0.125⋅\Delta i_L 
+		─────────────────
+		 C⋅\Delta v_C⋅fₛ 
+2021-06-16 07:51:20,583
+		recursesym: 
+		[\Delta v_C, C, \Delta i_L, D, V_c, V_g, M, L, fₛ, R, i_L]
+2021-06-16 07:51:20,583
+		calling solver looking for 
+		fₛ
+2021-06-16 07:51:20,583
+											base case
+2021-06-16 07:51:20,583
+returning: f_s=OrderedSet([D*(-V_c + V_g)/(2*L*\Delta i_L), 0.125*\Delta i_L/(C*\Delta v_C)])
+2021-06-16 07:51:20,584
+		sub-ing in 
+		D⋅(-V_c + V_g)
+		──────────────
+		2⋅L⋅\Delta i_L for 
+		fₛ
+2021-06-16 07:51:20,584
+		and found 
+		\Delta i_L
+2021-06-16 07:51:20,602
+		sub-ing in 
+		0.125⋅\Delta i_L
+		────────────────
+		  C⋅\Delta v_C   for 
+		fₛ
+2021-06-16 07:51:20,603
+		and found 
+		4.0⋅C⋅D⋅\Delta v_C⋅(-V_c + V_g)
+		───────────────────────────────
+		          L⋅\Delta i_L         
+2021-06-16 07:51:20,603
+		solution to delta_iL is: 
+		8.0⋅C⋅\Delta v_C⋅fₛ 
+2021-06-16 07:51:20,603
+		recursesym: 
+		[\Delta v_C, C, \Delta i_L, D, V_c, V_g, M, L, fₛ, R, i_L]
+2021-06-16 07:51:20,604
+		calling solver looking for 
+		C
+2021-06-16 07:51:20,604
+											base case
+2021-06-16 07:51:20,604
+returning: C=set()
+2021-06-16 07:51:20,604
+		recursesym: 
+		[\Delta v_C, C, \Delta i_L, D, V_c, V_g, M, L, fₛ, R, i_L]
+2021-06-16 07:51:20,604
+		calling solver looking for 
+		\Delta v_C
+2021-06-16 07:51:20,604
+											base case
+2021-06-16 07:51:20,604
+returning: detla_vC=set()
+2021-06-16 07:51:20,604
+		recursesym: 
+		[\Delta v_C, C, \Delta i_L, D, V_c, V_g, M, L, fₛ, R, i_L]
+2021-06-16 07:51:20,605
+		calling solver looking for 
+		fₛ
+2021-06-16 07:51:20,605
+											base case
+2021-06-16 07:51:20,605
+returning: f_s=OrderedSet([D*(-V_c + V_g)/(2*L*\Delta i_L), 0.125*\Delta i_L/(C*\Delta v_C)])
+2021-06-16 07:51:20,615
+		sub-ing in 
+		D⋅(-V_c + V_g)
+		──────────────
+		2⋅L⋅\Delta i_L for 
+		fₛ
+2021-06-16 07:51:20,615
+		and found 
+		4.0⋅C⋅D⋅\Delta v_C⋅(-V_c + V_g)
+		───────────────────────────────
+		          L⋅\Delta i_L         
+2021-06-16 07:51:20,618
+		sub-ing in 
+		0.125⋅\Delta i_L
+		────────────────
+		  C⋅\Delta v_C   for 
+		fₛ
+2021-06-16 07:51:20,619
+		and found 
+		1.0⋅\Delta i_L
+2021-06-16 07:51:20,623
+end of function, recursesym: {\Delta v_C: set(), C: set(), \Delta i_L: set(), D: OrderedSet([(V_c + V_g)/(2*V_g), -2*L*\Delta i_L*f_s/(V_c - V_g), M/2 + 1/2, (R*i_L + V_g)/(2*V_g), -2*L*\Delta i_L*f_s/(V_g*(M - 1)), -2*L*\Delta i_L*f_s/(R*i_L - V_g), -2*L*M*\Delta i_L*f_s/(V_c*(M - 1)), -0.25*L*\Delta i_L**2/(C*\Delta v_C*(V_c - V_g))]), V_c: OrderedSet([V_g*(2*D - 1), M*V_g, V_g - 2*L*\Delta i_L*f_s/D, R*i_L, V_g - 0.25*L*\Delta i_L**2/(C*D*\Delta v_C)]), V_g: OrderedSet([V_c/(2*D - 1), V_c/M, V_c + 2*L*\Delta i_L*f_s/D, V_c + 0.25*L*\Delta i_L**2/(C*D*\Delta v_C)]), M: OrderedSet([V_c/V_g]), L: OrderedSet([D*(-V_c + V_g)/(2*\Delta i_L*f_s), 4.0*C*D*\Delta v_C*(-V_c + V_g)/\Delta i_L**2]), f_s: OrderedSet([D*(-V_c + V_g)/(2*L*\Delta i_L), 0.125*\Delta i_L/(C*\Delta v_C)]), R: OrderedSet([V_c/i_L]), i_L: OrderedSet([V_c/R])}
+2021-06-16 07:51:20,625
+returning: 
+		OrderedSet([D*(-V_c + V_g)/(2*L*f_s), 8.0*C*\Delta v_C*f_s, (-V_c**2 + V_g**2)
+		/(4*L*V_g*f_s), -(M + 1)*(V_c - V_g)/(4*L*f_s), -(V_c - V_g)*(R*i_L + V_g)/(4*
+		L*V_g*f_s), D*V_g*(1 - D)/(L*f_s), D*(-R*i_L + V_g)/(2*L*f_s), D*V_c*(1 - D)/(
+		L*f_s*(2*D - 1))])
+2021-06-16 07:51:20,651
+	sub-ing in 
+	D⋅(-V_c + V_g)
+	──────────────
+	    2⋅L⋅fₛ     for 
+	\Delta i_L
+2021-06-16 07:51:20,652
+	and found 
+	0.0625⋅D⋅(-V_c + V_g)
+	─────────────────────
+	                  2  
+	   L⋅\Delta v_C⋅fₛ   
+2021-06-16 07:51:20,656
+	sub-ing in 
+	8.0⋅C⋅\Delta v_C⋅fₛ for 
+	\Delta i_L
+2021-06-16 07:51:20,656
+	and found 
+	1.0⋅C
+2021-06-16 07:51:20,685
+	sub-ing in 
+	     2      2
+	- V_c  + V_g 
+	─────────────
+	  4⋅L⋅V_g⋅fₛ  for 
+	\Delta i_L
+2021-06-16 07:51:20,686
+	and found 
+	        ⎛     2      2⎞
+	0.03125⋅⎝- V_c  + V_g ⎠
+	───────────────────────
+	                     2 
+	  L⋅V_g⋅\Delta v_C⋅fₛ  
+2021-06-16 07:51:20,715
+	sub-ing in 
+	-(M + 1)⋅(V_c - V_g) 
+	─────────────────────
+	        4⋅L⋅fₛ        for 
+	\Delta i_L
+2021-06-16 07:51:20,716
+	and found 
+	-0.03125⋅(M + 1)⋅(V_c - V_g) 
+	─────────────────────────────
+	                      2      
+	       L⋅\Delta v_C⋅fₛ       
+2021-06-16 07:51:20,750
+	sub-ing in 
+	-(V_c - V_g)⋅(R⋅i_L + V_g) 
+	───────────────────────────
+	         4⋅L⋅V_g⋅fₛ         for 
+	\Delta i_L
+2021-06-16 07:51:20,751
+	and found 
+	-0.03125⋅(V_c - V_g)⋅(R⋅i_L + V_g) 
+	───────────────────────────────────
+	                           2       
+	        L⋅V_g⋅\Delta v_C⋅fₛ        
+2021-06-16 07:51:20,776
+	sub-ing in 
+	D⋅V_g⋅(1 - D)
+	─────────────
+	     L⋅fₛ     for 
+	\Delta i_L
+2021-06-16 07:51:20,776
+	and found 
+	0.125⋅D⋅V_g⋅(1 - D)
+	───────────────────
+	                 2 
+	  L⋅\Delta v_C⋅fₛ  
+2021-06-16 07:51:20,799
+	sub-ing in 
+	D⋅(-R⋅i_L + V_g)
+	────────────────
+	     2⋅L⋅fₛ      for 
+	\Delta i_L
+2021-06-16 07:51:20,799
+	and found 
+	0.0625⋅D⋅(-R⋅i_L + V_g)
+	───────────────────────
+	                   2   
+	    L⋅\Delta v_C⋅fₛ    
+2021-06-16 07:51:20,847
+	sub-ing in 
+	D⋅V_c⋅(1 - D) 
+	──────────────
+	L⋅fₛ⋅(2⋅D - 1) for 
+	\Delta i_L
+2021-06-16 07:51:20,848
+	and found 
+	   0.125⋅D⋅V_c⋅(1 - D)    
+	──────────────────────────
+	               2          
+	L⋅\Delta v_C⋅fₛ ⋅(2⋅D - 1)
+2021-06-16 07:51:20,849
+	recursesym: 
+	[\Delta v_C, C, \Delta i_L, D, V_c, V_g, M, L, fₛ, R, i_L]
+2021-06-16 07:51:20,849
+	calling solver looking for 
+	\Delta v_C
+2021-06-16 07:51:20,849
+											base case
+2021-06-16 07:51:20,849
+returning: detla_vC=set()
+2021-06-16 07:51:20,849
+	recursesym: 
+	[\Delta v_C, C, \Delta i_L, D, V_c, V_g, M, L, fₛ, R, i_L]
+2021-06-16 07:51:20,849
+	calling solver looking for 
+	fₛ
+2021-06-16 07:51:20,849
+											base case
+2021-06-16 07:51:20,850
+returning: f_s=OrderedSet([D*(-V_c + V_g)/(2*L*\Delta i_L), 0.125*\Delta i_L/(C*\Delta v_C)])
+2021-06-16 07:51:20,871
+	sub-ing in 
+	D⋅(-V_c + V_g)
+	──────────────
+	2⋅L⋅\Delta i_L for 
+	fₛ
+2021-06-16 07:51:20,872
+	and found 
+	                     2   
+	    0.25⋅L⋅\Delta i_L    
+	─────────────────────────
+	D⋅\Delta v_C⋅(-V_c + V_g)
+2021-06-16 07:51:20,875
+	sub-ing in 
+	0.125⋅\Delta i_L
+	────────────────
+	  C⋅\Delta v_C   for 
+	fₛ
+2021-06-16 07:51:20,875
+	and found 
+	1.0⋅C
+2021-06-16 07:51:20,881
+end of function, recursesym: {\Delta v_C: set(), C: set(), \Delta i_L: OrderedSet([D*(-V_c + V_g)/(2*L*f_s), 8.0*C*\Delta v_C*f_s, (-V_c**2 + V_g**2)/(4*L*V_g*f_s), -(M + 1)*(V_c - V_g)/(4*L*f_s), -(V_c - V_g)*(R*i_L + V_g)/(4*L*V_g*f_s), D*V_g*(1 - D)/(L*f_s), D*(-R*i_L + V_g)/(2*L*f_s), D*V_c*(1 - D)/(L*f_s*(2*D - 1))]), D: OrderedSet([(V_c + V_g)/(2*V_g), -2*L*\Delta i_L*f_s/(V_c - V_g), M/2 + 1/2, (R*i_L + V_g)/(2*V_g), -2*L*\Delta i_L*f_s/(V_g*(M - 1)), -2*L*\Delta i_L*f_s/(R*i_L - V_g), -2*L*M*\Delta i_L*f_s/(V_c*(M - 1)), -0.25*L*\Delta i_L**2/(C*\Delta v_C*(V_c - V_g))]), V_c: OrderedSet([V_g*(2*D - 1), M*V_g, V_g - 2*L*\Delta i_L*f_s/D, R*i_L, V_g - 0.25*L*\Delta i_L**2/(C*D*\Delta v_C)]), V_g: OrderedSet([V_c/(2*D - 1), V_c/M, V_c + 2*L*\Delta i_L*f_s/D, V_c + 0.25*L*\Delta i_L**2/(C*D*\Delta v_C)]), M: OrderedSet([V_c/V_g]), L: OrderedSet([D*(-V_c + V_g)/(2*\Delta i_L*f_s), 4.0*C*D*\Delta v_C*(-V_c + V_g)/\Delta i_L**2]), f_s: OrderedSet([D*(-V_c + V_g)/(2*L*\Delta i_L), 0.125*\Delta i_L/(C*\Delta v_C)]), R: OrderedSet([V_c/i_L]), i_L: OrderedSet([V_c/R])}
+2021-06-16 07:51:20,884
+returning: 
+	OrderedSet([0.125*\Delta i_L/(\Delta v_C*f_s), 0.0625*D*(-V_c + V_g)/(L*\Delta
+	 v_C*f_s**2), 0.03125*(-V_c**2 + V_g**2)/(L*V_g*\Delta v_C*f_s**2), -0.03125*(
+	M + 1)*(V_c - V_g)/(L*\Delta v_C*f_s**2), -0.03125*(V_c - V_g)*(R*i_L + V_g)/(
+	L*V_g*\Delta v_C*f_s**2), 0.125*D*V_g*(1 - D)/(L*\Delta v_C*f_s**2), 0.0625*D*
+	(-R*i_L + V_g)/(L*\Delta v_C*f_s**2), 0.125*D*V_c*(1 - D)/(L*\Delta v_C*f_s**2
+	*(2.0*D - 1.0)), -0.25*L*\Delta i_L**2/(D*\Delta v_C*(V_c - V_g))])
+2021-06-16 07:51:20,889
+sub-ing in 
+0.125⋅\Delta i_L
+────────────────
+ \Delta v_C⋅fₛ   for 
+C
+2021-06-16 07:51:20,889
+and found 
+1.0⋅\Delta v_C
+2021-06-16 07:51:20,909
+sub-ing in 
+0.0625⋅D⋅(-V_c + V_g)
+─────────────────────
+                  2  
+   L⋅\Delta v_C⋅fₛ    for 
+C
+2021-06-16 07:51:20,910
+and found 
+2.0⋅L⋅\Delta i_L⋅\Delta v_C⋅fₛ
+──────────────────────────────
+        D⋅(-V_c + V_g)        
+2021-06-16 07:51:20,931
+sub-ing in 
+        ⎛     2      2⎞
+0.03125⋅⎝- V_c  + V_g ⎠
+───────────────────────
+                     2 
+  L⋅V_g⋅\Delta v_C⋅fₛ   for 
+C
+2021-06-16 07:51:20,932
+and found 
+4.0⋅L⋅V_g⋅\Delta i_L⋅\Delta v_C⋅fₛ
+──────────────────────────────────
+               2      2           
+          - V_c  + V_g            
+2021-06-16 07:51:20,958
+sub-ing in 
+-0.03125⋅(M + 1)⋅(V_c - V_g) 
+─────────────────────────────
+                      2      
+       L⋅\Delta v_C⋅fₛ        for 
+C
+2021-06-16 07:51:20,959
+and found 
+-4.0⋅L⋅\Delta i_L⋅\Delta v_C⋅fₛ 
+────────────────────────────────
+      (M + 1)⋅(V_c - V_g)       
+2021-06-16 07:51:20,986
+sub-ing in 
+-0.03125⋅(V_c - V_g)⋅(R⋅i_L + V_g) 
+───────────────────────────────────
+                           2       
+        L⋅V_g⋅\Delta v_C⋅fₛ         for 
+C
+2021-06-16 07:51:20,988
+and found 
+-4.0⋅L⋅V_g⋅\Delta i_L⋅\Delta v_C⋅fₛ 
+────────────────────────────────────
+     (V_c - V_g)⋅(R⋅i_L + V_g)      
+2021-06-16 07:51:21,009
+sub-ing in 
+0.125⋅D⋅V_g⋅(1 - D)
+───────────────────
+                 2 
+  L⋅\Delta v_C⋅fₛ   for 
+C
+2021-06-16 07:51:21,009
+and found 
+1.0⋅L⋅\Delta i_L⋅\Delta v_C⋅fₛ
+──────────────────────────────
+        D⋅V_g⋅(1 - D)         
+2021-06-16 07:51:21,030
+sub-ing in 
+0.0625⋅D⋅(-R⋅i_L + V_g)
+───────────────────────
+                   2   
+    L⋅\Delta v_C⋅fₛ     for 
+C
+2021-06-16 07:51:21,031
+and found 
+2.0⋅L⋅\Delta i_L⋅\Delta v_C⋅fₛ
+──────────────────────────────
+       D⋅(-R⋅i_L + V_g)       
+2021-06-16 07:51:21,082
+sub-ing in 
+     0.125⋅D⋅V_c⋅(1 - D)      
+──────────────────────────────
+               2              
+L⋅\Delta v_C⋅fₛ ⋅(2.0⋅D - 1.0) for 
+C
+2021-06-16 07:51:21,083
+and found 
+1.0⋅L⋅\Delta i_L⋅\Delta v_C⋅fₛ⋅(2.0⋅D - 1.0)
+────────────────────────────────────────────
+               D⋅V_c⋅(1 - D)                
+2021-06-16 07:51:21,109
+sub-ing in 
+                    2   
+  -0.25⋅L⋅\Delta i_L    
+────────────────────────
+D⋅\Delta v_C⋅(V_c - V_g) for 
+C
+2021-06-16 07:51:21,110
+and found 
+-0.5⋅D⋅\Delta v_C⋅(V_c - V_g) 
+──────────────────────────────
+       L⋅\Delta i_L⋅fₛ        
+2021-06-16 07:51:21,110
+recursesym: 
+[\Delta v_C, C, \Delta i_L, D, V_c, V_g, M, L, fₛ, R, i_L]
+2021-06-16 07:51:21,111
+calling solver looking for 
+\Delta i_L
+2021-06-16 07:51:21,111
+											base case
+2021-06-16 07:51:21,112
+returning: delta_iL=OrderedSet([D*(-V_c + V_g)/(2*L*f_s), 8.0*C*\Delta v_C*f_s, (-V_c**2 + V_g**2)
+/(4*L*V_g*f_s), -(M + 1)*(V_c - V_g)/(4*L*f_s), -(V_c - V_g)*(R*i_L + V_g)/(4*
+L*V_g*f_s), D*V_g*(1 - D)/(L*f_s), D*(-R*i_L + V_g)/(2*L*f_s), D*V_c*(1 - D)/(
+L*f_s*(2*D - 1))])
+2021-06-16 07:51:21,136
+sub-ing in 
+D⋅(-V_c + V_g)
+──────────────
+    2⋅L⋅fₛ     for 
+\Delta i_L
+2021-06-16 07:51:21,137
+and found 
+0.0625⋅D⋅(-V_c + V_g)
+─────────────────────
+             2       
+       C⋅L⋅fₛ        
+2021-06-16 07:51:21,140
+sub-ing in 
+8.0⋅C⋅\Delta v_C⋅fₛ for 
+\Delta i_L
+2021-06-16 07:51:21,140
+and found 
+1.0⋅\Delta v_C
+2021-06-16 07:51:21,168
+sub-ing in 
+     2      2
+- V_c  + V_g 
+─────────────
+  4⋅L⋅V_g⋅fₛ  for 
+\Delta i_L
+2021-06-16 07:51:21,168
+and found 
+        ⎛     2      2⎞
+0.03125⋅⎝- V_c  + V_g ⎠
+───────────────────────
+                2      
+      C⋅L⋅V_g⋅fₛ       
+2021-06-16 07:51:21,197
+sub-ing in 
+-(M + 1)⋅(V_c - V_g) 
+─────────────────────
+        4⋅L⋅fₛ        for 
+\Delta i_L
+2021-06-16 07:51:21,198
+and found 
+-0.03125⋅(M + 1)⋅(V_c - V_g) 
+─────────────────────────────
+                 2           
+           C⋅L⋅fₛ            
+2021-06-16 07:51:21,239
+sub-ing in 
+-(V_c - V_g)⋅(R⋅i_L + V_g) 
+───────────────────────────
+         4⋅L⋅V_g⋅fₛ         for 
+\Delta i_L
+2021-06-16 07:51:21,239
+and found 
+-0.03125⋅(V_c - V_g)⋅(R⋅i_L + V_g) 
+───────────────────────────────────
+                      2            
+            C⋅L⋅V_g⋅fₛ             
+2021-06-16 07:51:21,261
+sub-ing in 
+D⋅V_g⋅(1 - D)
+─────────────
+     L⋅fₛ     for 
+\Delta i_L
+2021-06-16 07:51:21,262
+and found 
+0.125⋅D⋅V_g⋅(1 - D)
+───────────────────
+            2      
+      C⋅L⋅fₛ       
+2021-06-16 07:51:21,285
+sub-ing in 
+D⋅(-R⋅i_L + V_g)
+────────────────
+     2⋅L⋅fₛ      for 
+\Delta i_L
+2021-06-16 07:51:21,285
+and found 
+0.0625⋅D⋅(-R⋅i_L + V_g)
+───────────────────────
+              2        
+        C⋅L⋅fₛ         
+2021-06-16 07:51:21,329
+sub-ing in 
+D⋅V_c⋅(1 - D) 
+──────────────
+L⋅fₛ⋅(2⋅D - 1) for 
+\Delta i_L
+2021-06-16 07:51:21,329
+and found 
+0.125⋅D⋅V_c⋅(1 - D)
+───────────────────
+       2           
+ C⋅L⋅fₛ ⋅(2⋅D - 1) 
+2021-06-16 07:51:21,330
+recursesym: 
+[\Delta v_C, C, \Delta i_L, D, V_c, V_g, M, L, fₛ, R, i_L]
+2021-06-16 07:51:21,330
+calling solver looking for 
+fₛ
+2021-06-16 07:51:21,330
+											base case
+2021-06-16 07:51:21,330
+returning: f_s=OrderedSet([D*(-V_c + V_g)/(2*L*\Delta i_L), 0.125*\Delta i_L/(C*\Delta v_C)])
+2021-06-16 07:51:21,352
+sub-ing in 
+D⋅(-V_c + V_g)
+──────────────
+2⋅L⋅\Delta i_L for 
+fₛ
+2021-06-16 07:51:21,353
+and found 
+                 2
+0.25⋅L⋅\Delta i_L 
+──────────────────
+ C⋅D⋅(-V_c + V_g) 
+2021-06-16 07:51:21,356
+sub-ing in 
+0.125⋅\Delta i_L
+────────────────
+  C⋅\Delta v_C   for 
+fₛ
+2021-06-16 07:51:21,356
+and found 
+1.0⋅\Delta v_C
+2021-06-16 07:51:21,365
+end of function, recursesym: {\Delta v_C: set(), C: OrderedSet([0.125*\Delta i_L/(\Delta v_C*f_s), 0.0625*D*(-V_c + V_g)/(L*\Delta v_C*f_s**2), 0.03125*(-V_c**2 + V_g**2)/(L*V_g*\Delta v_C*f_s**2), -0.03125*(M + 1)*(V_c - V_g)/(L*\Delta v_C*f_s**2), -0.03125*(V_c - V_g)*(R*i_L + V_g)/(L*V_g*\Delta v_C*f_s**2), 0.125*D*V_g*(1 - D)/(L*\Delta v_C*f_s**2), 0.0625*D*(-R*i_L + V_g)/(L*\Delta v_C*f_s**2), 0.125*D*V_c*(1 - D)/(L*\Delta v_C*f_s**2*(2.0*D - 1.0)), -0.25*L*\Delta i_L**2/(D*\Delta v_C*(V_c - V_g))]), \Delta i_L: OrderedSet([D*(-V_c + V_g)/(2*L*f_s), 8.0*C*\Delta v_C*f_s, (-V_c**2 + V_g**2)/(4*L*V_g*f_s), -(M + 1)*(V_c - V_g)/(4*L*f_s), -(V_c - V_g)*(R*i_L + V_g)/(4*L*V_g*f_s), D*V_g*(1 - D)/(L*f_s), D*(-R*i_L + V_g)/(2*L*f_s), D*V_c*(1 - D)/(L*f_s*(2*D - 1))]), D: OrderedSet([(V_c + V_g)/(2*V_g), -2*L*\Delta i_L*f_s/(V_c - V_g), M/2 + 1/2, (R*i_L + V_g)/(2*V_g), -2*L*\Delta i_L*f_s/(V_g*(M - 1)), -2*L*\Delta i_L*f_s/(R*i_L - V_g), -2*L*M*\Delta i_L*f_s/(V_c*(M - 1)), -0.25*L*\Delta i_L**2/(C*\Delta v_C*(V_c - V_g))]), V_c: OrderedSet([V_g*(2*D - 1), M*V_g, V_g - 2*L*\Delta i_L*f_s/D, R*i_L, V_g - 0.25*L*\Delta i_L**2/(C*D*\Delta v_C)]), V_g: OrderedSet([V_c/(2*D - 1), V_c/M, V_c + 2*L*\Delta i_L*f_s/D, V_c + 0.25*L*\Delta i_L**2/(C*D*\Delta v_C)]), M: OrderedSet([V_c/V_g]), L: OrderedSet([D*(-V_c + V_g)/(2*\Delta i_L*f_s), 4.0*C*D*\Delta v_C*(-V_c + V_g)/\Delta i_L**2]), f_s: OrderedSet([D*(-V_c + V_g)/(2*L*\Delta i_L), 0.125*\Delta i_L/(C*\Delta v_C)]), R: OrderedSet([V_c/i_L]), i_L: OrderedSet([V_c/R])}
+2021-06-16 07:51:21,368
+returning: 
+OrderedSet([0.125*\Delta i_L/(C*f_s), 0.0625*D*(-V_c + V_g)/(C*L*f_s**2), 0.03
+125*(-V_c**2 + V_g**2)/(C*L*V_g*f_s**2), -0.03125*(M + 1)*(V_c - V_g)/(C*L*f_s
+**2), -0.03125*(V_c - V_g)*(R*i_L + V_g)/(C*L*V_g*f_s**2), 0.125*D*V_g*(1 - D)
+/(C*L*f_s**2), 0.0625*D*(-R*i_L + V_g)/(C*L*f_s**2), 0.125*D*V_c*(1 - D)/(C*L*
+f_s**2*(2.0*D - 1.0)), -0.25*L*\Delta i_L**2/(C*D*(V_c - V_g))])
+2021-06-16 07:51:21,385
+adding i_L to []
+2021-06-16 07:51:21,385
+looking for 
+i_L
+2021-06-16 07:51:21,474
+nonlinsolve returns: 
+V_c
+───
+ R 
+2021-06-16 07:51:21,476
+
+D⋅(-V_c + V_g) + (1 - D)⋅(-V_c - V_g) solved for 
+i_L=
+∅
+2021-06-16 07:51:21,477
+
+    V_c
+M - ───
+    V_g solved for 
+i_L=
+∅
+2021-06-16 07:51:21,479
+
+  D⋅(-V_c + V_g)               
+- ────────────── + 2⋅\Delta i_L
+       L⋅fₛ                     solved for 
+i_L=
+∅
+2021-06-16 07:51:21,480
+
+                 0.25⋅\Delta i_L
+2⋅C⋅\Delta v_C - ───────────────
+                        fₛ       solved for 
+i_L=
+∅
+2021-06-16 07:51:21,482
+
+      V_c
+i_L - ───
+       R  solved for 
+i_L=
+⎧V_c⎫
+⎨───⎬
+⎩ R ⎭
+2021-06-16 07:51:21,484
+Done with 
+i_L
+2021-06-16 07:51:21,484
+so far i_L = 
+OrderedSet([V_c/R])
+2021-06-16 07:51:21,485
+solution to i_L is: 
+V_c
+───
+ R  
+2021-06-16 07:51:21,485
+recursesym: 
+[i_L]
+2021-06-16 07:51:21,485
+calling solver looking for 
+R
+2021-06-16 07:51:21,485
+	adding R to [i_L]
+2021-06-16 07:51:21,485
+looking for 
+R
+2021-06-16 07:51:21,562
+nonlinsolve returns: 
+V_c
+───
+i_L
+2021-06-16 07:51:21,564
+
+D⋅(-V_c + V_g) + (1 - D)⋅(-V_c - V_g) solved for 
+R=
+∅
+2021-06-16 07:51:21,565
+
+    V_c
+M - ───
+    V_g solved for 
+R=
+∅
+2021-06-16 07:51:21,566
+
+  D⋅(-V_c + V_g)               
+- ────────────── + 2⋅\Delta i_L
+       L⋅fₛ                     solved for 
+R=
+∅
+2021-06-16 07:51:21,567
+
+                 0.25⋅\Delta i_L
+2⋅C⋅\Delta v_C - ───────────────
+                        fₛ       solved for 
+R=
+∅
+2021-06-16 07:51:21,576
+
+      V_c
+i_L - ───
+       R  solved for 
+R=
+⎧V_c⎫      
+⎨───⎬ \ {0}
+⎩i_L⎭      
+2021-06-16 07:51:21,579
+	Done with 
+R
+2021-06-16 07:51:21,579
+	so far R = 
+	OrderedSet([V_c/i_L])
+2021-06-16 07:51:21,580
+	solution to R is: 
+	V_c
+	───
+	i_L 
+2021-06-16 07:51:21,580
+	recursesym: 
+	[i_L, R]
+2021-06-16 07:51:21,580
+	calling solver looking for 
+	V_c
+2021-06-16 07:51:21,580
+		adding V_c to [i_L, R]
+2021-06-16 07:51:21,580
+looking for 
+V_c
+2021-06-16 07:51:21,643
+nonlinsolve returns: 
+M⋅V_g
+2021-06-16 07:51:21,653
+
+D⋅(-V_c + V_g) + (1 - D)⋅(-V_c - V_g) solved for 
+V_c=
+{V_g⋅(2⋅D - 1)}
+2021-06-16 07:51:21,663
+
+    V_c
+M - ───
+    V_g solved for 
+V_c=
+{M⋅V_g}
+2021-06-16 07:51:21,670
+
+  D⋅(-V_c + V_g)               
+- ────────────── + 2⋅\Delta i_L
+       L⋅fₛ                     solved for 
+V_c=
+⎧      2⋅L⋅\Delta i_L⋅fₛ⎫
+⎨V_g - ─────────────────⎬
+⎩              D        ⎭
+2021-06-16 07:51:21,683
+
+                 0.25⋅\Delta i_L
+2⋅C⋅\Delta v_C - ───────────────
+                        fₛ       solved for 
+V_c=
+∅
+2021-06-16 07:51:21,686
+
+      V_c
+i_L - ───
+       R  solved for 
+V_c=
+{R⋅i_L}
+2021-06-16 07:51:21,689
+		Done with 
+V_c
+2021-06-16 07:51:21,690
+		so far V_c = 
+		OrderedSet([V_g*(2*D - 1), M*V_g, V_g - 2*L*\Delta i_L*f_s/D, R*i_L])
+2021-06-16 07:51:21,690
+		solution to V_c is: 
+		V_g⋅(2⋅D - 1) 
+2021-06-16 07:51:21,690
+		recursesym: 
+		[i_L, R, V_c]
+2021-06-16 07:51:21,691
+		calling solver looking for 
+		D
+2021-06-16 07:51:21,691
+			adding D to [i_L, R, V_c]
+2021-06-16 07:51:21,691
+looking for 
+D
+2021-06-16 07:51:21,760
+nonlinsolve returns: 
+V_c + V_g
+─────────
+  2⋅V_g  
+2021-06-16 07:51:21,769
+
+D⋅(-V_c + V_g) + (1 - D)⋅(-V_c - V_g) solved for 
+D=
+⎧V_c + V_g⎫
+⎨─────────⎬
+⎩  2⋅V_g  ⎭
+2021-06-16 07:51:21,775
+
+    V_c
+M - ───
+    V_g solved for 
+D=
+∅
+2021-06-16 07:51:21,780
+
+  D⋅(-V_c + V_g)               
+- ────────────── + 2⋅\Delta i_L
+       L⋅fₛ                     solved for 
+D=
+⎧-2⋅L⋅\Delta i_L⋅fₛ ⎫
+⎨───────────────────⎬
+⎩     V_c - V_g     ⎭
+2021-06-16 07:51:21,787
+
+                 0.25⋅\Delta i_L
+2⋅C⋅\Delta v_C - ───────────────
+                        fₛ       solved for 
+D=
+∅
+2021-06-16 07:51:21,788
+
+      V_c
+i_L - ───
+       R  solved for 
+D=
+∅
+2021-06-16 07:51:21,788
+			Done with 
+D
+2021-06-16 07:51:21,789
+			so far D = 
+			OrderedSet([(V_c + V_g)/(2*V_g), -2*L*\Delta i_L*f_s/(V_c - V_g)])
+2021-06-16 07:51:21,789
+			solution to D is: 
+			V_c + V_g
+			─────────
+			  2⋅V_g   
+2021-06-16 07:51:21,789
+			recursesym: 
+			[i_L, R, V_c, D]
+2021-06-16 07:51:21,789
+			calling solver looking for 
+			V_c
+2021-06-16 07:51:21,789
+				base case
+2021-06-16 07:51:21,789
+returning: V_c=set()
+2021-06-16 07:51:21,790
+			recursesym: 
+			[i_L, R, V_c, D]
+2021-06-16 07:51:21,790
+			calling solver looking for 
+			V_g
+2021-06-16 07:51:21,790
+				adding V_g to [i_L, R, V_c, D]
+2021-06-16 07:51:21,790
+looking for 
+V_g
+2021-06-16 07:51:21,894
+nonlinsolve returns: 
+V_c
+───
+ M 
+2021-06-16 07:51:21,905
+
+D⋅(-V_c + V_g) + (1 - D)⋅(-V_c - V_g) solved for 
+V_g=
+⎧  V_c  ⎫
+⎨───────⎬
+⎩2⋅D - 1⎭
+2021-06-16 07:51:21,916
+
+    V_c
+M - ───
+    V_g solved for 
+V_g=
+⎧V_c⎫      
+⎨───⎬ \ {0}
+⎩ M ⎭      
+2021-06-16 07:51:21,922
+
+  D⋅(-V_c + V_g)               
+- ────────────── + 2⋅\Delta i_L
+       L⋅fₛ                     solved for 
+V_g=
+⎧      2⋅L⋅\Delta i_L⋅fₛ⎫
+⎨V_c + ─────────────────⎬
+⎩              D        ⎭
+2021-06-16 07:51:21,932
+
+                 0.25⋅\Delta i_L
+2⋅C⋅\Delta v_C - ───────────────
+                        fₛ       solved for 
+V_g=
+∅
+2021-06-16 07:51:21,932
+
+      V_c
+i_L - ───
+       R  solved for 
+V_g=
+∅
+2021-06-16 07:51:21,933
+				Done with 
+V_g
+2021-06-16 07:51:21,933
+				so far V_g = 
+				OrderedSet([V_c/(2*D - 1), V_c/M, V_c + 2*L*\Delta i_L*f_s/D])
+2021-06-16 07:51:21,933
+				solution to V_g is: 
+				  V_c  
+				───────
+				2⋅D - 1 
+2021-06-16 07:51:21,934
+				recursesym: 
+				[i_L, R, V_c, D, V_g]
+2021-06-16 07:51:21,934
+				calling solver looking for 
+				D
+2021-06-16 07:51:21,934
+					base case
+2021-06-16 07:51:21,934
+returning: D=set()
+2021-06-16 07:51:21,934
+				recursesym: 
+				[i_L, R, V_c, D, V_g]
+2021-06-16 07:51:21,934
+				calling solver looking for 
+				V_c
+2021-06-16 07:51:21,934
+					base case
+2021-06-16 07:51:21,934
+returning: V_c=set()
+2021-06-16 07:51:21,934
+				solution to V_g is: 
+				V_c
+				───
+				 M  
+2021-06-16 07:51:21,935
+				recursesym: 
+				[i_L, R, V_c, D, V_g]
+2021-06-16 07:51:21,935
+				calling solver looking for 
+				M
+2021-06-16 07:51:21,935
+					adding M to [i_L, R, V_c, D, V_g]
+2021-06-16 07:51:21,935
+looking for 
+M
+2021-06-16 07:51:21,995
+nonlinsolve returns: 
+V_c
+───
+V_g
+2021-06-16 07:51:21,996
+
+D⋅(-V_c + V_g) + (1 - D)⋅(-V_c - V_g) solved for 
+M=
+∅
+2021-06-16 07:51:21,997
+
+    V_c
+M - ───
+    V_g solved for 
+M=
+⎧V_c⎫
+⎨───⎬
+⎩V_g⎭
+2021-06-16 07:51:22,001
+
+  D⋅(-V_c + V_g)               
+- ────────────── + 2⋅\Delta i_L
+       L⋅fₛ                     solved for 
+M=
+∅
+2021-06-16 07:51:22,002
+
+                 0.25⋅\Delta i_L
+2⋅C⋅\Delta v_C - ───────────────
+                        fₛ       solved for 
+M=
+∅
+2021-06-16 07:51:22,002
+
+      V_c
+i_L - ───
+       R  solved for 
+M=
+∅
+2021-06-16 07:51:22,002
+					Done with 
+M
+2021-06-16 07:51:22,002
+					so far M = 
+					OrderedSet([V_c/V_g])
+2021-06-16 07:51:22,003
+					solution to M is: 
+					V_c
+					───
+					V_g 
+2021-06-16 07:51:22,003
+					recursesym: 
+					[i_L, R, V_c, D, V_g, M]
+2021-06-16 07:51:22,003
+					calling solver looking for 
+					V_c
+2021-06-16 07:51:22,003
+						base case
+2021-06-16 07:51:22,003
+returning: V_c=set()
+2021-06-16 07:51:22,003
+					recursesym: 
+					[i_L, R, V_c, D, V_g, M]
+2021-06-16 07:51:22,003
+					calling solver looking for 
+					V_g
+2021-06-16 07:51:22,003
+						base case
+2021-06-16 07:51:22,003
+returning: V_g=set()
+2021-06-16 07:51:22,003
+end of function, recursesym: {i_L: set(), R: set(), V_c: set(), D: set(), V_g: set(), M: set()}
+2021-06-16 07:51:22,004
+returning: 
+					OrderedSet([V_c/V_g])
+2021-06-16 07:51:22,004
+				sub-ing in 
+				V_c
+				───
+				V_g for 
+				M
+2021-06-16 07:51:22,004
+				and found 
+				V_g
+2021-06-16 07:51:22,004
+				recursesym: 
+				[i_L, R, V_c, D, V_g, M]
+2021-06-16 07:51:22,004
+				calling solver looking for 
+				V_c
+2021-06-16 07:51:22,004
+						base case
+2021-06-16 07:51:22,004
+returning: V_c=set()
+2021-06-16 07:51:22,005
+				solution to V_g is: 
+				      2⋅L⋅\Delta i_L⋅fₛ
+				V_c + ─────────────────
+				              D         
+2021-06-16 07:51:22,005
+				recursesym: 
+				[i_L, R, V_c, D, V_g, M]
+2021-06-16 07:51:22,005
+				calling solver looking for 
+				D
+2021-06-16 07:51:22,005
+						base case
+2021-06-16 07:51:22,005
+returning: D=set()
+2021-06-16 07:51:22,005
+				recursesym: 
+				[i_L, R, V_c, D, V_g, M]
+2021-06-16 07:51:22,005
+				calling solver looking for 
+				L
+2021-06-16 07:51:22,005
+						adding L to [i_L, R, V_c, D, V_g, M]
+2021-06-16 07:51:22,006
+looking for 
+L
+2021-06-16 07:51:22,117
+nonlinsolve returns: 
+ D⋅(-V_c + V_g)
+───────────────
+2⋅\Delta i_L⋅fₛ
+2021-06-16 07:51:22,118
+
+D⋅(-V_c + V_g) + (1 - D)⋅(-V_c - V_g) solved for 
+L=
+∅
+2021-06-16 07:51:22,119
+
+    V_c
+M - ───
+    V_g solved for 
+L=
+∅
+2021-06-16 07:51:22,130
+
+  D⋅(-V_c + V_g)               
+- ────────────── + 2⋅\Delta i_L
+       L⋅fₛ                     solved for 
+L=
+⎧-D⋅(V_c - V_g) ⎫      
+⎨───────────────⎬ \ {0}
+⎩2⋅\Delta i_L⋅fₛ⎭      
+2021-06-16 07:51:22,138
+
+                 0.25⋅\Delta i_L
+2⋅C⋅\Delta v_C - ───────────────
+                        fₛ       solved for 
+L=
+∅
+2021-06-16 07:51:22,139
+
+      V_c
+i_L - ───
+       R  solved for 
+L=
+∅
+2021-06-16 07:51:22,139
+						Done with 
+L
+2021-06-16 07:51:22,139
+						so far L = 
+						OrderedSet([D*(-V_c + V_g)/(2*\Delta i_L*f_s)])
+2021-06-16 07:51:22,140
+						solution to L is: 
+						 D⋅(-V_c + V_g)
+						───────────────
+						2⋅\Delta i_L⋅fₛ 
+2021-06-16 07:51:22,140
+						recursesym: 
+						[i_L, R, V_c, D, V_g, M, L]
+2021-06-16 07:51:22,140
+						calling solver looking for 
+						D
+2021-06-16 07:51:22,140
+							base case
+2021-06-16 07:51:22,140
+returning: D=set()
+2021-06-16 07:51:22,141
+						recursesym: 
+						[i_L, R, V_c, D, V_g, M, L]
+2021-06-16 07:51:22,141
+						calling solver looking for 
+						V_c
+2021-06-16 07:51:22,141
+							base case
+2021-06-16 07:51:22,141
+returning: V_c=set()
+2021-06-16 07:51:22,141
+						recursesym: 
+						[i_L, R, V_c, D, V_g, M, L]
+2021-06-16 07:51:22,141
+						calling solver looking for 
+						V_g
+2021-06-16 07:51:22,141
+							base case
+2021-06-16 07:51:22,141
+returning: V_g=set()
+2021-06-16 07:51:22,141
+						recursesym: 
+						[i_L, R, V_c, D, V_g, M, L]
+2021-06-16 07:51:22,141
+						calling solver looking for 
+						\Delta i_L
+2021-06-16 07:51:22,141
+							adding delta_iL to [i_L, R, V_c, D, V_g, M, L]
+2021-06-16 07:51:22,142
+looking for 
+\Delta i_L
+2021-06-16 07:51:22,208
+nonlinsolve returns: 
+8.0⋅C⋅\Delta v_C⋅fₛ
+2021-06-16 07:51:22,209
+
+D⋅(-V_c + V_g) + (1 - D)⋅(-V_c - V_g) solved for 
+\Delta i_L=
+∅
+2021-06-16 07:51:22,210
+
+    V_c
+M - ───
+    V_g solved for 
+\Delta i_L=
+∅
+2021-06-16 07:51:22,214
+
+  D⋅(-V_c + V_g)               
+- ────────────── + 2⋅\Delta i_L
+       L⋅fₛ                     solved for 
+\Delta i_L=
+⎧-D⋅(V_c - V_g) ⎫
+⎨───────────────⎬
+⎩     2⋅L⋅fₛ    ⎭
+2021-06-16 07:51:22,227
+
+                 0.25⋅\Delta i_L
+2⋅C⋅\Delta v_C - ───────────────
+                        fₛ       solved for 
+\Delta i_L=
+{8.0⋅C⋅\Delta v_C⋅fₛ}
+2021-06-16 07:51:22,232
+
+      V_c
+i_L - ───
+       R  solved for 
+\Delta i_L=
+∅
+2021-06-16 07:51:22,232
+							Done with 
+\Delta i_L
+2021-06-16 07:51:22,232
+							so far delta_iL = 
+							OrderedSet([D*(-V_c + V_g)/(2*L*f_s), 8.0*C*\Delta v_C*f_s])
+2021-06-16 07:51:22,233
+							solution to delta_iL is: 
+							D⋅(-V_c + V_g)
+							──────────────
+							    2⋅L⋅fₛ     
+2021-06-16 07:51:22,233
+							recursesym: 
+							[i_L, R, V_c, D, V_g, M, L, \Delta i_L]
+2021-06-16 07:51:22,233
+							calling solver looking for 
+							D
+2021-06-16 07:51:22,233
+								base case
+2021-06-16 07:51:22,233
+returning: D=set()
+2021-06-16 07:51:22,233
+							recursesym: 
+							[i_L, R, V_c, D, V_g, M, L, \Delta i_L]
+2021-06-16 07:51:22,233
+							calling solver looking for 
+							L
+2021-06-16 07:51:22,233
+								base case
+2021-06-16 07:51:22,233
+returning: L=set()
+2021-06-16 07:51:22,234
+							recursesym: 
+							[i_L, R, V_c, D, V_g, M, L, \Delta i_L]
+2021-06-16 07:51:22,234
+							calling solver looking for 
+							V_c
+2021-06-16 07:51:22,234
+								base case
+2021-06-16 07:51:22,234
+returning: V_c=set()
+2021-06-16 07:51:22,234
+							recursesym: 
+							[i_L, R, V_c, D, V_g, M, L, \Delta i_L]
+2021-06-16 07:51:22,234
+							calling solver looking for 
+							V_g
+2021-06-16 07:51:22,234
+								base case
+2021-06-16 07:51:22,234
+returning: V_g=set()
+2021-06-16 07:51:22,235
+							recursesym: 
+							[i_L, R, V_c, D, V_g, M, L, \Delta i_L]
+2021-06-16 07:51:22,235
+							calling solver looking for 
+							fₛ
+2021-06-16 07:51:22,235
+								adding f_s to [i_L, R, V_c, D, V_g, M, L, \Delta i_L]
+2021-06-16 07:51:22,235
+looking for 
+fₛ
+2021-06-16 07:51:22,344
+nonlinsolve returns: 
+0.125⋅\Delta i_L
+────────────────
+  C⋅\Delta v_C  
+2021-06-16 07:51:22,345
+
+D⋅(-V_c + V_g) + (1 - D)⋅(-V_c - V_g) solved for 
+fₛ=
+∅
+2021-06-16 07:51:22,346
+
+    V_c
+M - ───
+    V_g solved for 
+fₛ=
+∅
+2021-06-16 07:51:22,356
+
+  D⋅(-V_c + V_g)               
+- ────────────── + 2⋅\Delta i_L
+       L⋅fₛ                     solved for 
+fₛ=
+⎧-D⋅(V_c - V_g) ⎫      
+⎨───────────────⎬ \ {0}
+⎩ 2⋅L⋅\Delta i_L⎭      
+2021-06-16 07:51:22,376
+
+                 0.25⋅\Delta i_L
+2⋅C⋅\Delta v_C - ───────────────
+                        fₛ       solved for 
+fₛ=
+⎧0.125⋅\Delta i_L⎫      
+⎨────────────────⎬ \ {0}
+⎩  C⋅\Delta v_C  ⎭      
+2021-06-16 07:51:22,380
+
+      V_c
+i_L - ───
+       R  solved for 
+fₛ=
+∅
+2021-06-16 07:51:22,380
+								Done with 
+fₛ
+2021-06-16 07:51:22,381
+								so far f_s = 
+								OrderedSet([D*(-V_c + V_g)/(2*L*\Delta i_L), 0.125*\Delta i_L/(C*\Delta v_C)])
+2021-06-16 07:51:22,381
+								solution to f_s is: 
+								D⋅(-V_c + V_g)
+								──────────────
+								2⋅L⋅\Delta i_L 
+2021-06-16 07:51:22,382
+								recursesym: 
+								[i_L, R, V_c, D, V_g, M, L, \Delta i_L, fₛ]
+2021-06-16 07:51:22,382
+								calling solver looking for 
+								D
+2021-06-16 07:51:22,382
+									base case
+2021-06-16 07:51:22,382
+returning: D=set()
+2021-06-16 07:51:22,382
+								recursesym: 
+								[i_L, R, V_c, D, V_g, M, L, \Delta i_L, fₛ]
+2021-06-16 07:51:22,382
+								calling solver looking for 
+								L
+2021-06-16 07:51:22,382
+									base case
+2021-06-16 07:51:22,382
+returning: L=set()
+2021-06-16 07:51:22,382
+								recursesym: 
+								[i_L, R, V_c, D, V_g, M, L, \Delta i_L, fₛ]
+2021-06-16 07:51:22,383
+								calling solver looking for 
+								V_c
+2021-06-16 07:51:22,383
+									base case
+2021-06-16 07:51:22,383
+returning: V_c=set()
+2021-06-16 07:51:22,383
+								recursesym: 
+								[i_L, R, V_c, D, V_g, M, L, \Delta i_L, fₛ]
+2021-06-16 07:51:22,383
+								calling solver looking for 
+								V_g
+2021-06-16 07:51:22,383
+									base case
+2021-06-16 07:51:22,383
+returning: V_g=set()
+2021-06-16 07:51:22,383
+								recursesym: 
+								[i_L, R, V_c, D, V_g, M, L, \Delta i_L, fₛ]
+2021-06-16 07:51:22,383
+								calling solver looking for 
+								\Delta i_L
+2021-06-16 07:51:22,383
+									base case
+2021-06-16 07:51:22,384
+returning: delta_iL=set()
+2021-06-16 07:51:22,384
+								solution to f_s is: 
+								0.125⋅\Delta i_L
+								────────────────
+								  C⋅\Delta v_C   
+2021-06-16 07:51:22,384
+								recursesym: 
+								[i_L, R, V_c, D, V_g, M, L, \Delta i_L, fₛ]
+2021-06-16 07:51:22,384
+								calling solver looking for 
+								C
+2021-06-16 07:51:22,384
+									adding C to [i_L, R, V_c, D, V_g, M, L, \Delta i_L, f_s]
+2021-06-16 07:51:22,384
+looking for 
+C
+2021-06-16 07:51:22,448
+nonlinsolve returns: 
+0.125⋅\Delta i_L
+────────────────
+ \Delta v_C⋅fₛ  
+2021-06-16 07:51:22,449
+
+D⋅(-V_c + V_g) + (1 - D)⋅(-V_c - V_g) solved for 
+C=
+∅
+2021-06-16 07:51:22,450
+
+    V_c
+M - ───
+    V_g solved for 
+C=
+∅
+2021-06-16 07:51:22,451
+
+  D⋅(-V_c + V_g)               
+- ────────────── + 2⋅\Delta i_L
+       L⋅fₛ                     solved for 
+C=
+∅
+2021-06-16 07:51:22,454
+
+                 0.25⋅\Delta i_L
+2⋅C⋅\Delta v_C - ───────────────
+                        fₛ       solved for 
+C=
+⎧0.125⋅\Delta i_L⎫
+⎨────────────────⎬
+⎩ \Delta v_C⋅fₛ  ⎭
+2021-06-16 07:51:22,460
+
+      V_c
+i_L - ───
+       R  solved for 
+C=
+∅
+2021-06-16 07:51:22,460
+									Done with 
+C
+2021-06-16 07:51:22,460
+									so far C = 
+									OrderedSet([0.125*\Delta i_L/(\Delta v_C*f_s)])
+2021-06-16 07:51:22,460
+									solution to C is: 
+									0.125⋅\Delta i_L
+									────────────────
+									 \Delta v_C⋅fₛ   
+2021-06-16 07:51:22,461
+									recursesym: 
+									[i_L, R, V_c, D, V_g, M, L, \Delta i_L, fₛ, C]
+2021-06-16 07:51:22,461
+									calling solver looking for 
+									\Delta i_L
+2021-06-16 07:51:22,461
+										base case
+2021-06-16 07:51:22,461
+returning: delta_iL=set()
+2021-06-16 07:51:22,461
+									recursesym: 
+									[i_L, R, V_c, D, V_g, M, L, \Delta i_L, fₛ, C]
+2021-06-16 07:51:22,461
+									calling solver looking for 
+									\Delta v_C
+2021-06-16 07:51:22,461
+										adding detla_vC to [i_L, R, V_c, D, V_g, M, L, \Delta i_L, f_s, C]
+2021-06-16 07:51:22,461
+looking for 
+\Delta v_C
+2021-06-16 07:51:22,520
+nonlinsolve returns: 
+0.125⋅\Delta i_L
+────────────────
+      C⋅fₛ      
+2021-06-16 07:51:22,521
+
+D⋅(-V_c + V_g) + (1 - D)⋅(-V_c - V_g) solved for 
+\Delta v_C=
+∅
+2021-06-16 07:51:22,522
+
+    V_c
+M - ───
+    V_g solved for 
+\Delta v_C=
+∅
+2021-06-16 07:51:22,523
+
+  D⋅(-V_c + V_g)               
+- ────────────── + 2⋅\Delta i_L
+       L⋅fₛ                     solved for 
+\Delta v_C=
+∅
+2021-06-16 07:51:22,526
+
+                 0.25⋅\Delta i_L
+2⋅C⋅\Delta v_C - ───────────────
+                        fₛ       solved for 
+\Delta v_C=
+⎧0.125⋅\Delta i_L⎫
+⎨────────────────⎬
+⎩      C⋅fₛ      ⎭
+2021-06-16 07:51:22,532
+
+      V_c
+i_L - ───
+       R  solved for 
+\Delta v_C=
+∅
+2021-06-16 07:51:22,532
+										Done with 
+\Delta v_C
+2021-06-16 07:51:22,532
+										so far detla_vC = 
+										OrderedSet([0.125*\Delta i_L/(C*f_s)])
+2021-06-16 07:51:22,533
+										solution to detla_vC is: 
+										0.125⋅\Delta i_L
+										────────────────
+										      C⋅fₛ       
+2021-06-16 07:51:22,533
+										recursesym: 
+										[i_L, R, V_c, D, V_g, M, L, \Delta i_L, fₛ, C, \Delta v_C]
+2021-06-16 07:51:22,533
+										calling solver looking for 
+										C
+2021-06-16 07:51:22,533
+											base case
+2021-06-16 07:51:22,533
+returning: C=set()
+2021-06-16 07:51:22,533
+										recursesym: 
+										[i_L, R, V_c, D, V_g, M, L, \Delta i_L, fₛ, C, \Delta v_C]
+2021-06-16 07:51:22,533
+										calling solver looking for 
+										\Delta i_L
+2021-06-16 07:51:22,534
+											base case
+2021-06-16 07:51:22,534
+returning: delta_iL=set()
+2021-06-16 07:51:22,534
+										recursesym: 
+										[i_L, R, V_c, D, V_g, M, L, \Delta i_L, fₛ, C, \Delta v_C]
+2021-06-16 07:51:22,534
+										calling solver looking for 
+										fₛ
+2021-06-16 07:51:22,534
+											base case
+2021-06-16 07:51:22,534
+returning: f_s=set()
+2021-06-16 07:51:22,534
+end of function, recursesym: {i_L: set(), R: set(), V_c: set(), D: set(), V_g: set(), M: OrderedSet([V_c/V_g]), L: set(), \Delta i_L: set(), f_s: set(), C: set(), \Delta v_C: set()}
+2021-06-16 07:51:22,534
+returning: 
+										OrderedSet([0.125*\Delta i_L/(C*f_s)])
+2021-06-16 07:51:22,539
+									sub-ing in 
+									0.125⋅\Delta i_L
+									────────────────
+									      C⋅fₛ       for 
+									\Delta v_C
+2021-06-16 07:51:22,539
+									and found 
+									1.0⋅C
+2021-06-16 07:51:22,539
+									recursesym: 
+									[i_L, R, V_c, D, V_g, M, L, \Delta i_L, fₛ, C, \Delta v_C]
+2021-06-16 07:51:22,539
+									calling solver looking for 
+									fₛ
+2021-06-16 07:51:22,539
+											base case
+2021-06-16 07:51:22,539
+returning: f_s=set()
+2021-06-16 07:51:22,540
+end of function, recursesym: {i_L: set(), R: set(), V_c: set(), D: set(), V_g: set(), M: OrderedSet([V_c/V_g]), L: set(), \Delta i_L: set(), f_s: set(), C: set(), \Delta v_C: OrderedSet([0.125*\Delta i_L/(C*f_s)])}
+2021-06-16 07:51:22,540
+returning: 
+									OrderedSet([0.125*\Delta i_L/(\Delta v_C*f_s)])
+2021-06-16 07:51:22,543
+								sub-ing in 
+								0.125⋅\Delta i_L
+								────────────────
+								 \Delta v_C⋅fₛ   for 
+								C
+2021-06-16 07:51:22,543
+								and found 
+								1.0⋅fₛ
+2021-06-16 07:51:22,544
+								recursesym: 
+								[i_L, R, V_c, D, V_g, M, L, \Delta i_L, fₛ, C, \Delta v_C]
+2021-06-16 07:51:22,544
+								calling solver looking for 
+								\Delta i_L
+2021-06-16 07:51:22,544
+											base case
+2021-06-16 07:51:22,544
+returning: delta_iL=set()
+2021-06-16 07:51:22,544
+								recursesym: 
+								[i_L, R, V_c, D, V_g, M, L, \Delta i_L, fₛ, C, \Delta v_C]
+2021-06-16 07:51:22,544
+								calling solver looking for 
+								\Delta v_C
+2021-06-16 07:51:22,544
+											base case
+2021-06-16 07:51:22,544
+returning: detla_vC=OrderedSet([0.125*\Delta i_L/(C*f_s)])
+2021-06-16 07:51:22,547
+								sub-ing in 
+								0.125⋅\Delta i_L
+								────────────────
+								      C⋅fₛ       for 
+								\Delta v_C
+2021-06-16 07:51:22,547
+								and found 
+								1.0⋅fₛ
+2021-06-16 07:51:22,548
+end of function, recursesym: {i_L: set(), R: set(), V_c: set(), D: set(), V_g: set(), M: OrderedSet([V_c/V_g]), L: set(), \Delta i_L: set(), f_s: set(), C: OrderedSet([0.125*\Delta i_L/(\Delta v_C*f_s)]), \Delta v_C: OrderedSet([0.125*\Delta i_L/(C*f_s)])}
+2021-06-16 07:51:22,548
+returning: 
+								OrderedSet([D*(-V_c + V_g)/(2*L*\Delta i_L), 0.125*\Delta i_L/(C*\Delta v_C)])
+2021-06-16 07:51:22,549
+							sub-ing in 
+							D⋅(-V_c + V_g)
+							──────────────
+							2⋅L⋅\Delta i_L for 
+							fₛ
+2021-06-16 07:51:22,549
+							and found 
+							\Delta i_L
+2021-06-16 07:51:22,567
+							sub-ing in 
+							0.125⋅\Delta i_L
+							────────────────
+							  C⋅\Delta v_C   for 
+							fₛ
+2021-06-16 07:51:22,567
+							and found 
+							4.0⋅C⋅D⋅\Delta v_C⋅(-V_c + V_g)
+							───────────────────────────────
+							          L⋅\Delta i_L         
+2021-06-16 07:51:22,567
+							solution to delta_iL is: 
+							8.0⋅C⋅\Delta v_C⋅fₛ 
+2021-06-16 07:51:22,568
+							recursesym: 
+							[i_L, R, V_c, D, V_g, M, L, \Delta i_L, fₛ, C, \Delta v_C]
+2021-06-16 07:51:22,568
+							calling solver looking for 
+							C
+2021-06-16 07:51:22,568
+											base case
+2021-06-16 07:51:22,568
+returning: C=OrderedSet([0.125*\Delta i_L/(\Delta v_C*f_s)])
+2021-06-16 07:51:22,571
+							sub-ing in 
+							0.125⋅\Delta i_L
+							────────────────
+							 \Delta v_C⋅fₛ   for 
+							C
+2021-06-16 07:51:22,571
+							and found 
+							1.0⋅\Delta i_L
+2021-06-16 07:51:22,572
+							recursesym: 
+							[i_L, R, V_c, D, V_g, M, L, \Delta i_L, fₛ, C, \Delta v_C]
+2021-06-16 07:51:22,572
+							calling solver looking for 
+							\Delta v_C
+2021-06-16 07:51:22,572
+											base case
+2021-06-16 07:51:22,572
+returning: detla_vC=OrderedSet([0.125*\Delta i_L/(C*f_s)])
+2021-06-16 07:51:22,574
+							sub-ing in 
+							0.125⋅\Delta i_L
+							────────────────
+							      C⋅fₛ       for 
+							\Delta v_C
+2021-06-16 07:51:22,575
+							and found 
+							1.0⋅\Delta i_L
+2021-06-16 07:51:22,575
+							recursesym: 
+							[i_L, R, V_c, D, V_g, M, L, \Delta i_L, fₛ, C, \Delta v_C]
+2021-06-16 07:51:22,575
+							calling solver looking for 
+							fₛ
+2021-06-16 07:51:22,575
+											base case
+2021-06-16 07:51:22,575
+returning: f_s=OrderedSet([D*(-V_c + V_g)/(2*L*\Delta i_L), 0.125*\Delta i_L/(C*\Delta v_C)])
+2021-06-16 07:51:22,585
+							sub-ing in 
+							D⋅(-V_c + V_g)
+							──────────────
+							2⋅L⋅\Delta i_L for 
+							fₛ
+2021-06-16 07:51:22,586
+							and found 
+							4.0⋅C⋅D⋅\Delta v_C⋅(-V_c + V_g)
+							───────────────────────────────
+							          L⋅\Delta i_L         
+2021-06-16 07:51:22,588
+							sub-ing in 
+							0.125⋅\Delta i_L
+							────────────────
+							  C⋅\Delta v_C   for 
+							fₛ
+2021-06-16 07:51:22,588
+							and found 
+							1.0⋅\Delta i_L
+2021-06-16 07:51:22,589
+end of function, recursesym: {i_L: set(), R: set(), V_c: set(), D: set(), V_g: set(), M: OrderedSet([V_c/V_g]), L: set(), \Delta i_L: set(), f_s: OrderedSet([D*(-V_c + V_g)/(2*L*\Delta i_L), 0.125*\Delta i_L/(C*\Delta v_C)]), C: OrderedSet([0.125*\Delta i_L/(\Delta v_C*f_s)]), \Delta v_C: OrderedSet([0.125*\Delta i_L/(C*f_s)])}
+2021-06-16 07:51:22,589
+returning: 
+							OrderedSet([D*(-V_c + V_g)/(2*L*f_s), 8.0*C*\Delta v_C*f_s])
+2021-06-16 07:51:22,590
+						sub-ing in 
+						D⋅(-V_c + V_g)
+						──────────────
+						    2⋅L⋅fₛ     for 
+						\Delta i_L
+2021-06-16 07:51:22,591
+						and found 
+						L
+2021-06-16 07:51:22,614
+						sub-ing in 
+						8.0⋅C⋅\Delta v_C⋅fₛ for 
+						\Delta i_L
+2021-06-16 07:51:22,615
+						and found 
+						0.0625⋅D⋅(-V_c + V_g)
+						─────────────────────
+						                  2  
+						   C⋅\Delta v_C⋅fₛ   
+2021-06-16 07:51:22,615
+						recursesym: 
+						[i_L, R, V_c, D, V_g, M, L, \Delta i_L, fₛ, C, \Delta v_C]
+2021-06-16 07:51:22,615
+						calling solver looking for 
+						fₛ
+2021-06-16 07:51:22,615
+											base case
+2021-06-16 07:51:22,616
+returning: f_s=OrderedSet([D*(-V_c + V_g)/(2*L*\Delta i_L), 0.125*\Delta i_L/(C*\Delta v_C)])
+2021-06-16 07:51:22,616
+						sub-ing in 
+						D⋅(-V_c + V_g)
+						──────────────
+						2⋅L⋅\Delta i_L for 
+						fₛ
+2021-06-16 07:51:22,616
+						and found 
+						L
+2021-06-16 07:51:22,630
+						sub-ing in 
+						0.125⋅\Delta i_L
+						────────────────
+						  C⋅\Delta v_C   for 
+						fₛ
+2021-06-16 07:51:22,630
+						and found 
+						4.0⋅C⋅D⋅\Delta v_C⋅(-V_c + V_g)
+						───────────────────────────────
+						                    2          
+						          \Delta i_L           
+2021-06-16 07:51:22,631
+end of function, recursesym: {i_L: set(), R: set(), V_c: set(), D: set(), V_g: set(), M: OrderedSet([V_c/V_g]), L: set(), \Delta i_L: OrderedSet([D*(-V_c + V_g)/(2*L*f_s), 8.0*C*\Delta v_C*f_s]), f_s: OrderedSet([D*(-V_c + V_g)/(2*L*\Delta i_L), 0.125*\Delta i_L/(C*\Delta v_C)]), C: OrderedSet([0.125*\Delta i_L/(\Delta v_C*f_s)]), \Delta v_C: OrderedSet([0.125*\Delta i_L/(C*f_s)])}
+2021-06-16 07:51:22,632
+returning: 
+						OrderedSet([D*(-V_c + V_g)/(2*\Delta i_L*f_s), 0.0625*D*(-V_c + V_g)/(C*\Delta
+						 v_C*f_s**2), 4.0*C*D*\Delta v_C*(-V_c + V_g)/\Delta i_L**2])
+2021-06-16 07:51:22,633
+				sub-ing in 
+				 D⋅(-V_c + V_g)
+				───────────────
+				2⋅\Delta i_L⋅fₛ for 
+				L
+2021-06-16 07:51:22,633
+				and found 
+				V_g
+2021-06-16 07:51:22,668
+				sub-ing in 
+				0.0625⋅D⋅(-V_c + V_g)
+				─────────────────────
+				                  2  
+				   C⋅\Delta v_C⋅fₛ    for 
+				L
+2021-06-16 07:51:22,669
+				and found 
+				      0.125⋅\Delta i_L⋅(-V_c + V_g)
+				V_c + ─────────────────────────────
+				             C⋅\Delta v_C⋅fₛ       
+2021-06-16 07:51:22,694
+				sub-ing in 
+				4.0⋅C⋅D⋅\Delta v_C⋅(-V_c + V_g)
+				───────────────────────────────
+				                    2          
+				          \Delta i_L            for 
+				L
+2021-06-16 07:51:22,695
+				and found 
+				8.0⋅C⋅\Delta v_C⋅fₛ⋅(-V_c + V_g)      
+				──────────────────────────────── + V_c
+				           \Delta i_L                 
+2021-06-16 07:51:22,695
+				recursesym: 
+				[i_L, R, V_c, D, V_g, M, L, \Delta i_L, fₛ, C, \Delta v_C]
+2021-06-16 07:51:22,695
+				calling solver looking for 
+				V_c
+2021-06-16 07:51:22,695
+											base case
+2021-06-16 07:51:22,695
+returning: V_c=set()
+2021-06-16 07:51:22,695
+				recursesym: 
+				[i_L, R, V_c, D, V_g, M, L, \Delta i_L, fₛ, C, \Delta v_C]
+2021-06-16 07:51:22,695
+				calling solver looking for 
+				\Delta i_L
+2021-06-16 07:51:22,695
+											base case
+2021-06-16 07:51:22,696
+returning: delta_iL=OrderedSet([D*(-V_c + V_g)/(2*L*f_s), 8.0*C*\Delta v_C*f_s])
+2021-06-16 07:51:22,697
+				sub-ing in 
+				D⋅(-V_c + V_g)
+				──────────────
+				    2⋅L⋅fₛ     for 
+				\Delta i_L
+2021-06-16 07:51:22,697
+				and found 
+				V_g
+2021-06-16 07:51:22,720
+				sub-ing in 
+				8.0⋅C⋅\Delta v_C⋅fₛ for 
+				\Delta i_L
+2021-06-16 07:51:22,720
+				and found 
+				                      2      
+				16.0⋅C⋅L⋅\Delta v_C⋅fₛ       
+				─────────────────────── + V_c
+				           D                 
+2021-06-16 07:51:22,720
+				recursesym: 
+				[i_L, R, V_c, D, V_g, M, L, \Delta i_L, fₛ, C, \Delta v_C]
+2021-06-16 07:51:22,720
+				calling solver looking for 
+				fₛ
+2021-06-16 07:51:22,721
+											base case
+2021-06-16 07:51:22,721
+returning: f_s=OrderedSet([D*(-V_c + V_g)/(2*L*\Delta i_L), 0.125*\Delta i_L/(C*\Delta v_C)])
+2021-06-16 07:51:22,721
+				sub-ing in 
+				D⋅(-V_c + V_g)
+				──────────────
+				2⋅L⋅\Delta i_L for 
+				fₛ
+2021-06-16 07:51:22,722
+				and found 
+				V_g
+2021-06-16 07:51:22,743
+				sub-ing in 
+				0.125⋅\Delta i_L
+				────────────────
+				  C⋅\Delta v_C   for 
+				fₛ
+2021-06-16 07:51:22,743
+				and found 
+				                       2
+				      0.25⋅L⋅\Delta i_L 
+				V_c + ──────────────────
+				        C⋅D⋅\Delta v_C  
+2021-06-16 07:51:22,745
+end of function, recursesym: {i_L: set(), R: set(), V_c: set(), D: set(), V_g: set(), M: OrderedSet([V_c/V_g]), L: OrderedSet([D*(-V_c + V_g)/(2*\Delta i_L*f_s), 0.0625*D*(-V_c + V_g)/(C*\Delta v_C*f_s**2), 4.0*C*D*\Delta v_C*(-V_c + V_g)/\Delta i_L**2]), \Delta i_L: OrderedSet([D*(-V_c + V_g)/(2*L*f_s), 8.0*C*\Delta v_C*f_s]), f_s: OrderedSet([D*(-V_c + V_g)/(2*L*\Delta i_L), 0.125*\Delta i_L/(C*\Delta v_C)]), C: OrderedSet([0.125*\Delta i_L/(\Delta v_C*f_s)]), \Delta v_C: OrderedSet([0.125*\Delta i_L/(C*f_s)])}
+2021-06-16 07:51:22,746
+returning: 
+				OrderedSet([V_c/(2*D - 1), V_c/M, V_c + 2*L*\Delta i_L*f_s/D, 16.0*C*L*\Delta 
+				v_C*f_s**2/D + V_c, V_c + 0.25*L*\Delta i_L**2/(C*D*\Delta v_C)])
+2021-06-16 07:51:22,755
+			sub-ing in 
+			  V_c  
+			───────
+			2⋅D - 1 for 
+			V_g
+2021-06-16 07:51:22,756
+			and found 
+			          ⎛        V_c  ⎞
+			(2⋅D - 1)⋅⎜V_c + ───────⎟
+			          ⎝      2⋅D - 1⎠
+			─────────────────────────
+			          2⋅V_c          
+2021-06-16 07:51:22,762
+			sub-ing in 
+			V_c
+			───
+			 M  for 
+			V_g
+2021-06-16 07:51:22,763
+			and found 
+			  ⎛      V_c⎞
+			M⋅⎜V_c + ───⎟
+			  ⎝       M ⎠
+			─────────────
+			    2⋅V_c    
+2021-06-16 07:51:22,781
+			sub-ing in 
+			      2⋅L⋅\Delta i_L⋅fₛ
+			V_c + ─────────────────
+			              D         for 
+			V_g
+2021-06-16 07:51:22,782
+			and found 
+			         2⋅L⋅\Delta i_L⋅fₛ 
+			 2⋅V_c + ───────────────── 
+			                 D         
+			───────────────────────────
+			  ⎛      2⋅L⋅\Delta i_L⋅fₛ⎞
+			2⋅⎜V_c + ─────────────────⎟
+			  ⎝              D        ⎠
+2021-06-16 07:51:22,834
+			sub-ing in 
+			                      2      
+			16.0⋅C⋅L⋅\Delta v_C⋅fₛ       
+			─────────────────────── + V_c
+			           D                  for 
+			V_g
+2021-06-16 07:51:22,835
+			and found 
+			                       2         
+			 16.0⋅C⋅L⋅\Delta v_C⋅fₛ          
+			 ─────────────────────── + 2⋅V_c 
+			            D                    
+			─────────────────────────────────
+			  ⎛                      2      ⎞
+			  ⎜16.0⋅C⋅L⋅\Delta v_C⋅fₛ       ⎟
+			2⋅⎜─────────────────────── + V_c⎟
+			  ⎝           D                 ⎠
+2021-06-16 07:51:22,878
+			sub-ing in 
+			                       2
+			      0.25⋅L⋅\Delta i_L 
+			V_c + ──────────────────
+			        C⋅D⋅\Delta v_C   for 
+			V_g
+2021-06-16 07:51:22,879
+			and found 
+			                          2 
+			         0.25⋅L⋅\Delta i_L  
+			 2⋅V_c + ────────────────── 
+			           C⋅D⋅\Delta v_C   
+			────────────────────────────
+			  ⎛                       2⎞
+			  ⎜      0.25⋅L⋅\Delta i_L ⎟
+			2⋅⎜V_c + ──────────────────⎟
+			  ⎝        C⋅D⋅\Delta v_C  ⎠
+2021-06-16 07:51:22,880
+			solution to D is: 
+			-2⋅L⋅\Delta i_L⋅fₛ 
+			───────────────────
+			     V_c - V_g      
+2021-06-16 07:51:22,880
+			recursesym: 
+			[i_L, R, V_c, D, V_g, M, L, \Delta i_L, fₛ, C, \Delta v_C]
+2021-06-16 07:51:22,880
+			calling solver looking for 
+			L
+2021-06-16 07:51:22,880
+											base case
+2021-06-16 07:51:22,881
+returning: L=OrderedSet([D*(-V_c + V_g)/(2*\Delta i_L*f_s), 0.0625*D*(-V_c + V_g)/(C*\Delta
+ v_C*f_s**2), 4.0*C*D*\Delta v_C*(-V_c + V_g)/\Delta i_L**2])
+2021-06-16 07:51:22,882
+			sub-ing in 
+			 D⋅(-V_c + V_g)
+			───────────────
+			2⋅\Delta i_L⋅fₛ for 
+			L
+2021-06-16 07:51:22,883
+			and found 
+			-D⋅(-V_c + V_g) 
+			────────────────
+			   V_c - V_g    
+2021-06-16 07:51:22,893
+			sub-ing in 
+			0.0625⋅D⋅(-V_c + V_g)
+			─────────────────────
+			                  2  
+			   C⋅\Delta v_C⋅fₛ    for 
+			L
+2021-06-16 07:51:22,894
+			and found 
+			-0.125⋅D⋅\Delta i_L⋅(-V_c + V_g) 
+			─────────────────────────────────
+			   C⋅\Delta v_C⋅fₛ⋅(V_c - V_g)   
+2021-06-16 07:51:22,902
+			sub-ing in 
+			4.0⋅C⋅D⋅\Delta v_C⋅(-V_c + V_g)
+			───────────────────────────────
+			                    2          
+			          \Delta i_L            for 
+			L
+2021-06-16 07:51:22,903
+			and found 
+			-8.0⋅C⋅D⋅\Delta v_C⋅fₛ⋅(-V_c + V_g) 
+			────────────────────────────────────
+			       \Delta i_L⋅(V_c - V_g)       
+2021-06-16 07:51:22,903
+			recursesym: 
+			[i_L, R, V_c, D, V_g, M, L, \Delta i_L, fₛ, C, \Delta v_C]
+2021-06-16 07:51:22,903
+			calling solver looking for 
+			V_c
+2021-06-16 07:51:22,903
+											base case
+2021-06-16 07:51:22,903
+returning: V_c=set()
+2021-06-16 07:51:22,904
+			recursesym: 
+			[i_L, R, V_c, D, V_g, M, L, \Delta i_L, fₛ, C, \Delta v_C]
+2021-06-16 07:51:22,904
+			calling solver looking for 
+			V_g
+2021-06-16 07:51:22,904
+											base case
+2021-06-16 07:51:22,905
+returning: V_g=OrderedSet([V_c/(2*D - 1), V_c/M, V_c + 2*L*\Delta i_L*f_s/D, 16.0*C*L*\Delta 
+v_C*f_s**2/D + V_c, V_c + 0.25*L*\Delta i_L**2/(C*D*\Delta v_C)])
+2021-06-16 07:51:22,927
+			sub-ing in 
+			  V_c  
+			───────
+			2⋅D - 1 for 
+			V_g
+2021-06-16 07:51:22,928
+			and found 
+			-2⋅L⋅\Delta i_L⋅fₛ 
+			───────────────────
+			           V_c     
+			   V_c - ───────   
+			         2⋅D - 1   
+2021-06-16 07:51:22,940
+			sub-ing in 
+			V_c
+			───
+			 M  for 
+			V_g
+2021-06-16 07:51:22,941
+			and found 
+			-2⋅L⋅\Delta i_L⋅fₛ 
+			───────────────────
+			           V_c     
+			     V_c - ───     
+			            M      
+2021-06-16 07:51:22,942
+			sub-ing in 
+			      2⋅L⋅\Delta i_L⋅fₛ
+			V_c + ─────────────────
+			              D         for 
+			V_g
+2021-06-16 07:51:22,942
+			and found 
+			D
+2021-06-16 07:51:22,949
+			sub-ing in 
+			                      2      
+			16.0⋅C⋅L⋅\Delta v_C⋅fₛ       
+			─────────────────────── + V_c
+			           D                  for 
+			V_g
+2021-06-16 07:51:22,949
+			and found 
+			0.125⋅D⋅\Delta i_L
+			──────────────────
+			 C⋅\Delta v_C⋅fₛ  
+2021-06-16 07:51:22,954
+			sub-ing in 
+			                       2
+			      0.25⋅L⋅\Delta i_L 
+			V_c + ──────────────────
+			        C⋅D⋅\Delta v_C   for 
+			V_g
+2021-06-16 07:51:22,955
+			and found 
+			8.0⋅C⋅D⋅\Delta v_C⋅fₛ
+			─────────────────────
+			      \Delta i_L     
+2021-06-16 07:51:22,955
+			recursesym: 
+			[i_L, R, V_c, D, V_g, M, L, \Delta i_L, fₛ, C, \Delta v_C]
+2021-06-16 07:51:22,955
+			calling solver looking for 
+			\Delta i_L
+2021-06-16 07:51:22,955
+											base case
+2021-06-16 07:51:22,955
+returning: delta_iL=OrderedSet([D*(-V_c + V_g)/(2*L*f_s), 8.0*C*\Delta v_C*f_s])
+2021-06-16 07:51:22,957
+			sub-ing in 
+			D⋅(-V_c + V_g)
+			──────────────
+			    2⋅L⋅fₛ     for 
+			\Delta i_L
+2021-06-16 07:51:22,957
+			and found 
+			-D⋅(-V_c + V_g) 
+			────────────────
+			   V_c - V_g    
+2021-06-16 07:51:22,974
+			sub-ing in 
+			8.0⋅C⋅\Delta v_C⋅fₛ for 
+			\Delta i_L
+2021-06-16 07:51:22,974
+			and found 
+			                       2 
+			-16.0⋅C⋅L⋅\Delta v_C⋅fₛ  
+			─────────────────────────
+			        V_c - V_g        
+2021-06-16 07:51:22,975
+			recursesym: 
+			[i_L, R, V_c, D, V_g, M, L, \Delta i_L, fₛ, C, \Delta v_C]
+2021-06-16 07:51:22,975
+			calling solver looking for 
+			fₛ
+2021-06-16 07:51:22,975
+											base case
+2021-06-16 07:51:22,975
+returning: f_s=OrderedSet([D*(-V_c + V_g)/(2*L*\Delta i_L), 0.125*\Delta i_L/(C*\Delta v_C)])
+2021-06-16 07:51:22,976
+			sub-ing in 
+			D⋅(-V_c + V_g)
+			──────────────
+			2⋅L⋅\Delta i_L for 
+			fₛ
+2021-06-16 07:51:22,977
+			and found 
+			-D⋅(-V_c + V_g) 
+			────────────────
+			   V_c - V_g    
+2021-06-16 07:51:22,993
+			sub-ing in 
+			0.125⋅\Delta i_L
+			────────────────
+			  C⋅\Delta v_C   for 
+			fₛ
+2021-06-16 07:51:22,994
+			and found 
+			                    2   
+			  -0.25⋅L⋅\Delta i_L    
+			────────────────────────
+			C⋅\Delta v_C⋅(V_c - V_g)
+2021-06-16 07:51:22,997
+end of function, recursesym: {i_L: set(), R: set(), V_c: set(), D: set(), V_g: OrderedSet([V_c/(2*D - 1), V_c/M, V_c + 2*L*\Delta i_L*f_s/D, 16.0*C*L*\Delta v_C*f_s**2/D + V_c, V_c + 0.25*L*\Delta i_L**2/(C*D*\Delta v_C)]), M: OrderedSet([V_c/V_g]), L: OrderedSet([D*(-V_c + V_g)/(2*\Delta i_L*f_s), 0.0625*D*(-V_c + V_g)/(C*\Delta v_C*f_s**2), 4.0*C*D*\Delta v_C*(-V_c + V_g)/\Delta i_L**2]), \Delta i_L: OrderedSet([D*(-V_c + V_g)/(2*L*f_s), 8.0*C*\Delta v_C*f_s]), f_s: OrderedSet([D*(-V_c + V_g)/(2*L*\Delta i_L), 0.125*\Delta i_L/(C*\Delta v_C)]), C: OrderedSet([0.125*\Delta i_L/(\Delta v_C*f_s)]), \Delta v_C: OrderedSet([0.125*\Delta i_L/(C*f_s)])}
+2021-06-16 07:51:22,999
+returning: 
+			OrderedSet([(V_c + V_g)/(2*V_g), -2*L*\Delta i_L*f_s/(V_c - V_g), M/2 + 1/2, -
+			2*L*M*\Delta i_L*f_s/(V_c*(M - 1)), -16.0*C*L*\Delta v_C*f_s**2/(V_c - V_g), -
+			0.25*L*\Delta i_L**2/(C*\Delta v_C*(V_c - V_g))])
+2021-06-16 07:51:23,004
+		sub-ing in 
+		V_c + V_g
+		─────────
+		  2⋅V_g   for 
+		D
+2021-06-16 07:51:23,004
+		and found 
+		    ⎛     V_c + V_g⎞
+		V_g⋅⎜-1 + ─────────⎟
+		    ⎝        V_g   ⎠
+2021-06-16 07:51:23,030
+		sub-ing in 
+		-2⋅L⋅\Delta i_L⋅fₛ 
+		───────────────────
+		     V_c - V_g      for 
+		D
+2021-06-16 07:51:23,031
+		and found 
+		    ⎛  4⋅L⋅\Delta i_L⋅fₛ    ⎞
+		V_g⋅⎜- ───────────────── - 1⎟
+		    ⎝      V_c - V_g        ⎠
+2021-06-16 07:51:23,033
+		sub-ing in 
+		M   1
+		─ + ─
+		2   2 for 
+		D
+2021-06-16 07:51:23,034
+		and found 
+		M⋅V_g
+2021-06-16 07:51:23,067
+		sub-ing in 
+		-2⋅L⋅M⋅\Delta i_L⋅fₛ 
+		─────────────────────
+		     V_c⋅(M - 1)      for 
+		D
+2021-06-16 07:51:23,068
+		and found 
+		    ⎛  4⋅L⋅M⋅\Delta i_L⋅fₛ    ⎞
+		V_g⋅⎜- ─────────────────── - 1⎟
+		    ⎝      V_c⋅(M - 1)        ⎠
+2021-06-16 07:51:23,123
+		sub-ing in 
+		                       2 
+		-16.0⋅C⋅L⋅\Delta v_C⋅fₛ  
+		─────────────────────────
+		        V_c - V_g         for 
+		D
+2021-06-16 07:51:23,125
+		and found 
+		    ⎛                        2    ⎞
+		    ⎜  32.0⋅C⋅L⋅\Delta v_C⋅fₛ     ⎟
+		V_g⋅⎜- ─────────────────────── - 1⎟
+		    ⎝         V_c - V_g           ⎠
+2021-06-16 07:51:23,193
+		sub-ing in 
+		                    2   
+		  -0.25⋅L⋅\Delta i_L    
+		────────────────────────
+		C⋅\Delta v_C⋅(V_c - V_g) for 
+		D
+2021-06-16 07:51:23,194
+		and found 
+		    ⎛                        2    ⎞
+		    ⎜        0.5⋅L⋅\Delta i_L     ⎟
+		V_g⋅⎜-1 - ────────────────────────⎟
+		    ⎝     C⋅\Delta v_C⋅(V_c - V_g)⎠
+2021-06-16 07:51:23,194
+		recursesym: 
+		[i_L, R, V_c, D, V_g, M, L, \Delta i_L, fₛ, C, \Delta v_C]
+2021-06-16 07:51:23,195
+		calling solver looking for 
+		V_g
+2021-06-16 07:51:23,195
+											base case
+2021-06-16 07:51:23,196
+returning: V_g=OrderedSet([V_c/(2*D - 1), V_c/M, V_c + 2*L*\Delta i_L*f_s/D, 16.0*C*L*\Delta 
+v_C*f_s**2/D + V_c, V_c + 0.25*L*\Delta i_L**2/(C*D*\Delta v_C)])
+2021-06-16 07:51:23,196
+		sub-ing in 
+		  V_c  
+		───────
+		2⋅D - 1 for 
+		V_g
+2021-06-16 07:51:23,196
+		and found 
+		V_c
+2021-06-16 07:51:23,209
+		sub-ing in 
+		V_c
+		───
+		 M  for 
+		V_g
+2021-06-16 07:51:23,209
+		and found 
+		V_c⋅(2⋅D - 1)
+		─────────────
+		      M      
+2021-06-16 07:51:23,229
+		sub-ing in 
+		      2⋅L⋅\Delta i_L⋅fₛ
+		V_c + ─────────────────
+		              D         for 
+		V_g
+2021-06-16 07:51:23,230
+		and found 
+		          ⎛      2⋅L⋅\Delta i_L⋅fₛ⎞
+		(2⋅D - 1)⋅⎜V_c + ─────────────────⎟
+		          ⎝              D        ⎠
+2021-06-16 07:51:23,262
+		sub-ing in 
+		                      2      
+		16.0⋅C⋅L⋅\Delta v_C⋅fₛ       
+		─────────────────────── + V_c
+		           D                  for 
+		V_g
+2021-06-16 07:51:23,263
+		and found 
+		          ⎛                      2      ⎞
+		          ⎜16.0⋅C⋅L⋅\Delta v_C⋅fₛ       ⎟
+		(2⋅D - 1)⋅⎜─────────────────────── + V_c⎟
+		          ⎝           D                 ⎠
+2021-06-16 07:51:23,294
+		sub-ing in 
+		                       2
+		      0.25⋅L⋅\Delta i_L 
+		V_c + ──────────────────
+		        C⋅D⋅\Delta v_C   for 
+		V_g
+2021-06-16 07:51:23,295
+		and found 
+		          ⎛                       2⎞
+		          ⎜      0.25⋅L⋅\Delta i_L ⎟
+		(2⋅D - 1)⋅⎜V_c + ──────────────────⎟
+		          ⎝        C⋅D⋅\Delta v_C  ⎠
+2021-06-16 07:51:23,295
+		solution to V_c is: 
+		M⋅V_g 
+2021-06-16 07:51:23,295
+		recursesym: 
+		[i_L, R, V_c, D, V_g, M, L, \Delta i_L, fₛ, C, \Delta v_C]
+2021-06-16 07:51:23,296
+		calling solver looking for 
+		M
+2021-06-16 07:51:23,296
+											base case
+2021-06-16 07:51:23,296
+returning: M=OrderedSet([V_c/V_g])
+2021-06-16 07:51:23,296
+		sub-ing in 
+		V_c
+		───
+		V_g for 
+		M
+2021-06-16 07:51:23,296
+		and found 
+		V_c
+2021-06-16 07:51:23,296
+		recursesym: 
+		[i_L, R, V_c, D, V_g, M, L, \Delta i_L, fₛ, C, \Delta v_C]
+2021-06-16 07:51:23,296
+		calling solver looking for 
+		V_g
+2021-06-16 07:51:23,296
+											base case
+2021-06-16 07:51:23,297
+returning: V_g=OrderedSet([V_c/(2*D - 1), V_c/M, V_c + 2*L*\Delta i_L*f_s/D, 16.0*C*L*\Delta 
+v_C*f_s**2/D + V_c, V_c + 0.25*L*\Delta i_L**2/(C*D*\Delta v_C)])
+2021-06-16 07:51:23,304
+		sub-ing in 
+		  V_c  
+		───────
+		2⋅D - 1 for 
+		V_g
+2021-06-16 07:51:23,304
+		and found 
+		 M⋅V_c 
+		───────
+		2⋅D - 1
+2021-06-16 07:51:23,304
+		sub-ing in 
+		V_c
+		───
+		 M  for 
+		V_g
+2021-06-16 07:51:23,304
+		and found 
+		V_c
+2021-06-16 07:51:23,317
+		sub-ing in 
+		      2⋅L⋅\Delta i_L⋅fₛ
+		V_c + ─────────────────
+		              D         for 
+		V_g
+2021-06-16 07:51:23,317
+		and found 
+		  ⎛      2⋅L⋅\Delta i_L⋅fₛ⎞
+		M⋅⎜V_c + ─────────────────⎟
+		  ⎝              D        ⎠
+2021-06-16 07:51:23,340
+		sub-ing in 
+		                      2      
+		16.0⋅C⋅L⋅\Delta v_C⋅fₛ       
+		─────────────────────── + V_c
+		           D                  for 
+		V_g
+2021-06-16 07:51:23,340
+		and found 
+		  ⎛                      2      ⎞
+		  ⎜16.0⋅C⋅L⋅\Delta v_C⋅fₛ       ⎟
+		M⋅⎜─────────────────────── + V_c⎟
+		  ⎝           D                 ⎠
+2021-06-16 07:51:23,362
+		sub-ing in 
+		                       2
+		      0.25⋅L⋅\Delta i_L 
+		V_c + ──────────────────
+		        C⋅D⋅\Delta v_C   for 
+		V_g
+2021-06-16 07:51:23,363
+		and found 
+		  ⎛                       2⎞
+		  ⎜      0.25⋅L⋅\Delta i_L ⎟
+		M⋅⎜V_c + ──────────────────⎟
+		  ⎝        C⋅D⋅\Delta v_C  ⎠
+2021-06-16 07:51:23,364
+		solution to V_c is: 
+		      2⋅L⋅\Delta i_L⋅fₛ
+		V_g - ─────────────────
+		              D         
+2021-06-16 07:51:23,364
+		recursesym: 
+		[i_L, R, V_c, D, V_g, M, L, \Delta i_L, fₛ, C, \Delta v_C]
+2021-06-16 07:51:23,364
+		calling solver looking for 
+		D
+2021-06-16 07:51:23,364
+											base case
+2021-06-16 07:51:23,366
+returning: D=OrderedSet([(V_c + V_g)/(2*V_g), -2*L*\Delta i_L*f_s/(V_c - V_g), M/2 + 1/2, -
+2*L*M*\Delta i_L*f_s/(V_c*(M - 1)), -16.0*C*L*\Delta v_C*f_s**2/(V_c - V_g), -
+0.25*L*\Delta i_L**2/(C*\Delta v_C*(V_c - V_g))])
+2021-06-16 07:51:23,390
+		sub-ing in 
+		V_c + V_g
+		─────────
+		  2⋅V_g   for 
+		D
+2021-06-16 07:51:23,391
+		and found 
+		  4⋅L⋅V_g⋅\Delta i_L⋅fₛ      
+		- ───────────────────── + V_g
+		        V_c + V_g            
+2021-06-16 07:51:23,392
+		sub-ing in 
+		-2⋅L⋅\Delta i_L⋅fₛ 
+		───────────────────
+		     V_c - V_g      for 
+		D
+2021-06-16 07:51:23,392
+		and found 
+		V_c
+2021-06-16 07:51:23,414
+		sub-ing in 
+		M   1
+		─ + ─
+		2   2 for 
+		D
+2021-06-16 07:51:23,415
+		and found 
+		  2⋅L⋅\Delta i_L⋅fₛ      
+		- ───────────────── + V_g
+		        M   1            
+		        ─ + ─            
+		        2   2            
+2021-06-16 07:51:23,430
+		sub-ing in 
+		-2⋅L⋅M⋅\Delta i_L⋅fₛ 
+		─────────────────────
+		     V_c⋅(M - 1)      for 
+		D
+2021-06-16 07:51:23,431
+		and found 
+		      V_c⋅(M - 1)
+		V_g + ───────────
+		           M     
+2021-06-16 07:51:23,465
+		sub-ing in 
+		                       2 
+		-16.0⋅C⋅L⋅\Delta v_C⋅fₛ  
+		─────────────────────────
+		        V_c - V_g         for 
+		D
+2021-06-16 07:51:23,466
+		and found 
+		      0.125⋅\Delta i_L⋅(V_c - V_g)
+		V_g + ────────────────────────────
+		            C⋅\Delta v_C⋅fₛ       
+2021-06-16 07:51:23,492
+		sub-ing in 
+		                    2   
+		  -0.25⋅L⋅\Delta i_L    
+		────────────────────────
+		C⋅\Delta v_C⋅(V_c - V_g) for 
+		D
+2021-06-16 07:51:23,493
+		and found 
+		8.0⋅C⋅\Delta v_C⋅fₛ⋅(V_c - V_g)      
+		─────────────────────────────── + V_g
+		           \Delta i_L                
+2021-06-16 07:51:23,493
+		recursesym: 
+		[i_L, R, V_c, D, V_g, M, L, \Delta i_L, fₛ, C, \Delta v_C]
+2021-06-16 07:51:23,493
+		calling solver looking for 
+		L
+2021-06-16 07:51:23,493
+											base case
+2021-06-16 07:51:23,494
+returning: L=OrderedSet([D*(-V_c + V_g)/(2*\Delta i_L*f_s), 0.0625*D*(-V_c + V_g)/(C*\Delta
+ v_C*f_s**2), 4.0*C*D*\Delta v_C*(-V_c + V_g)/\Delta i_L**2])
+2021-06-16 07:51:23,495
+		sub-ing in 
+		 D⋅(-V_c + V_g)
+		───────────────
+		2⋅\Delta i_L⋅fₛ for 
+		L
+2021-06-16 07:51:23,495
+		and found 
+		V_c
+2021-06-16 07:51:23,514
+		sub-ing in 
+		0.0625⋅D⋅(-V_c + V_g)
+		─────────────────────
+		                  2  
+		   C⋅\Delta v_C⋅fₛ    for 
+		L
+2021-06-16 07:51:23,515
+		and found 
+		      0.125⋅\Delta i_L⋅(-V_c + V_g)
+		V_g - ─────────────────────────────
+		             C⋅\Delta v_C⋅fₛ       
+2021-06-16 07:51:23,530
+		sub-ing in 
+		4.0⋅C⋅D⋅\Delta v_C⋅(-V_c + V_g)
+		───────────────────────────────
+		                    2          
+		          \Delta i_L            for 
+		L
+2021-06-16 07:51:23,531
+		and found 
+		  8.0⋅C⋅\Delta v_C⋅fₛ⋅(-V_c + V_g)      
+		- ──────────────────────────────── + V_g
+		             \Delta i_L                 
+2021-06-16 07:51:23,532
+		recursesym: 
+		[i_L, R, V_c, D, V_g, M, L, \Delta i_L, fₛ, C, \Delta v_C]
+2021-06-16 07:51:23,532
+		calling solver looking for 
+		V_g
+2021-06-16 07:51:23,532
+											base case
+2021-06-16 07:51:23,533
+returning: V_g=OrderedSet([V_c/(2*D - 1), V_c/M, V_c + 2*L*\Delta i_L*f_s/D, 16.0*C*L*\Delta 
+v_C*f_s**2/D + V_c, V_c + 0.25*L*\Delta i_L**2/(C*D*\Delta v_C)])
+2021-06-16 07:51:23,557
+		sub-ing in 
+		  V_c  
+		───────
+		2⋅D - 1 for 
+		V_g
+2021-06-16 07:51:23,558
+		and found 
+		  V_c     2⋅L⋅\Delta i_L⋅fₛ
+		─────── - ─────────────────
+		2⋅D - 1           D        
+2021-06-16 07:51:23,570
+		sub-ing in 
+		V_c
+		───
+		 M  for 
+		V_g
+2021-06-16 07:51:23,570
+		and found 
+		V_c   2⋅L⋅\Delta i_L⋅fₛ
+		─── - ─────────────────
+		 M            D        
+2021-06-16 07:51:23,571
+		sub-ing in 
+		      2⋅L⋅\Delta i_L⋅fₛ
+		V_c + ─────────────────
+		              D         for 
+		V_g
+2021-06-16 07:51:23,571
+		and found 
+		V_c
+2021-06-16 07:51:23,599
+		sub-ing in 
+		                      2      
+		16.0⋅C⋅L⋅\Delta v_C⋅fₛ       
+		─────────────────────── + V_c
+		           D                  for 
+		V_g
+2021-06-16 07:51:23,599
+		and found 
+		                      2                          
+		16.0⋅C⋅L⋅\Delta v_C⋅fₛ          2⋅L⋅\Delta i_L⋅fₛ
+		─────────────────────── + V_c - ─────────────────
+		           D                            D        
+2021-06-16 07:51:23,634
+		sub-ing in 
+		                       2
+		      0.25⋅L⋅\Delta i_L 
+		V_c + ──────────────────
+		        C⋅D⋅\Delta v_C   for 
+		V_g
+2021-06-16 07:51:23,635
+		and found 
+		                                           2
+		      2⋅L⋅\Delta i_L⋅fₛ   0.25⋅L⋅\Delta i_L 
+		V_c - ───────────────── + ──────────────────
+		              D             C⋅D⋅\Delta v_C  
+2021-06-16 07:51:23,636
+		recursesym: 
+		[i_L, R, V_c, D, V_g, M, L, \Delta i_L, fₛ, C, \Delta v_C]
+2021-06-16 07:51:23,636
+		calling solver looking for 
+		\Delta i_L
+2021-06-16 07:51:23,636
+											base case
+2021-06-16 07:51:23,636
+returning: delta_iL=OrderedSet([D*(-V_c + V_g)/(2*L*f_s), 8.0*C*\Delta v_C*f_s])
+2021-06-16 07:51:23,637
+		sub-ing in 
+		D⋅(-V_c + V_g)
+		──────────────
+		    2⋅L⋅fₛ     for 
+		\Delta i_L
+2021-06-16 07:51:23,637
+		and found 
+		V_c
+2021-06-16 07:51:23,661
+		sub-ing in 
+		8.0⋅C⋅\Delta v_C⋅fₛ for 
+		\Delta i_L
+2021-06-16 07:51:23,661
+		and found 
+		                        2      
+		  16.0⋅C⋅L⋅\Delta v_C⋅fₛ       
+		- ─────────────────────── + V_g
+		             D                 
+2021-06-16 07:51:23,668
+		recursesym: 
+		[i_L, R, V_c, D, V_g, M, L, \Delta i_L, fₛ, C, \Delta v_C]
+2021-06-16 07:51:23,669
+		calling solver looking for 
+		fₛ
+2021-06-16 07:51:23,669
+											base case
+2021-06-16 07:51:23,669
+returning: f_s=OrderedSet([D*(-V_c + V_g)/(2*L*\Delta i_L), 0.125*\Delta i_L/(C*\Delta v_C)])
+2021-06-16 07:51:23,670
+		sub-ing in 
+		D⋅(-V_c + V_g)
+		──────────────
+		2⋅L⋅\Delta i_L for 
+		fₛ
+2021-06-16 07:51:23,670
+		and found 
+		V_c
+2021-06-16 07:51:23,692
+		sub-ing in 
+		0.125⋅\Delta i_L
+		────────────────
+		  C⋅\Delta v_C   for 
+		fₛ
+2021-06-16 07:51:23,692
+		and found 
+		                       2
+		      0.25⋅L⋅\Delta i_L 
+		V_g - ──────────────────
+		        C⋅D⋅\Delta v_C  
+2021-06-16 07:51:23,692
+		solution to V_c is: 
+		R⋅i_L 
+2021-06-16 07:51:23,693
+		recursesym: 
+		[i_L, R, V_c, D, V_g, M, L, \Delta i_L, fₛ, C, \Delta v_C]
+2021-06-16 07:51:23,693
+		calling solver looking for 
+		R
+2021-06-16 07:51:23,693
+											base case
+2021-06-16 07:51:23,693
+returning: R=set()
+2021-06-16 07:51:23,693
+		recursesym: 
+		[i_L, R, V_c, D, V_g, M, L, \Delta i_L, fₛ, C, \Delta v_C]
+2021-06-16 07:51:23,693
+		calling solver looking for 
+		i_L
+2021-06-16 07:51:23,694
+											base case
+2021-06-16 07:51:23,694
+returning: i_L=set()
+2021-06-16 07:51:23,699
+end of function, recursesym: {i_L: set(), R: set(), V_c: set(), D: OrderedSet([(V_c + V_g)/(2*V_g), -2*L*\Delta i_L*f_s/(V_c - V_g), M/2 + 1/2, -2*L*M*\Delta i_L*f_s/(V_c*(M - 1)), -16.0*C*L*\Delta v_C*f_s**2/(V_c - V_g), -0.25*L*\Delta i_L**2/(C*\Delta v_C*(V_c - V_g))]), V_g: OrderedSet([V_c/(2*D - 1), V_c/M, V_c + 2*L*\Delta i_L*f_s/D, 16.0*C*L*\Delta v_C*f_s**2/D + V_c, V_c + 0.25*L*\Delta i_L**2/(C*D*\Delta v_C)]), M: OrderedSet([V_c/V_g]), L: OrderedSet([D*(-V_c + V_g)/(2*\Delta i_L*f_s), 0.0625*D*(-V_c + V_g)/(C*\Delta v_C*f_s**2), 4.0*C*D*\Delta v_C*(-V_c + V_g)/\Delta i_L**2]), \Delta i_L: OrderedSet([D*(-V_c + V_g)/(2*L*f_s), 8.0*C*\Delta v_C*f_s]), f_s: OrderedSet([D*(-V_c + V_g)/(2*L*\Delta i_L), 0.125*\Delta i_L/(C*\Delta v_C)]), C: OrderedSet([0.125*\Delta i_L/(\Delta v_C*f_s)]), \Delta v_C: OrderedSet([0.125*\Delta i_L/(C*f_s)])}
+2021-06-16 07:51:23,701
+returning: 
+		OrderedSet([V_g*(2*D - 1), M*V_g, V_g - 2*L*\Delta i_L*f_s/D, R*i_L, (-4*L*\De
+		lta i_L*f_s + V_g*(M + 1))/(M + 1), -16.0*C*L*\Delta v_C*f_s**2/D + V_g, V_g -
+		 0.25*L*\Delta i_L**2/(C*D*\Delta v_C)])
+2021-06-16 07:51:23,712
+	sub-ing in 
+	V_g⋅(2⋅D - 1) for 
+	V_c
+2021-06-16 07:51:23,712
+	and found 
+	V_g⋅(2⋅D - 1)
+	─────────────
+	     i_L     
+2021-06-16 07:51:23,717
+	sub-ing in 
+	M⋅V_g for 
+	V_c
+2021-06-16 07:51:23,717
+	and found 
+	M⋅V_g
+	─────
+	 i_L 
+2021-06-16 07:51:23,731
+	sub-ing in 
+	      2⋅L⋅\Delta i_L⋅fₛ
+	V_g - ─────────────────
+	              D         for 
+	V_c
+2021-06-16 07:51:23,732
+	and found 
+	      2⋅L⋅\Delta i_L⋅fₛ
+	V_g - ─────────────────
+	              D        
+	───────────────────────
+	          i_L          
+2021-06-16 07:51:23,732
+	sub-ing in 
+	R⋅i_L for 
+	V_c
+2021-06-16 07:51:23,732
+	and found 
+	R
+2021-06-16 07:51:23,758
+	sub-ing in 
+	-4⋅L⋅\Delta i_L⋅fₛ + V_g⋅(M + 1)
+	────────────────────────────────
+	             M + 1               for 
+	V_c
+2021-06-16 07:51:23,759
+	and found 
+	-4⋅L⋅\Delta i_L⋅fₛ + V_g⋅(M + 1)
+	────────────────────────────────
+	          i_L⋅(M + 1)           
+2021-06-16 07:51:23,782
+	sub-ing in 
+	                        2      
+	  16.0⋅C⋅L⋅\Delta v_C⋅fₛ       
+	- ─────────────────────── + V_g
+	             D                  for 
+	V_c
+2021-06-16 07:51:23,782
+	and found 
+	                        2      
+	  16.0⋅C⋅L⋅\Delta v_C⋅fₛ       
+	- ─────────────────────── + V_g
+	             D                 
+	───────────────────────────────
+	              i_L              
+2021-06-16 07:51:23,809
+	sub-ing in 
+	                       2
+	      0.25⋅L⋅\Delta i_L 
+	V_g - ──────────────────
+	        C⋅D⋅\Delta v_C   for 
+	V_c
+2021-06-16 07:51:23,809
+	and found 
+	                       2
+	      0.25⋅L⋅\Delta i_L 
+	V_g - ──────────────────
+	        C⋅D⋅\Delta v_C  
+	────────────────────────
+	          i_L           
+2021-06-16 07:51:23,810
+	recursesym: 
+	[i_L, R, V_c, D, V_g, M, L, \Delta i_L, fₛ, C, \Delta v_C]
+2021-06-16 07:51:23,810
+	calling solver looking for 
+	i_L
+2021-06-16 07:51:23,810
+											base case
+2021-06-16 07:51:23,810
+returning: i_L=set()
+2021-06-16 07:51:23,815
+end of function, recursesym: {i_L: set(), R: set(), V_c: OrderedSet([V_g*(2*D - 1), M*V_g, V_g - 2*L*\Delta i_L*f_s/D, R*i_L, (-4*L*\Delta i_L*f_s + V_g*(M + 1))/(M + 1), -16.0*C*L*\Delta v_C*f_s**2/D + V_g, V_g - 0.25*L*\Delta i_L**2/(C*D*\Delta v_C)]), D: OrderedSet([(V_c + V_g)/(2*V_g), -2*L*\Delta i_L*f_s/(V_c - V_g), M/2 + 1/2, -2*L*M*\Delta i_L*f_s/(V_c*(M - 1)), -16.0*C*L*\Delta v_C*f_s**2/(V_c - V_g), -0.25*L*\Delta i_L**2/(C*\Delta v_C*(V_c - V_g))]), V_g: OrderedSet([V_c/(2*D - 1), V_c/M, V_c + 2*L*\Delta i_L*f_s/D, 16.0*C*L*\Delta v_C*f_s**2/D + V_c, V_c + 0.25*L*\Delta i_L**2/(C*D*\Delta v_C)]), M: OrderedSet([V_c/V_g]), L: OrderedSet([D*(-V_c + V_g)/(2*\Delta i_L*f_s), 0.0625*D*(-V_c + V_g)/(C*\Delta v_C*f_s**2), 4.0*C*D*\Delta v_C*(-V_c + V_g)/\Delta i_L**2]), \Delta i_L: OrderedSet([D*(-V_c + V_g)/(2*L*f_s), 8.0*C*\Delta v_C*f_s]), f_s: OrderedSet([D*(-V_c + V_g)/(2*L*\Delta i_L), 0.125*\Delta i_L/(C*\Delta v_C)]), C: OrderedSet([0.125*\Delta i_L/(\Delta v_C*f_s)]), \Delta v_C: OrderedSet([0.125*\Delta i_L/(C*f_s)])}
+2021-06-16 07:51:23,818
+returning: 
+	OrderedSet([V_c/i_L, V_g*(2*D - 1)/i_L, M*V_g/i_L, (D*V_g - 2*L*\Delta i_L*f_s
+	)/(D*i_L), (-4*L*\Delta i_L*f_s + V_g*(M + 1))/(i_L*(M + 1)), (-16.0*C*L*\Delt
+	a v_C*f_s**2 + D*V_g)/(D*i_L), V_g/i_L - 0.25*L*\Delta i_L**2/(C*D*\Delta v_C*
+	i_L)])
+2021-06-16 07:51:23,819
+sub-ing in 
+V_c
+───
+i_L for 
+R
+2021-06-16 07:51:23,819
+and found 
+i_L
+2021-06-16 07:51:23,831
+sub-ing in 
+V_g⋅(2⋅D - 1)
+─────────────
+     i_L      for 
+R
+2021-06-16 07:51:23,831
+and found 
+   V_c⋅i_L   
+─────────────
+V_g⋅(2⋅D - 1)
+2021-06-16 07:51:23,838
+sub-ing in 
+M⋅V_g
+─────
+ i_L  for 
+R
+2021-06-16 07:51:23,838
+and found 
+V_c⋅i_L
+───────
+ M⋅V_g 
+2021-06-16 07:51:23,851
+sub-ing in 
+D⋅V_g - 2⋅L⋅\Delta i_L⋅fₛ
+─────────────────────────
+          D⋅i_L           for 
+R
+2021-06-16 07:51:23,852
+and found 
+        D⋅V_c⋅i_L        
+─────────────────────────
+D⋅V_g - 2⋅L⋅\Delta i_L⋅fₛ
+2021-06-16 07:51:23,883
+sub-ing in 
+-4⋅L⋅\Delta i_L⋅fₛ + V_g⋅(M + 1)
+────────────────────────────────
+          i_L⋅(M + 1)            for 
+R
+2021-06-16 07:51:23,884
+and found 
+        V_c⋅i_L⋅(M + 1)         
+────────────────────────────────
+-4⋅L⋅\Delta i_L⋅fₛ + V_g⋅(M + 1)
+2021-06-16 07:51:23,909
+sub-ing in 
+                        2        
+- 16.0⋅C⋅L⋅\Delta v_C⋅fₛ  + D⋅V_g
+─────────────────────────────────
+              D⋅i_L               for 
+R
+2021-06-16 07:51:23,910
+and found 
+            D⋅V_c⋅i_L            
+─────────────────────────────────
+                        2        
+- 16.0⋅C⋅L⋅\Delta v_C⋅fₛ  + D⋅V_g
+2021-06-16 07:51:23,938
+sub-ing in 
+                       2
+V_g   0.25⋅L⋅\Delta i_L 
+─── - ──────────────────
+i_L   C⋅D⋅\Delta v_C⋅i_L for 
+R
+2021-06-16 07:51:23,939
+and found 
+          V_c           
+────────────────────────
+                       2
+V_g   0.25⋅L⋅\Delta i_L 
+─── - ──────────────────
+i_L   C⋅D⋅\Delta v_C⋅i_L
+2021-06-16 07:51:23,940
+recursesym: 
+[i_L, R, V_c, D, V_g, M, L, \Delta i_L, fₛ, C, \Delta v_C]
+2021-06-16 07:51:23,940
+calling solver looking for 
+V_c
+2021-06-16 07:51:23,940
+											base case
+2021-06-16 07:51:23,941
+returning: V_c=OrderedSet([V_g*(2*D - 1), M*V_g, V_g - 2*L*\Delta i_L*f_s/D, R*i_L, (-4*L*\De
+lta i_L*f_s + V_g*(M + 1))/(M + 1), -16.0*C*L*\Delta v_C*f_s**2/D + V_g, V_g -
+ 0.25*L*\Delta i_L**2/(C*D*\Delta v_C)])
+2021-06-16 07:51:23,951
+sub-ing in 
+V_g⋅(2⋅D - 1) for 
+V_c
+2021-06-16 07:51:23,952
+and found 
+V_g⋅(2⋅D - 1)
+─────────────
+      R      
+2021-06-16 07:51:23,956
+sub-ing in 
+M⋅V_g for 
+V_c
+2021-06-16 07:51:23,956
+and found 
+M⋅V_g
+─────
+  R  
+2021-06-16 07:51:23,969
+sub-ing in 
+      2⋅L⋅\Delta i_L⋅fₛ
+V_g - ─────────────────
+              D         for 
+V_c
+2021-06-16 07:51:23,969
+and found 
+      2⋅L⋅\Delta i_L⋅fₛ
+V_g - ─────────────────
+              D        
+───────────────────────
+           R           
+2021-06-16 07:51:23,970
+sub-ing in 
+R⋅i_L for 
+V_c
+2021-06-16 07:51:23,970
+and found 
+i_L
+2021-06-16 07:51:23,990
+sub-ing in 
+-4⋅L⋅\Delta i_L⋅fₛ + V_g⋅(M + 1)
+────────────────────────────────
+             M + 1               for 
+V_c
+2021-06-16 07:51:23,991
+and found 
+-4⋅L⋅\Delta i_L⋅fₛ + V_g⋅(M + 1)
+────────────────────────────────
+           R⋅(M + 1)            
+2021-06-16 07:51:24,010
+sub-ing in 
+                        2      
+  16.0⋅C⋅L⋅\Delta v_C⋅fₛ       
+- ─────────────────────── + V_g
+             D                  for 
+V_c
+2021-06-16 07:51:24,011
+and found 
+                        2      
+  16.0⋅C⋅L⋅\Delta v_C⋅fₛ       
+- ─────────────────────── + V_g
+             D                 
+───────────────────────────────
+               R               
+2021-06-16 07:51:24,035
+sub-ing in 
+                       2
+      0.25⋅L⋅\Delta i_L 
+V_g - ──────────────────
+        C⋅D⋅\Delta v_C   for 
+V_c
+2021-06-16 07:51:24,035
+and found 
+                       2
+      0.25⋅L⋅\Delta i_L 
+V_g - ──────────────────
+        C⋅D⋅\Delta v_C  
+────────────────────────
+           R            
+2021-06-16 07:51:24,043
+end of function, recursesym: {i_L: set(), R: OrderedSet([V_c/i_L, V_g*(2*D - 1)/i_L, M*V_g/i_L, (D*V_g - 2*L*\Delta i_L*f_s)/(D*i_L), (-4*L*\Delta i_L*f_s + V_g*(M + 1))/(i_L*(M + 1)), (-16.0*C*L*\Delta v_C*f_s**2 + D*V_g)/(D*i_L), V_g/i_L - 0.25*L*\Delta i_L**2/(C*D*\Delta v_C*i_L)]), V_c: OrderedSet([V_g*(2*D - 1), M*V_g, V_g - 2*L*\Delta i_L*f_s/D, R*i_L, (-4*L*\Delta i_L*f_s + V_g*(M + 1))/(M + 1), -16.0*C*L*\Delta v_C*f_s**2/D + V_g, V_g - 0.25*L*\Delta i_L**2/(C*D*\Delta v_C)]), D: OrderedSet([(V_c + V_g)/(2*V_g), -2*L*\Delta i_L*f_s/(V_c - V_g), M/2 + 1/2, -2*L*M*\Delta i_L*f_s/(V_c*(M - 1)), -16.0*C*L*\Delta v_C*f_s**2/(V_c - V_g), -0.25*L*\Delta i_L**2/(C*\Delta v_C*(V_c - V_g))]), V_g: OrderedSet([V_c/(2*D - 1), V_c/M, V_c + 2*L*\Delta i_L*f_s/D, 16.0*C*L*\Delta v_C*f_s**2/D + V_c, V_c + 0.25*L*\Delta i_L**2/(C*D*\Delta v_C)]), M: OrderedSet([V_c/V_g]), L: OrderedSet([D*(-V_c + V_g)/(2*\Delta i_L*f_s), 0.0625*D*(-V_c + V_g)/(C*\Delta v_C*f_s**2), 4.0*C*D*\Delta v_C*(-V_c + V_g)/\Delta i_L**2]), \Delta i_L: OrderedSet([D*(-V_c + V_g)/(2*L*f_s), 8.0*C*\Delta v_C*f_s]), f_s: OrderedSet([D*(-V_c + V_g)/(2*L*\Delta i_L), 0.125*\Delta i_L/(C*\Delta v_C)]), C: OrderedSet([0.125*\Delta i_L/(\Delta v_C*f_s)]), \Delta v_C: OrderedSet([0.125*\Delta i_L/(C*f_s)])}
+2021-06-16 07:51:24,045
+returning: 
+OrderedSet([V_c/R, V_g*(2*D - 1)/R, M*V_g/R, (D*V_g - 2*L*\Delta i_L*f_s)/(D*R
+), (-4*L*\Delta i_L*f_s + V_g*(M + 1))/(R*(M + 1)), (-16.0*C*L*\Delta v_C*f_s*
+*2 + D*V_g)/(D*R), V_g/R - 0.25*L*\Delta i_L**2/(C*D*R*\Delta v_C)])

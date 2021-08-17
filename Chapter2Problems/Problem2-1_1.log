@@ -1,0 +1,741 @@
+2021-05-19 07:50:23,443
+adding i_L to []
+2021-05-19 07:50:23,602
+nonlinsolve returns: 
+⎛   V_c    ⎞
+⎜─────────,⎟
+⎝R⋅(D - 1) ⎠
+2021-05-19 07:50:23,645
+
+  D⋅V_c           ⎛       V_c⎞
+- ───── + (1 - D)⋅⎜-i_L - ───⎟
+    R             ⎝        R ⎠ solved for 
+i_L=
+⎧  D⋅V_c     V_c⎫
+⎨───────── - ───⎬
+⎩R⋅(D - 1)    R ⎭
+2021-05-19 07:50:23,645
+so far i_L = 
+OrderedSet([V_c/(R*(D - 1))])
+2021-05-19 07:50:23,646
+solution to i_L is: 
+   V_c   
+─────────
+R⋅(D - 1) 
+2021-05-19 07:50:23,646
+set of syms: {D, R, V_c}
+2021-05-19 07:50:23,646
+ordered: [D, R, V_c]
+2021-05-19 07:50:23,646
+orderedset: OrderedSet([D, R, V_c])
+2021-05-19 07:50:23,646
+calling solver looking for 
+D
+2021-05-19 07:50:23,646
+	adding D to [i_L]
+2021-05-19 07:50:23,725
+	nonlinsolve returns: 
+	⎛   V_c    ⎞
+	⎜─────────,⎟
+	⎝V_c - V_g ⎠
+2021-05-19 07:50:23,739
+
+	D⋅V_g + V_c⋅(1 - D) solved for 
+	D=
+	⎧   V_c   ⎫
+	⎨─────────⎬
+	⎩V_c - V_g⎭
+2021-05-19 07:50:23,764
+
+	  D⋅V_c           ⎛       V_c⎞
+	- ───── + (1 - D)⋅⎜-i_L - ───⎟
+	    R             ⎝        R ⎠ solved for 
+	D=
+	⎧R⋅i_L + V_c⎫
+	⎨───────────⎬
+	⎩   R⋅i_L   ⎭
+2021-05-19 07:50:23,765
+	so far D = 
+	OrderedSet([V_c/(V_c - V_g), 1 + V_c/(R*i_L)])
+2021-05-19 07:50:23,765
+	solution to D is: 
+	   V_c   
+	─────────
+	V_c - V_g 
+2021-05-19 07:50:23,766
+set of syms: {V_g, V_c}
+2021-05-19 07:50:23,766
+ordered: [V_c, V_g]
+2021-05-19 07:50:23,766
+orderedset: OrderedSet([V_g, V_c])
+2021-05-19 07:50:23,766
+	calling solver looking for 
+	V_g
+2021-05-19 07:50:23,766
+		adding V_g to [i_L, D]
+2021-05-19 07:50:23,840
+		nonlinsolve returns: 
+		⎛V_c ⎞
+		⎜───,⎟
+		⎝ M  ⎠
+2021-05-19 07:50:23,853
+
+		D⋅V_g + V_c⋅(1 - D) solved for 
+		V_g=
+		⎧V_c⋅(D - 1)⎫
+		⎨───────────⎬
+		⎩     D     ⎭
+2021-05-19 07:50:23,865
+
+		    V_c
+		M - ───
+		    V_g solved for 
+		V_g=
+		⎧V_c⎫
+		⎨───⎬
+		⎩ M ⎭
+2021-05-19 07:50:23,867
+		so far V_g = 
+		OrderedSet([V_c/M, V_c - V_c/D])
+2021-05-19 07:50:23,867
+		solution to V_g is: 
+		V_c
+		───
+		 M  
+2021-05-19 07:50:23,867
+set of syms: {M, V_c}
+2021-05-19 07:50:23,867
+ordered: [M, V_c]
+2021-05-19 07:50:23,867
+orderedset: OrderedSet([M, V_c])
+2021-05-19 07:50:23,868
+		calling solver looking for 
+		M
+2021-05-19 07:50:23,868
+			adding M to [i_L, D, V_g]
+2021-05-19 07:50:23,911
+			nonlinsolve returns: 
+			⎛V_c ⎞
+			⎜───,⎟
+			⎝V_g ⎠
+2021-05-19 07:50:23,915
+
+			    V_c
+			M - ───
+			    V_g solved for 
+			M=
+			⎧V_c⎫
+			⎨───⎬
+			⎩V_g⎭
+2021-05-19 07:50:23,916
+			so far M = 
+			OrderedSet([V_c/V_g])
+2021-05-19 07:50:23,916
+			solution to M is: 
+			V_c
+			───
+			V_g 
+2021-05-19 07:50:23,916
+set of syms: {V_g, V_c}
+2021-05-19 07:50:23,916
+ordered: [V_c, V_g]
+2021-05-19 07:50:23,916
+orderedset: OrderedSet([V_g, V_c])
+2021-05-19 07:50:23,916
+			calling solver looking for 
+			V_g
+2021-05-19 07:50:23,916
+				base case
+2021-05-19 07:50:23,916
+			calling solver looking for 
+			V_c
+2021-05-19 07:50:23,916
+				adding V_c to [i_L, D, V_g, M]
+2021-05-19 07:50:23,961
+				nonlinsolve returns: 
+				(M⋅V_g,)
+2021-05-19 07:50:23,969
+
+				D⋅V_g + V_c⋅(1 - D) solved for 
+				V_c=
+				⎧D⋅V_g⎫
+				⎨─────⎬
+				⎩D - 1⎭
+2021-05-19 07:50:23,973
+
+				    V_c
+				M - ───
+				    V_g solved for 
+				V_c=
+				{M⋅V_g}
+2021-05-19 07:50:23,992
+
+				  D⋅V_c           ⎛       V_c⎞
+				- ───── + (1 - D)⋅⎜-i_L - ───⎟
+				    R             ⎝        R ⎠ solved for 
+				V_c=
+				{R⋅i_L⋅(D - 1)}
+2021-05-19 07:50:23,997
+
+				    V_c
+				R - ───
+				    i_R solved for 
+				V_c=
+				{R⋅i_R}
+2021-05-19 07:50:23,998
+				so far V_c = 
+				OrderedSet([M*V_g, D*V_g/(D - 1), R*i_L*(D - 1), R*i_R])
+2021-05-19 07:50:23,998
+				solution to V_c is: 
+				M⋅V_g 
+2021-05-19 07:50:23,998
+set of syms: {V_g, M}
+2021-05-19 07:50:23,998
+ordered: [M, V_g]
+2021-05-19 07:50:23,998
+orderedset: OrderedSet([V_g, M])
+2021-05-19 07:50:23,998
+				calling solver looking for 
+				V_g
+2021-05-19 07:50:23,998
+					base case
+2021-05-19 07:50:23,998
+				calling solver looking for 
+				M
+2021-05-19 07:50:23,998
+					base case
+2021-05-19 07:50:23,999
+				solution to V_c is: 
+				D⋅V_g
+				─────
+				D - 1 
+2021-05-19 07:50:23,999
+set of syms: {D, V_g}
+2021-05-19 07:50:23,999
+ordered: [D, V_g]
+2021-05-19 07:50:23,999
+orderedset: OrderedSet([D, V_g])
+2021-05-19 07:50:23,999
+				calling solver looking for 
+				D
+2021-05-19 07:50:23,999
+					base case
+2021-05-19 07:50:23,999
+				calling solver looking for 
+				V_g
+2021-05-19 07:50:23,999
+					base case
+2021-05-19 07:50:23,999
+				solution to V_c is: 
+				R⋅i_L⋅(D - 1) 
+2021-05-19 07:50:24,000
+set of syms: {D, R, i_L}
+2021-05-19 07:50:24,000
+ordered: [D, R, i_L]
+2021-05-19 07:50:24,000
+orderedset: OrderedSet([D, R, i_L])
+2021-05-19 07:50:24,000
+				calling solver looking for 
+				D
+2021-05-19 07:50:24,000
+					base case
+2021-05-19 07:50:24,000
+				calling solver looking for 
+				R
+2021-05-19 07:50:24,000
+					adding R to [i_L, D, V_g, M, V_c]
+2021-05-19 07:50:24,069
+					nonlinsolve returns: 
+					⎛V_c ⎞
+					⎜───,⎟
+					⎝i_R ⎠
+2021-05-19 07:50:24,095
+
+					  D⋅V_c           ⎛       V_c⎞
+					- ───── + (1 - D)⋅⎜-i_L - ───⎟
+					    R             ⎝        R ⎠ solved for 
+					R=
+					⎧D⋅V_c      ⎫
+					⎪───── - V_c⎪
+					⎨D - 1      ⎬
+					⎪───────────⎪
+					⎩    i_L    ⎭
+2021-05-19 07:50:24,099
+
+					    V_c
+					R - ───
+					    i_R solved for 
+					R=
+					⎧V_c⎫
+					⎨───⎬
+					⎩i_R⎭
+2021-05-19 07:50:24,099
+					so far R = 
+					OrderedSet([V_c/i_R, V_c/(i_L*(D - 1))])
+2021-05-19 07:50:24,099
+					solution to R is: 
+					V_c
+					───
+					i_R 
+2021-05-19 07:50:24,099
+set of syms: {i_R, V_c}
+2021-05-19 07:50:24,099
+ordered: [V_c, i_R]
+2021-05-19 07:50:24,099
+orderedset: OrderedSet([i_R, V_c])
+2021-05-19 07:50:24,100
+					calling solver looking for 
+					i_R
+2021-05-19 07:50:24,100
+						adding i_R to [i_L, D, V_g, M, V_c, R]
+2021-05-19 07:50:24,149
+						nonlinsolve returns: 
+						⎛V_c ⎞
+						⎜───,⎟
+						⎝ R  ⎠
+2021-05-19 07:50:24,159
+
+						    V_c
+						R - ───
+						    i_R solved for 
+						i_R=
+						⎧V_c⎫
+						⎨───⎬
+						⎩ R ⎭
+2021-05-19 07:50:24,159
+						so far i_R = 
+						OrderedSet([V_c/R])
+2021-05-19 07:50:24,159
+						solution to i_R is: 
+						V_c
+						───
+						 R  
+2021-05-19 07:50:24,159
+set of syms: {R, V_c}
+2021-05-19 07:50:24,159
+ordered: [R, V_c]
+2021-05-19 07:50:24,159
+orderedset: OrderedSet([R, V_c])
+2021-05-19 07:50:24,160
+						calling solver looking for 
+						R
+2021-05-19 07:50:24,160
+							base case
+2021-05-19 07:50:24,160
+						calling solver looking for 
+						V_c
+2021-05-19 07:50:24,160
+							base case
+2021-05-19 07:50:24,160
+end of function, recursesym: [i_L, D, V_g, M, V_c, R, i_R]
+2021-05-19 07:50:24,160
+					sub-ing in 
+					V_c
+					───
+					 R  for 
+					i_R
+2021-05-19 07:50:24,160
+					and found 
+					R
+2021-05-19 07:50:24,161
+					calling solver looking for 
+					V_c
+2021-05-19 07:50:24,161
+							base case
+2021-05-19 07:50:24,161
+					solution to R is: 
+					    V_c    
+					───────────
+					i_L⋅(D - 1) 
+2021-05-19 07:50:24,161
+set of syms: {D, i_L, V_c}
+2021-05-19 07:50:24,161
+ordered: [D, V_c, i_L]
+2021-05-19 07:50:24,161
+orderedset: OrderedSet([D, i_L, V_c])
+2021-05-19 07:50:24,161
+					calling solver looking for 
+					D
+2021-05-19 07:50:24,161
+							base case
+2021-05-19 07:50:24,161
+					calling solver looking for 
+					i_L
+2021-05-19 07:50:24,161
+							base case
+2021-05-19 07:50:24,161
+					calling solver looking for 
+					V_c
+2021-05-19 07:50:24,162
+							base case
+2021-05-19 07:50:24,162
+sym list: 
+					{R}
+2021-05-19 07:50:24,162
+bool op = False
+2021-05-19 07:50:24,162
+					removing 
+					R
+2021-05-19 07:50:24,162
+end of function, recursesym: [i_L, D, V_g, M, V_c, R, i_R]
+2021-05-19 07:50:24,172
+				sub-ing in 
+				V_c
+				───
+				i_R for 
+				R
+2021-05-19 07:50:24,172
+				and found 
+				V_c⋅i_L⋅(D - 1)
+				───────────────
+				      i_R      
+2021-05-19 07:50:24,173
+				sub-ing in 
+				    V_c    
+				───────────
+				i_L⋅(D - 1) for 
+				R
+2021-05-19 07:50:24,173
+				and found 
+				V_c
+2021-05-19 07:50:24,173
+				calling solver looking for 
+				i_L
+2021-05-19 07:50:24,173
+							base case
+2021-05-19 07:50:24,173
+				solution to V_c is: 
+				R⋅i_R 
+2021-05-19 07:50:24,173
+set of syms: {i_R, R}
+2021-05-19 07:50:24,173
+ordered: [R, i_R]
+2021-05-19 07:50:24,173
+orderedset: OrderedSet([i_R, R])
+2021-05-19 07:50:24,173
+				calling solver looking for 
+				i_R
+2021-05-19 07:50:24,173
+							base case
+2021-05-19 07:50:24,173
+				calling solver looking for 
+				R
+2021-05-19 07:50:24,174
+							base case
+2021-05-19 07:50:24,174
+sym list: 
+				{D, V_c, i_L, i_R}
+2021-05-19 07:50:24,174
+bool op = False
+2021-05-19 07:50:24,174
+				removing 
+				V_c⋅i_L⋅(D - 1)
+				───────────────
+				      i_R      
+2021-05-19 07:50:24,174
+sym list: 
+				{V_c}
+2021-05-19 07:50:24,174
+bool op = False
+2021-05-19 07:50:24,174
+				removing 
+				V_c
+2021-05-19 07:50:24,175
+end of function, recursesym: [i_L, D, V_g, M, V_c, R, i_R]
+2021-05-19 07:50:24,175
+			sub-ing in 
+			M⋅V_g for 
+			V_c
+2021-05-19 07:50:24,175
+			and found 
+			M
+2021-05-19 07:50:24,180
+			sub-ing in 
+			D⋅V_g
+			─────
+			D - 1 for 
+			V_c
+2021-05-19 07:50:24,180
+			and found 
+			  D  
+			─────
+			D - 1
+2021-05-19 07:50:24,189
+			sub-ing in 
+			R⋅i_L⋅(D - 1) for 
+			V_c
+2021-05-19 07:50:24,190
+			and found 
+			R⋅i_L⋅(D - 1)
+			─────────────
+			     V_g     
+2021-05-19 07:50:24,195
+			sub-ing in 
+			R⋅i_R for 
+			V_c
+2021-05-19 07:50:24,195
+			and found 
+			R⋅i_R
+			─────
+			 V_g 
+2021-05-19 07:50:24,195
+sym list: 
+			{M}
+2021-05-19 07:50:24,195
+bool op = False
+2021-05-19 07:50:24,195
+			removing 
+			M
+2021-05-19 07:50:24,195
+sym list: 
+			{D}
+2021-05-19 07:50:24,195
+bool op = False
+2021-05-19 07:50:24,195
+sym list: 
+			{D, R, V_g, i_L}
+2021-05-19 07:50:24,195
+bool op = False
+2021-05-19 07:50:24,196
+sym list: 
+			{R, V_g, i_R}
+2021-05-19 07:50:24,196
+bool op = False
+2021-05-19 07:50:24,196
+end of function, recursesym: [i_L, D, V_g, M, V_c, R, i_R]
+2021-05-19 07:50:24,196
+		sub-ing in 
+		V_c
+		───
+		V_g for 
+		M
+2021-05-19 07:50:24,197
+		and found 
+		V_g
+2021-05-19 07:50:24,203
+		sub-ing in 
+		  D  
+		─────
+		D - 1 for 
+		M
+2021-05-19 07:50:24,203
+		and found 
+		V_c⋅(D - 1)
+		───────────
+		     D     
+2021-05-19 07:50:24,214
+		sub-ing in 
+		R⋅i_L⋅(D - 1)
+		─────────────
+		     V_g      for 
+		M
+2021-05-19 07:50:24,215
+		and found 
+		   V_c⋅V_g   
+		─────────────
+		R⋅i_L⋅(D - 1)
+2021-05-19 07:50:24,221
+		sub-ing in 
+		R⋅i_R
+		─────
+		 V_g  for 
+		M
+2021-05-19 07:50:24,221
+		and found 
+		V_c⋅V_g
+		───────
+		 R⋅i_R 
+2021-05-19 07:50:24,222
+		calling solver looking for 
+		V_c
+2021-05-19 07:50:24,222
+							base case
+2021-05-19 07:50:24,222
+		solution to V_g is: 
+		      V_c
+		V_c - ───
+		       D  
+2021-05-19 07:50:24,222
+set of syms: {D, V_c}
+2021-05-19 07:50:24,222
+ordered: [D, V_c]
+2021-05-19 07:50:24,222
+orderedset: OrderedSet([D, V_c])
+2021-05-19 07:50:24,222
+		calling solver looking for 
+		D
+2021-05-19 07:50:24,222
+							base case
+2021-05-19 07:50:24,222
+		calling solver looking for 
+		V_c
+2021-05-19 07:50:24,222
+							base case
+2021-05-19 07:50:24,222
+sym list: 
+		{V_g}
+2021-05-19 07:50:24,223
+bool op = False
+2021-05-19 07:50:24,223
+		removing 
+		V_g
+2021-05-19 07:50:24,223
+sym list: 
+		{D, V_c}
+2021-05-19 07:50:24,223
+bool op = False
+2021-05-19 07:50:24,223
+sym list: 
+		{D, R, V_c, V_g, i_L}
+2021-05-19 07:50:24,223
+bool op = False
+2021-05-19 07:50:24,223
+		removing 
+		   V_c⋅V_g   
+		─────────────
+		R⋅i_L⋅(D - 1)
+2021-05-19 07:50:24,224
+sym list: 
+		{R, V_c, V_g, i_R}
+2021-05-19 07:50:24,224
+bool op = False
+2021-05-19 07:50:24,224
+		removing 
+		V_c⋅V_g
+		───────
+		 R⋅i_R 
+2021-05-19 07:50:24,224
+end of function, recursesym: [i_L, D, V_g, M, V_c, R, i_R]
+2021-05-19 07:50:24,237
+	sub-ing in 
+	V_c
+	───
+	 M  for 
+	V_g
+2021-05-19 07:50:24,238
+	and found 
+	   V_c   
+	─────────
+	      V_c
+	V_c - ───
+	       M 
+2021-05-19 07:50:24,238
+	sub-ing in 
+	      V_c
+	V_c - ───
+	       D  for 
+	V_g
+2021-05-19 07:50:24,239
+	and found 
+	D
+2021-05-19 07:50:24,239
+	calling solver looking for 
+	V_c
+2021-05-19 07:50:24,239
+							base case
+2021-05-19 07:50:24,239
+	solution to D is: 
+	     V_c 
+	1 + ─────
+	    R⋅i_L 
+2021-05-19 07:50:24,239
+set of syms: {R, i_L, V_c}
+2021-05-19 07:50:24,239
+ordered: [R, V_c, i_L]
+2021-05-19 07:50:24,239
+orderedset: OrderedSet([R, i_L, V_c])
+2021-05-19 07:50:24,239
+	calling solver looking for 
+	R
+2021-05-19 07:50:24,239
+							base case
+2021-05-19 07:50:24,239
+	calling solver looking for 
+	i_L
+2021-05-19 07:50:24,239
+							base case
+2021-05-19 07:50:24,240
+	calling solver looking for 
+	V_c
+2021-05-19 07:50:24,240
+							base case
+2021-05-19 07:50:24,240
+sym list: 
+	{M}
+2021-05-19 07:50:24,240
+bool op = False
+2021-05-19 07:50:24,240
+sym list: 
+	{D}
+2021-05-19 07:50:24,240
+bool op = False
+2021-05-19 07:50:24,240
+	removing 
+	D
+2021-05-19 07:50:24,240
+end of function, recursesym: [i_L, D, V_g, M, V_c, R, i_R]
+2021-05-19 07:50:24,255
+sub-ing in 
+   V_c   
+─────────
+V_c - V_g for 
+D
+2021-05-19 07:50:24,255
+and found 
+       V_c       
+─────────────────
+  ⎛   V_c       ⎞
+R⋅⎜───────── - 1⎟
+  ⎝V_c - V_g    ⎠
+2021-05-19 07:50:24,256
+sub-ing in 
+     V_c 
+1 + ─────
+    R⋅i_L for 
+D
+2021-05-19 07:50:24,257
+and found 
+i_L
+2021-05-19 07:50:24,267
+sub-ing in 
+  M  
+─────
+M - 1 for 
+D
+2021-05-19 07:50:24,268
+and found 
+     V_c     
+─────────────
+  ⎛  M      ⎞
+R⋅⎜───── - 1⎟
+  ⎝M - 1    ⎠
+2021-05-19 07:50:24,268
+calling solver looking for 
+R
+2021-05-19 07:50:24,268
+							base case
+2021-05-19 07:50:24,268
+calling solver looking for 
+V_c
+2021-05-19 07:50:24,268
+							base case
+2021-05-19 07:50:24,268
+sym list: 
+{R, V_c, V_g}
+2021-05-19 07:50:24,268
+bool op = False
+2021-05-19 07:50:24,269
+sym list: 
+{i_L}
+2021-05-19 07:50:24,269
+bool op = False
+2021-05-19 07:50:24,269
+removing 
+i_L
+2021-05-19 07:50:24,269
+sym list: 
+{M, R, V_c}
+2021-05-19 07:50:24,269
+bool op = False
+2021-05-19 07:50:24,269
+end of function, recursesym: [i_L, D, V_g, M, V_c, R, i_R]

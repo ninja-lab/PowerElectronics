@@ -1,0 +1,20 @@
+* C:\users\erik\My Documents\Education\powerelectronics\AdvancedConverterControlTechqiues\week1\HbridgeDraft2.asc
+S1 VLp N002 c1 0 mysw
+S2 VLn N002 c2 0 mysw
+C1 VLp VLn 1m ic=11
+R1 VLp VLn 1k
+S3 0 VLp c2 0 mysw
+S4 0 VLn c1 0 mysw
+L1 N001 N002 100m ic=11m
+R2 N001 vin .002
+V1 vin 0 10
+XU1 N006 N005 PWM VM=1V, fs=1k Dmin=0.001, Dmax=0.999, Voffset=0
+XU2 N005 c1 c2 dead_time Td=0
+V2 N006 0 .954
+C2 N004 0 100n
+R3 N003 N004 100k
+.model mysw SW(Ron=1u Roff=1Meg Vt=.5 Vh=0)
+.tran 1 uic
+.include /home/erik/Documents/Education/powerelectronics/AdvancedConverterControlTechqiues/week1/switching.lib
+.backanno
+.end

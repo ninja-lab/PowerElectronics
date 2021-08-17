@@ -1,0 +1,25 @@
+Circuit: * C:\users\erik\My Documents\Education\powerelectronics\AdvancedConverterControlTechniques\Chapter2Problems\problem2-1_2.asc
+
+Per .tran options, skipping operating point for transient analysis.
+Ignoring empty pin current: Ix(u1:1)
+Ignoring empty pin current: Ix(u1:2)
+Ignoring empty pin current: Ix(u1:3)
+Ignoring empty pin current: Ix(u1:5)
+
+Date: Tue Jun 01 07:14:30 2021
+Total elapsed time: 6.403 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 1070278
+traniter = 1070278
+tranpoints = 349934
+accept = 260566
+rejected = 89368
+matrix size = 30
+fillins = 0
+solver = Normal
+Matrix Compiler1: 976 bytes object code size  0.3/0.2/[0.1]
+Matrix Compiler2: 1.95 KB object code size  0.2/0.3/[0.1]
+
