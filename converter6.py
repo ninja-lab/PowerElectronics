@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Tue Jun  8 06:25:04 2021
+Created on Mon Jan 17 18:19:03 2022
 
 @author: erik
 """
@@ -10,6 +10,8 @@ Created on Tue Jun  8 06:25:04 2021
 
 from IPython.display import display, Latex
 from functools import wraps
+from itertools import product
+from copy import deepcopy
 from orderedset import OrderedSet
 import sympy
 from sympy.core.symbol import symbols, Symbol
@@ -46,6 +48,25 @@ def myprint2(eq):
         print('didnt work')
     return
 
+def get_combos(want, vals):
+    '''
+    
+
+    Parameters
+    ----------
+    vals : the values of a dictionary. The values are 
+        OrderedSets of expressions for variables
+
+    Returns
+    -------
+    Unique combinations of variables from all the values,
+    all of which exclude the variable being solved for.
+    
+
+    '''
+    
+    return product(*vals)
+
 def add_method(cls):
     def decorator(func):
         @wraps(func) 
@@ -56,7 +77,65 @@ def add_method(cls):
         return func # returning func means func can still be used normally
     return decorator
 
+def get_combos(want, vals):
+    '''
 
+    Parameters
+    ----------
+    vals : the values of a dictionary. The values are 
+        OrderedSets of expressions for variables
+
+    Returns
+    -------
+    Unique combinations of variables from all the values,
+    all of which exclude the variable being solved for.
+    The idea is that for an expression 
+    z = f(x,y), if you substitute in expressions for 
+    x and y in turn, as x=f(a,b) and y=f(c,d),
+    you will get the same result as substituting 
+    x = f(a,c), y=f(b,d) because ultimately 
+    z=f(a,b,c,d) is unique. 
+
+    '''
+
+    def addifunique(product):
+        '''
+                Parameters
+        ----------
+        product : TYPE
+            DESCRIPTION.
+
+        Returns
+        -------
+        list
+            DESCRIPTION.
+            
+        
+
+        '''
+        myM = variable('M', real=True)
+        myD = variable('D', real=True, positive=True) 
+       
+        unique_combos = []
+        
+        setofsymbolssets = set()
+        for combo in product: 
+            a = set()
+            for expr in combo: 
+                a |= expr.atoms(Symbol)
+            a = frozenset(a)
+            boolop = (myM in a) and (myD in a)
+            #print(a)
+            if a not in setofsymbolssets and want not in a and not boolop:
+                #print(a)
+                setofsymbolssets.add(a)
+                unique_combos.append(combo)
+        return unique_combos
+    
+    unique_combos = addifunique(product(*vals))
+    return unique_combos
+
+    
 
 class variable(sympy.core.symbol.Symbol):
     def __new__(self, name, *args, **assumptions):
@@ -121,7 +200,7 @@ class converter:
                 #after substituting known values, eq may be reduced to zero. 
                 #and solveset returns the entire set of complex numbers. 
                 continue
-            self.debug(f'{self.p(eq)} solved for {self.p(want)}={self.p(temp)}')
+            #self.debug(f'{self.p(eq)} solved for {self.p(want)}={self.p(temp)}')
             if isinstance(temp, sympy.sets.sets.Complement):
                 temp = temp.args[0]
             
@@ -130,9 +209,7 @@ class converter:
             else: 
                 sol = simplify(temp.args[0])
                 rhss.add(sol)
-                #syms.add(sorted(sol.atoms(Symbol), key=lambda f: f.__str__()))
-                #self.info(f'{p(eq)} solved for {p(want)}={p(sol)}')
-                #is wanted symbol guaranteed not to be in syms? 
+
                 
         return rhss
     
@@ -156,7 +233,7 @@ class converter:
         rhs_tuple = nonlinsolve([eq.subs(given) for eq in eqs], want).args[0]
         # ^ solveset will always return a FiniteSet of solutions for the single variable it can solve for.
         #nonlinsolve will always return a FiniteSet with a single ordered tuple, see documentation ^
-        self.debug(f'nonlinsolve returns: {self.p(rhs_tuple[0])}')
+        #self.debug(f'nonlinsolve returns: {self.p(rhs_tuple[0])}')
         if len(rhs_tuple) != 1:
             raise NotUniqueError
         return rhs_tuple[0]
@@ -198,14 +275,7 @@ class converter:
         the given values are substituted into the equations, and then Sympy's nonlinsolve
         is called. 
         '''
-        '''
-        s = '\t'
-        
-        def p(s):            
-            new_s = pretty(s, use_unicode=True)
-            return '\n' + indents + new_s.replace('\n', '\n'+indents)
 
-        '''
         s = '\t'
         
         def p(s):            
@@ -214,6 +284,7 @@ class converter:
 
         try:
             if want in recursesym:
+                self.flag -= 1
                 self.debug(f'{s*len(recursesym)}base case')
                 self.debug(f'returning: {want}={pretty(recursesym[want])}')
                 return recursesym[want]
@@ -222,6 +293,7 @@ class converter:
             recursesym = {}
         #used for recursive logging visibility:
         indents = s*len(recursesym)
+        self.flag += 1
         self.debug(f'{indents}adding {want} to {list(recursesym)}')
         if want not in recursesym:
             recursesym[want] = set()
@@ -236,7 +308,6 @@ class converter:
         
         
         for sol in rhss:
-            self.debug(f'{indents}solution to {want} is: {p(sol)} ')
 
             syms = sol.atoms(Symbol)
             syms = sorted(syms.copy(), key=lambda f: f.__str__())
@@ -247,26 +318,42 @@ class converter:
                 #if sym is already in recursesym, it'll hit the base case
 
                 solutions = self.solver(given, sym, recursesym=recursesym)
-                recursesym[sym] |= solutions
-                for newsub in recursesym[sym] :
-                    
-                    new = sol.subs(sym, newsub)
-                    newrhss.add(simplify(new))
-                    
-                    self.debug(f'{indents}sub-ing in {p(newsub)} for {p(sym)}')
-                    self.debug(f'{indents}and found {p(new)}')
-            self.debug('hello')
-        myM = variable('M', real=True)
-        myD = variable('D', real=True, positive=True)  
-        for eq in newrhss.copy():
-            syms = eq.atoms(Symbol)
-            #self.debug(f'sym list: {p(syms)}')
-            boolop = (myM in syms) and (myD in syms)
-            #self.debug(f'bool op = {boolop}')
-            if (want in syms) or boolop  :
-                newrhss.remove(eq)
-                #self.info(f'{indents}removing {p(eq)}')
-         
+                recursesym[sym] |= solutions #recursesym[sym] is one or more expression
+                #that can be substituted for sym in sol
+                #call a function that makes a substitution, removes that expression, 
+                #and returns an empty set if there are no more substitutions to make, 
+                #or recurse and make additional substitutions 
+                #to make multiple substitutions at once, pass a list of (old, new)
+                #pairs 
+                recursesym[sym] |= OrderedSet([sym]) #makes substitutions easier later
+            self.debug(recursesym) 
+            #only make combinations of symbols that 
+            #are actually in sol. Otherwise it'll be a 
+            #worthless substitution and get thrown out. 
+            needed = {sym: recursesym[sym] for sym in syms}
+            keys = needed.keys()
+            vals = needed.values()
+            #combos = product(*vals)
+            combos = get_combos(want, vals)
+            self.debug(list(keys))
+            self.debug(list(vals))
+            subs = [zip(keys, combo) for combo in combos]
+            self.debug(f'number of subs = {len(subs)}')
+            self.debug(f'{indents}solution to {want} is: {p(sol)} ')
+
+            for sub in subs:
+
+                log_sub= deepcopy(sub)
+                #we may already have a given combination 
+                # of variables in an expression.
+                #only substitute a given combination 
+                #of variables ONCE
+                new = sol.subs(list(sub))
+                newrhss.add(simplify(new))
+                
+                self.debug(f'{indents}sub-ing in {list(log_sub)}')
+                self.debug(f'{indents}and found {p(new)}')
+     
         toreturn = rhss.union(newrhss) 
         self.debug(f'end of function, recursesym: {recursesym}')
         self.debug(f'returning: {p(toreturn)}')
