@@ -1,19 +1,18 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Mon Jan 17 18:19:03 2022
+Created on Mon Jan 31 07:14:39 2022
 
 @author: erik
 """
 
-
-
 from IPython.display import display, Latex
 from functools import wraps
-from itertools import product
+from itertools import product, filterfalse
 from copy import deepcopy
 from orderedset import OrderedSet
 import sympy
+from sympy import S, Interval
 from sympy.core.symbol import symbols, Symbol
 from sympy.solvers.solveset import nonlinsolve
 from sympy import solveset
@@ -22,6 +21,11 @@ from sympy.printing import latex, pprint, pretty
 from sympy import simplify# Symbol, 
 
 import logging
+
+in_equalities = (sympy.core.relational.LessThan,
+            sympy.core.relational.GreaterThan,
+            sympy.core.relational.StrictGreaterThan,
+            sympy.core.relational.StrictLessThan)
 
 def myprint(*args):
     '''  
@@ -44,8 +48,15 @@ def myprint2(eq):
         lhs = eq.args[0]
         rhs = eq - lhs
         myprint(-1*lhs, rhs)
+    elif any([isinstance(eq, rel) for rel in (sympy.core.relational.LessThan,
+            sympy.core.relational.GreaterThan,
+            sympy.core.relational.StrictGreaterThan,
+            sympy.core.relational.StrictLessThan)]):
+        display(eq)
     else:
-        print('didnt work')
+        print(type(eq))
+        #print('didnt work')
+        
     return
 
 def get_combos(want, vals):
@@ -113,8 +124,8 @@ def get_combos(want, vals):
         
 
         '''
-        myM = variable('M', real=True)
-        myD = variable('D', real=True, positive=True) 
+        #myM = variable('M', real=True)
+        #myD = variable('D', real=True, positive=True) 
        
         unique_combos = []
         
@@ -161,20 +172,50 @@ class converter:
  
     def __init__(self):
         self.equations = OrderedSet([]) #expressions assumed to = 0 (Sympy convention)
+        self.inequalities = OrderedSet([])
         self.relations = {} # useful symbolic expressions that are solved for
         self.variables = set()
         self.logger = logging.getLogger('__main__')
         self.debug = self.logger.debug
         self.info = self.logger.info 
         self.flag = 0
-        
-    def p(self, s):
+    
+    def add_equation(self, eq):
+        in_equalities = (sympy.core.relational.LessThan,
+                    sympy.core.relational.GreaterThan,
+                    sympy.core.relational.StrictGreaterThan,
+                    sympy.core.relational.StrictLessThan)
+        if any([isinstance(eq, rel) for rel in in_equalities]):
+            self.inequalities.add(eq)
+        else: 
+            self.equations.add(eq)
+            
+ 
+    def p(self, *args):
+        '''
+        first arg: sympy object
+        second arg: string 
+        '''
+        def helper(*args, chars=0):
+            if len(args) == 0:
+                return ''
+            #self.debug(f'chars start = {chars}')
+            ret_str= pretty(args[0], use_unicode=True)
+            ret_str = ret_str.replace('\n', '\n'+' '*(chars))
+            indent_ret_str = ret_str.replace('\n', '\n'+indents)
+            charsend = len(indent_ret_str.expandtabs()) + chars
+            #self.debug(f'chars start {chars}, chars end = {charsend}, arg = {args[0]}')
+            return indent_ret_str + helper(*args[1:], chars=charsend)
         indents = '\t'*self.flag
-        return '\n' + indents + pretty(s, use_unicode=True).replace('\n', '\n'+indents)
-
+        #print(indents + helper(*args))
+        return indents + helper(*args)
+    
+    
     def showequations(self):
         for eq in self.equations:
             myprint2(eq)
+        for ineq in self.inequalities:
+            myprint2(ineq)
     
     def run_solveset(self, given, want):
         '''
@@ -196,16 +237,30 @@ class converter:
             #go through each equation individually with solveset
             
             temp = solveset(eq.subs(given), want) 
+            #self.debug(f'{self.p(eq, " solved for ", want, " = ", temp)}'.__repr__())
+            self.debug(f'{self.p(eq, " solved for ", want, " = ", temp)}')            #after substituting known values, eq may be reduced to zero. 
+            #and solveset returns the entire set of complex numbers. 
             if type(temp) == sympy.sets.fancysets.Complexes:
-                #after substituting known values, eq may be reduced to zero. 
-                #and solveset returns the entire set of complex numbers. 
                 continue
-            #self.debug(f'{self.p(eq)} solved for {self.p(want)}={self.p(temp)}')
+            
             if isinstance(temp, sympy.sets.sets.Complement):
                 temp = temp.args[0]
-            
             if len(temp) ==0: #happens when symbol being solved for isn't in this equation
                 continue #meant to get to next pass in for loop
+            '''
+            solveset looks at assumptions on variables. <- NOT TRUE
+            if a variable could be zero, it will specify the solution
+            must exclude zero when the variable being solved for is 
+            in a denominator. 
+            Check to be really sure this is the case: 
+            '''
+            b1 = isinstance(temp, sympy.sets.sets.Complement)
+            #b2 = len(temp.args[1]) == 0
+            #b3 = temp.args[1].args == (0,)
+            if b1:# and b2 and b3 :
+                temp = temp.args[0]
+            #if isinstance(temp, sympy.sets.sets.Interval)
+
             else: 
                 sol = simplify(temp.args[0])
                 rhss.add(sol)
@@ -230,13 +285,19 @@ class converter:
 
         '''
         eqs = self.equations.copy()
-        rhs_tuple = nonlinsolve([eq.subs(given) for eq in eqs], want).args[0]
+        
+        try: 
+            rhs_tuple = nonlinsolve([eq.subs(given) for eq in eqs], want).args[0]
         # ^ solveset will always return a FiniteSet of solutions for the single variable it can solve for.
         #nonlinsolve will always return a FiniteSet with a single ordered tuple, see documentation ^
         #self.debug(f'nonlinsolve returns: {self.p(rhs_tuple[0])}')
+        except IndexError: 
+            #add comment about when this exception occurs
+            return
         if len(rhs_tuple) != 1:
             raise NotUniqueError
         return rhs_tuple[0]
+        
 
     def run_solvers(self, given, want):
         '''
@@ -254,11 +315,12 @@ class converter:
         a set combination of the return value of nonlinsolve and solveset
 
         '''
-        self.debug(f'looking for {self.p(want)}')
+        #self.debug(f'{self.p("looking for ", want)}')
         rhs = self.run_nonlinsolve(given, want)
 
         rhss = self.run_solveset(given, want)
-        rhss.add(rhs)
+        if rhs is not None: 
+            rhss.add(rhs)
         
         return rhss
    
@@ -276,33 +338,25 @@ class converter:
         is called. 
         '''
 
-        s = '\t'
-        
-        def p(s):            
-            new_s = pretty(s, use_unicode=True)
-            return '\n' + indents + new_s.replace('\n', '\n'+indents)
-
         try:
             if want in recursesym:
                 self.flag -= 1
-                self.debug(f'{s*len(recursesym)}base case')
-                self.debug(f'returning: {want}={pretty(recursesym[want])}')
+                #self.debug(self.p('base case'))
+                #self.debug(self.p('returning: ', want, ' = ', recursesym[want]))
                 return recursesym[want]
             
         except TypeError:
             recursesym = {}
-        #used for recursive logging visibility:
-        indents = s*len(recursesym)
-        self.flag += 1
-        self.debug(f'{indents}adding {want} to {list(recursesym)}')
+       
+        #self.debug(self.p('adding ', want, ' to ', list(recursesym)))
         if want not in recursesym:
             recursesym[want] = set()
-        
+        self.flag += 1 #used for recursive logging visibility
         rhss = self.run_solvers(given, want)
-        self.debug(f'{indents}Done with {self.p(want)}')
-        self.debug(f'{indents}so far {want} = {p(rhss)}')
+   
+        #self.debug(self.p('Done with ', want))
+        #self.debug(self.p('so far ', want, ' = ', rhss))
         
-
         newrhss = OrderedSet([]) #newrhss will be the solutions found already (nonrecursively)
         # and then also those found recursively. 
         
@@ -313,8 +367,7 @@ class converter:
             syms = sorted(syms.copy(), key=lambda f: f.__str__())
             for sym in syms:
     
-                self.debug(f'{indents}recursesym: {p(list(recursesym))}')
-                self.debug(f'{indents}calling solver looking for {p(sym)}')
+                #self.debug(self.p('calling solver looking for ', sym))
                 #if sym is already in recursesym, it'll hit the base case
 
                 solutions = self.solver(given, sym, recursesym=recursesym)
@@ -326,20 +379,19 @@ class converter:
                 #to make multiple substitutions at once, pass a list of (old, new)
                 #pairs 
                 recursesym[sym] |= OrderedSet([sym]) #makes substitutions easier later
-            self.debug(recursesym) 
+            #self.debug(self.p('recursesym = ', recursesym) )
             #only make combinations of symbols that 
             #are actually in sol. Otherwise it'll be a 
             #worthless substitution and get thrown out. 
             needed = {sym: recursesym[sym] for sym in syms}
             keys = needed.keys()
             vals = needed.values()
-            #combos = product(*vals)
+
             combos = get_combos(want, vals)
-            self.debug(list(keys))
-            self.debug(list(vals))
+    
             subs = [zip(keys, combo) for combo in combos]
-            self.debug(f'number of subs = {len(subs)}')
-            self.debug(f'{indents}solution to {want} is: {p(sol)} ')
+            #self.debug(self.p('number of subs = ',len(subs)))
+            #self.debug(self.p('solution to ', {want}, ' is: ', sol))
 
             for sub in subs:
 
@@ -351,17 +403,38 @@ class converter:
                 new = sol.subs(list(sub))
                 newrhss.add(simplify(new))
                 
-                self.debug(f'{indents}sub-ing in {list(log_sub)}')
-                self.debug(f'{indents}and found {p(new)}')
+                #self.debug(self.p('sub-ing in ',list(log_sub)))
+                #self.debug(self.p('and found ', new))
      
         toreturn = rhss.union(newrhss) 
-        self.debug(f'end of function, recursesym: {recursesym}')
-        self.debug(f'returning: {p(toreturn)}')
+        #self.debug(self.p('end of function, recursesym:', recursesym))
+        #self.debug(self.p('returning: ', toreturn))
         
         if want == list(recursesym)[0]: 
             self.addnewrelation(want, list(toreturn) )
         return toreturn
-    
+    def parse_interval(self, sym, interval):
+        '''
+        return an inequality based on the interval 
+        arg[2] of interval is True if open on the left, false if closed 
+        arg[3] of interval is True if openen on the right, false if closed 
+        '''
+        if interval.args[1] == S.Infinity:
+            #sym is > or >= something 
+            if interval.args[2]: 
+                #interval includes left boundary
+                return sym > interval.args[0]
+            else:
+                return sym >= interval.args[0]
+            
+        if interval.args[0] == S.NegativeInfinity:
+            #sym is < or <= something
+            if interval.args[3]: 
+                return sym < interval.args[1]
+            else:
+                return sym <= interval.args[1]
+            
+            
     def addnewrelation(self, sym, solutions):
         '''
         The relations dictionary is key= symbol,
@@ -421,11 +494,38 @@ class converter:
             except KeyError:
                 continue #don't bother any more with this exp
             
-            #try:
+            
               
             return exp(**use)
  
+    def get_expression(self, var, given):
+        def use_args(have, needed):
+            '''
+            
+
+            Parameters
+            ----------
+            have : dictionary of everything that was given with values
+            needed : tuple of arguments needed
+
+            Returns
+            -------
+            a selection of 'have', with no unneeded arguments. 
+            Lambdify generated functions won't ignore unneccesary arguments, 
+            and the function will raise a KeyError (need to verify?)
+
+            '''
+            return {x:have[x] for x in needed}
+        
+        temp = dict((key.__str__(), value) for (key, value) in given.items())
+        for exp in self.relations[var]:
     
+            needed = exp.__code__.co_varnames
+            try: 
+                use = use_args(temp, needed)
+            except KeyError:
+                continue 
+            return exp
     def showresult(self, var, given):
          '''
          Parameters
@@ -440,6 +540,7 @@ class converter:
          None.
 
          '''
+         expr = self.get_expression(var, given)
          result = self.computesym(var, given)
-         myprint(var, f'{result:.3f} {var.unit}')
+         myprint(var, expr, f'{result:.3e} {var.unit}')
          
