@@ -23,7 +23,7 @@ from sympy import simplify# Symbol,
 
 import logging
 
-def myprint(*args):
+def myprint(*args, exact=True):
     '''  
     the first argument is the only "lhs"
     subsequent arguments are rhs-s
@@ -34,8 +34,15 @@ def myprint(*args):
             return ''
         else: 
             return f'= {latex(args[0])}' + helper(args[1:])
-        
-    s = f'$${latex(args[0])} {helper(args[1:])}$$' 
+    def helper2(args):
+        if len(args) == 0:
+            return ''
+        else: 
+            return f'\u2248 {latex(args[0])}' + helper(args[1:])
+    if exact:
+        s = f'$${latex(args[0])} {helper(args[1:])}$$' 
+    else: 
+        s = f'$${latex(args[0])} {helper2(args[1:])}$$' 
     display(Latex(s))   
     
 def myprint2(eq):
@@ -48,24 +55,6 @@ def myprint2(eq):
         print('didnt work')
     return
 
-def get_combos(want, vals):
-    '''
-    
-
-    Parameters
-    ----------
-    vals : the values of a dictionary. The values are 
-        OrderedSets of expressions for variables
-
-    Returns
-    -------
-    Unique combinations of variables from all the values,
-    all of which exclude the variable being solved for.
-    
-
-    '''
-    
-    return product(*vals)
 
 def add_method(cls):
     def decorator(func):
@@ -124,9 +113,9 @@ def get_combos(want, vals):
             for expr in combo: 
                 a |= expr.atoms(Symbol)
             a = frozenset(a)
-            #boolop = (myM in a) and (myD in a)
+            boolop = (myM in a) and (myD in a)
             #print(a)
-            if a not in setofsymbolssets and want not in a:# and not boolop:
+            if a not in setofsymbolssets and want not in a and not boolop:
                 #print(a)
                 setofsymbolssets.add(a)
                 unique_combos.append(combo)

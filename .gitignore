@@ -130,3 +130,5 @@ dmypy.json
 
 *.log
 *.raw
+Chapter2Problems/problem2-1.log
+*.pyc
