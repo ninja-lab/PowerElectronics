@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Mon Jan 31 07:14:39 2022
+Created on Sun Jul 14 13:46:57 2024
 
 @author: erik
 """
+
 
 from IPython.display import display, Latex
 from functools import wraps
@@ -475,7 +476,9 @@ class converter:
             and the function will raise a KeyError (need to verify?)
 
             '''
-            return {x:have[x] for x in needed}
+            d = {x:have[x] for x in needed}
+            #print(d)
+            return d
                 
         #lambdify_generated functions must have strings for keyword arguments
     
@@ -484,16 +487,16 @@ class converter:
         
         #print(self.relations[sym])
         for exp in self.relations[sym]:
-            print(exp)
+            #print(exp)
             needed = exp.__code__.co_varnames
-            print(needed)
+            #print(f'needed: {needed}')
             try: 
                 use = use_args(temp, needed)
                 
-                print(use)
+                #print(use)
             
             except KeyError:
-                print('keyerror')
+                #print('keyerror')
                 continue #don't bother any more with this exp
             
             
